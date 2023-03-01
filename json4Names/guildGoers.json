@@ -1,0 +1,37 @@
+{
+	"1": {
+		"name": "Vazia",
+		"diceRangeMin": 1,
+		"diceRangeMax": 5
+	},
+	"2": {
+		"name": "Quase deserta",
+		"diceRangeMin": 6,
+		"diceRangeMax": 9
+	},
+	"3": {
+		"name": "Pouco movimentada",
+		"diceRangeMin": 10,
+		"diceRangeMax": 12
+	},
+	"4": {
+		"name": "Nem muito nem pouco",
+		"diceRangeMin": 13,
+		"diceRangeMax": 16
+	},
+	"5": {
+		"name": "Muito frequentada",
+		"diceRangeMin": 17,
+		"diceRangeMax": 18
+	},
+	"6": {
+		"name": "Abarrotada",
+		"diceRangeMin": 19,
+		"diceRangeMax": 19
+	},
+	"7": {
+		"name": "Lotada",
+		"diceRangeMin": 20,
+		"diceRangeMax": 1000
+	}
+}

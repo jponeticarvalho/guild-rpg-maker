@@ -1,0 +1,282 @@
+{
+	"1-2": {
+		"diceRangeMin": 1,
+		"diceRangeMax": 2,
+		"totalAmount": 75
+	},
+	"3-4": {
+		"diceRangeMin": 3,
+		"diceRangeMax": 4,
+		"totalAmount": 100
+	},
+	"5-6": {
+		"diceRangeMin": 5,
+		"diceRangeMax": 6,
+		"totalAmount": 125
+	},
+	"7-8": {
+		"diceRangeMin": 7,
+		"diceRangeMax": 8,
+		"totalAmount": 150
+	},
+	"9-11": {
+		"diceRangeMin": 9,
+		"diceRangeMax": 11,
+		"totalAmount": 200
+	},
+	"12-14": {
+		"diceRangeMin": 12,
+		"diceRangeMax": 14,
+		"totalAmount": 225
+	},
+	"15-18": {
+		"diceRangeMin": 15,
+		"diceRangeMax": 18,
+		"totalAmount": 250
+	},
+	"19-21": {
+		"diceRangeMin": 19,
+		"diceRangeMax": 21,
+		"totalAmount": 300
+	},
+	"22-23": {
+		"diceRangeMin": 22,
+		"diceRangeMax": 23,
+		"totalAmount": 350
+	},
+	"24-28": {
+		"diceRangeMin": 24,
+		"diceRangeMax": 28,
+		"totalAmount": 375
+	},
+	"29-31": {
+		"diceRangeMin": 29,
+		"diceRangeMax": 31,
+		"totalAmount": 400
+	},
+	"32-32": {
+		"diceRangeMin": 32,
+		"diceRangeMax": 32,
+		"totalAmount": 450
+	},
+	"33-35": {
+		"diceRangeMin": 33,
+		"diceRangeMax": 35,
+		"totalAmount": 500
+	},
+	"36-36": {
+		"diceRangeMin": 36,
+		"diceRangeMax": 36,
+		"totalAmount": 550
+	},
+	"37-39": {
+		"diceRangeMin": 37,
+		"diceRangeMax": 39,
+		"totalAmount": 600
+	},
+	"40-41": {
+		"diceRangeMin": 40,
+		"diceRangeMax": 41,
+		"totalAmount": 750
+	},
+	"42-43": {
+		"diceRangeMin": 42,
+		"diceRangeMax": 43,
+		"totalAmount": 800
+	},
+	"44-46": {
+		"diceRangeMin": 44,
+		"diceRangeMax": 46,
+		"totalAmount": 900
+	},
+	"47-49": {
+		"diceRangeMin": 47,
+		"diceRangeMax": 49,
+		"totalAmount": 1000
+	},
+	"50-51": {
+		"diceRangeMin": 50,
+		"diceRangeMax": 51,
+		"totalAmount": 1100
+	},
+	"52-52": {
+		"diceRangeMin": 52,
+		"diceRangeMax": 52,
+		"totalAmount": 1200
+	},
+	"53-54": {
+		"diceRangeMin": 53,
+		"diceRangeMax": 54,
+		"totalAmount": 1250
+	},
+	"55-56": {
+		"diceRangeMin": 55,
+		"diceRangeMax": 56,
+		"totalAmount": 1400
+	},
+	"57-59": {
+		"diceRangeMin": 57,
+		"diceRangeMax": 59,
+		"totalAmount": 1500
+	},
+	"60-62": {
+		"diceRangeMin": 60,
+		"diceRangeMax": 62,
+		"totalAmount": 1600
+	},
+	"63-64": {
+		"diceRangeMin": 63,
+		"diceRangeMax": 64,
+		"totalAmount": 1700
+	},
+	"65-68": {
+		"diceRangeMin": 65,
+		"diceRangeMax": 68,
+		"totalAmount": 1900
+	},
+	"69-72": {
+		"diceRangeMin": 69,
+		"diceRangeMax": 72,
+		"totalAmount": 2000
+	},
+	"73": {
+		"diceRangeMin": 73,
+		"diceRangeMax": 73,
+		"totalAmount": 2100
+	},
+	"74": {
+		"diceRangeMin": 74,
+		"diceRangeMax": 74,
+		"totalAmount": 2200
+	},
+	"75": {
+		"diceRangeMin": 75,
+		"diceRangeMax": 75,
+		"totalAmount": 2400
+	},
+	"76": {
+		"diceRangeMin": 76,
+		"diceRangeMax": 76,
+		"totalAmount": 2500
+	},
+	"77": {
+		"diceRangeMin": 77,
+		"diceRangeMax": 77,
+		"totalAmount": 2800
+	},
+	"78": {
+		"diceRangeMin": 78,
+		"diceRangeMax": 78,
+		"totalAmount": 3000
+	},
+	"79": {
+		"diceRangeMin": 79,
+		"diceRangeMax": 79,
+		"totalAmount": 3200
+	},
+	"80": {
+		"diceRangeMin": 80,
+		"diceRangeMax": 80,
+		"totalAmount": 3400
+	},
+	"81": {
+		"diceRangeMin": 81,
+		"diceRangeMax": 81,
+		"totalAmount": 3600
+	},
+	"82": {
+		"diceRangeMin": 82,
+		"diceRangeMax": 82,
+		"totalAmount": 3800
+	},
+	"83": {
+		"diceRangeMin": 83,
+		"diceRangeMax": 83,
+		"totalAmount": 3900
+	},
+	"84": {
+		"diceRangeMin": 84,
+		"diceRangeMax": 84,
+		"totalAmount": 4200
+	},
+	"85": {
+		"diceRangeMin": 85,
+		"diceRangeMax": 85,
+		"totalAmount": 4300
+	},
+	"86": {
+		"diceRangeMin": 86,
+		"diceRangeMax": 86,
+		"totalAmount": 4500
+	},
+	"87": {
+		"diceRangeMin": 87,
+		"diceRangeMax": 87,
+		"totalAmount": 4800
+	},
+	"88": {
+		"diceRangeMin": 88,
+		"diceRangeMax": 88,
+		"totalAmount": 4900
+	},
+	"89": {
+		"diceRangeMin": 89,
+		"diceRangeMax": 89,
+		"totalAmount": 5100
+	},
+	"90": {
+		"diceRangeMin": 90,
+		"diceRangeMax": 90,
+		"totalAmount": 5700
+	},
+	"91": {
+		"diceRangeMin": 91,
+		"diceRangeMax": 91,
+		"totalAmount": 5900
+	},
+	"92": {
+		"diceRangeMin": 92,
+		"diceRangeMax": 92,
+		"totalAmount": 6300
+	},
+	"93": {
+		"diceRangeMin": 93,
+		"diceRangeMax": 93,
+		"totalAmount": 6500
+	},
+	"94": {
+		"diceRangeMin": 94,
+		"diceRangeMax": 94,
+		"totalAmount": 7200
+	},
+	"95": {
+		"diceRangeMin": 95,
+		"diceRangeMax": 95,
+		"totalAmount": 7300
+	},
+	"96": {
+		"diceRangeMin": 96,
+		"diceRangeMax": 96,
+		"totalAmount": 8500
+	},
+	"97": {
+		"diceRangeMin": 97,
+		"diceRangeMax": 97,
+		"totalAmount": 8800
+	},
+	"98": {
+		"diceRangeMin": 98,
+		"diceRangeMax": 98,
+		"totalAmount": 9500
+	},
+	"99": {
+		"diceRangeMin": 99,
+		"diceRangeMax": 99,
+		"totalAmount": 10900
+	},
+	"100": {
+		"diceRangeMin": 100,
+		"diceRangeMax": 100,
+		"totalAmount": 12700
+	}
+}

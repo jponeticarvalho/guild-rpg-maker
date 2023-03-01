@@ -1,0 +1,648 @@
+{
+	"generalObjectives": {
+		"1-3": {
+			"name": "Atacar ou Destruir",
+			"diceRangeMin": 1,
+			"diceRangeMax": 3,
+			"objectiveKey": "attackObjectives"
+		},
+		"4-6": {
+			"name": "Encontrar ou recuperar",
+			"diceRangeMin": 4,
+			"diceRangeMax": 6,
+			"objectiveKey": "findObjectives"
+		},
+		"7-8": {
+			"name": "Capturar",
+			"diceRangeMin": 7,
+			"diceRangeMax": 8,
+			"objectiveKey": "captureObjectives"
+		},
+		"9-9": {
+			"name": "Proteger ou salvar",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"objectiveKey": "protectObjectives"
+		},
+		"10-11": {
+			"name": "Explorar ou descobrir",
+			"diceRangeMin": 10,
+			"diceRangeMax": 11,
+			"objectiveKey": "exploreObjectives"
+		},
+		"12-12": {
+			"name": "Entregar ou receber",
+			"diceRangeMin": 12,
+			"diceRangeMax": 12,
+			"objectiveKey": "deliveryObjectives"
+		},
+		"13-13": {
+			"name": "Investigar ou sabotar",
+			"diceRangeMin": 13,
+			"diceRangeMax": 13,
+			"objectiveKey": "investigateObjectives"
+		},
+		"14-18": {
+			"name": "Servicos perigosos",
+			"diceRangeMin": 14,
+			"diceRangeMax": 18,
+			"objectiveKey": "dangerJobObjectives"
+		},
+		"19-19": {
+			"name": "Religioso",
+			"diceRangeMin": 19,
+			"diceRangeMax": 19,
+			"objectiveKey": "churchObjectives"
+		},
+		"20+": {
+			"name": "Role duas vezes e use ambos",
+			"diceRangeMin": 20,
+			"diceRangeMax": 10000
+		}
+	},
+	"locationOfObjective": {
+		"1-11": {
+			"name": "Local ou territorio mundano",
+			"diceRangeMin": 1,
+			"diceRangeMax": 11
+		},
+		"12-12": {
+			"name": "Local magico",
+			"diceRangeMin": 12,
+			"diceRangeMax": 12
+		},
+		"13-13": {
+			"name": "Local sagrado",
+			"diceRangeMin": 13,
+			"diceRangeMax": 13
+		},
+		"14-15": {
+			"name": "Local profano",
+			"diceRangeMin": 14,
+			"diceRangeMax": 15
+		},
+		"16-20": {
+			"name": "Local estranho",
+			"diceRangeMin": 16,
+			"diceRangeMax": 20
+		}
+	},
+	"attackObjectives": {
+		"1": {
+			"name": "Uma criatura poderosa",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Uma organizacao",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "Uma comunidade",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Um artefato",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Uma criatura",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Um local ou territorio",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": true
+		},
+		"7": {
+			"name": "Uma ideia, alianca ou reputacao",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Recursos",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Um evento",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Role duas vezes e use ambos",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	},
+	"findObjectives": {
+		"1": {
+			"name": "Um artefato magico ou grimorio",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Uma ou mais criaturas desaparecidas",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "Um pergaminho unico/conhecimento perdido",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Algo que foi perdido ou roubado",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Uma fonte de recursos",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Ingredientes ou materiais",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "A entrada de uma ruina/masmorra",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Informacoes ou documentos importantes",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "A fonte de uma calamidade",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "A cura para uma maldição",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	},
+	"captureObjectives": {
+		"1": {
+			"name": "O lider de uma organizacao ou faccao",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Uma criatura rara",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "Uma criatura poderosa/influente",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Uma criatura infernal ou abissal",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Uma masmorra ou forte",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Um animal selvagem",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "Um veiculo ou comboio/caravana",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Os ocupantes de uma ruina proxima",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Um ou mais foras-da-lei",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Um tesouro",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	},
+	"protectObjectives": {
+		"1": {
+			"name": "Uma comunidade",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Um local ou territorio",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": true
+		},
+		"3": {
+			"name": "Uma criatura poderosa",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Um objeto importante",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Uma informação ou segredo",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Um tesouro",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "Anomalia magica",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Um veiculo ou comboio/caravana",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Um evento",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Prisioneiros",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	},
+	"exploreObjectives": {
+		"1": {
+			"name": "Uma ruina",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Um ambiente selvagem para mapea-lo",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "A verdade sobre uma lenda",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Zonas de magia morta ou selvagem",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Um covil ou masmorra",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Uma passagem misteriosa",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "Um plano/fenda dimensiona",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Resquicios de outra civilizacao",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Uma ilha exotica",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Um local ou territorio",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": true
+		}
+	},
+	"deliveryObjectives": {
+		"1": {
+			"name": "Uma mensagem ou documento importante/sigiloso",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Um artefato magico",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "Uma mercadoria em grande quantidade",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Uma planta rara muito delicada",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Um prisioneiro perigoso",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Suprimentos para uma comunidade",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "Um objeto de arte valioso",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Um mapa ou chave estranha",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Um caldeirao de pocao magica instavel",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Role novamente, mas a carga e secreta",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	},
+	"investigateObjectives": {
+		"1": {
+			"name": "Uma organizacao",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Enriquecimento duvidoso",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "Um assentamento que nao se tem noticias",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Um crime",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Um veiculo ou comboio/caravana",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Um nobre poderoso",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "Suposto posto avancado",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Anomalia magica ou ritual",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Eventos sobrenaturais estranhos",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Rumores suspeitos",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	},
+	"dangerJobObjectives": {
+		"1": {
+			"name": "Treinar criatura selvagem",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Recrutar criatura hostil",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "Curar enfermos extremamente contagiosos",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Negociar com criaturas do subterraneo",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Extrair recursos em local perigoso",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Transportar artefatos amaldiçoados",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "Mediar um conflito de longa data",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Construir em area selvagem",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Expurgar um local toxico ou putrido",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Desarmar armadilhas",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	},
+	"churchObjectives": {
+		"1": {
+			"name": "Expulsar mortos-vivos de uma tumba",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"needLocation": false
+		},
+		"2": {
+			"name": "Escoltar uma peregrinação por terras inospitas",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2,
+			"needLocation": false
+		},
+		"3": {
+			"name": "Destituir um culto maligno",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3,
+			"needLocation": false
+		},
+		"4": {
+			"name": "Purificar local profano",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4,
+			"needLocation": false
+		},
+		"5": {
+			"name": "Exorcismo de entidade poderosa",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"needLocation": false
+		},
+		"6": {
+			"name": "Ajudar um ressurgido",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"needLocation": false
+		},
+		"7": {
+			"name": "Dar suporte a um celestia",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7,
+			"needLocation": false
+		},
+		"8": {
+			"name": "Recuperar ou proteger local sagrado",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8,
+			"needLocation": false
+		},
+		"9": {
+			"name": "Buscar ingredientes para uma magia divina",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9,
+			"needLocation": false
+		},
+		"10": {
+			"name": "Investigar corrupção interna",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10,
+			"needLocation": false
+		}
+	}
+}

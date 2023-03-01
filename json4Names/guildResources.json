@@ -1,0 +1,68 @@
+{
+	"1": {
+		"name": "Em debito",
+		"diceRangeMin": 1,
+		"diceRangeMax": 2,
+		"goersModifier": -6
+	},
+	"2": {
+		"name": "Nenhum",
+		"diceRangeMin": 3,
+		"diceRangeMax": 5,
+		"goersModifier": -3
+	},
+	"3": {
+		"name": "Escassos",
+		"diceRangeMin": 6,
+		"diceRangeMax": 8,
+		"goersModifier": -2
+	},
+	"4": {
+		"name": "Escassos e obtidos com muito esforco e honestidade",
+		"diceRangeMin": 9,
+		"diceRangeMax": 9,
+		"goersModifier": -2
+	},
+	"5": {
+		"name": "Limitados",
+		"diceRangeMin": 10,
+		"diceRangeMax": 12,
+		"goersModifier": 0
+	},
+	"6": {
+		"name": "Suficientes",
+		"diceRangeMin": 13,
+		"diceRangeMax": 15,
+		"goersModifier": 2
+	},
+	"7": {
+		"name": "Excedentes",
+		"diceRangeMin": 16,
+		"diceRangeMax": 16,
+		"goersModifier": 3
+	},
+	"8": {
+		"name": "Excedentes mas alimenta fins malignos",
+		"diceRangeMin": 17,
+		"diceRangeMax": 17,
+		"goersModifier": 3
+	},
+	"9": {
+		"name": "Abundantes, porem quase todos vindos do governo de um assentamento proximo",
+		"diceRangeMin": 18,
+		"diceRangeMax": 19,
+		"goersModifier": 6
+	},
+	"10": {
+		"name": "Abundantes",
+		"diceRangeMin": 20,
+		"diceRangeMax": 20,
+		"goersModifier": 6
+	},
+	"11": {
+		"name": "Abundantes vindos de muitos anos de servico",
+		"diceRangeMin": 21,
+		"diceRangeMax": 1000,
+		"goersModifier": 6
+	}
+}

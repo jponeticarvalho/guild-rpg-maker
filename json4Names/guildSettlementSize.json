@@ -1,0 +1,306 @@
+{
+	"1": {
+		"name": "Lugarejo",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"noticeBoardDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		}
+	},
+	"2": {
+		"name": "Povoado",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"noticeBoardDice": {
+			"diceAmount": 2,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		}
+	},
+	"3": {
+		"name": "Aldeia",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"noticeBoardDice": {
+			"diceAmount": 2,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 0
+		}
+	},
+	"4": {
+		"name": "Vilarejo",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		},
+		"noticeBoardDice": {
+			"diceAmount": 3,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		}
+	},
+	"5": {
+		"name": "Vila grande",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		},
+		"noticeBoardDice": {
+			"diceAmount": 4,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		}
+	},
+	"6": {
+		"name": "Cidadela",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		},
+		"noticeBoardDice": {
+			"diceAmount": 5,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 0
+		}
+	},
+	"7": {
+		"name": "Cidade grande",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 4
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"noticeBoardDice": {
+			"diceAmount": 6,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 2
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		}
+	},
+	"8": {
+		"name": "Metropole",
+		"structureDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 8
+		},
+		"goersDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 5
+		},
+		"noticeBoardDice": {
+			"diceAmount": 8,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newOldNoticeDice": {
+			"diceAmount": 0,
+			"diceType": 0,
+			"diceBonus": 0
+		},
+		"logBookManyDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 4
+		},
+		"logBookWhoDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"newUserLogBookDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 5
+		}
+	}
+}

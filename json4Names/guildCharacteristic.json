@@ -1,0 +1,62 @@
+{
+	"1" : {
+		"name": "Antiga e mal conservada",
+		"diceRangeMin": 1,
+		"diceRangeMax": 2
+	},
+	"2" : {
+		"name": "Suja e desorganizada",
+		"diceRangeMin": 3,
+		"diceRangeMax": 4
+	},
+	"3" : {
+		"name": "Bem organizada e limpa",
+		"diceRangeMin": 5,
+		"diceRangeMax": 8
+	},
+	"4" : {
+		"name": "Recem-construida",
+		"diceRangeMin": 9,
+		"diceRangeMax": 9
+	},
+	"5" : {
+		"name": "Dentro de um calabouco",
+		"diceRangeMin": 10,
+		"diceRangeMax": 10
+	},
+	"6" : {
+		"name": "Junto a sede do governo local",
+		"diceRangeMin": 11,
+		"diceRangeMax": 13
+	},
+	"7" : {
+		"name": "Elegante, funcionarios arrogantes",
+		"diceRangeMin": 14,
+		"diceRangeMax": 15
+	},
+	"8" : {
+		"name": "Afastada do assentamento",
+		"diceRangeMin": 16,
+		"diceRangeMax": 17
+	},
+	"9" : {
+		"name": "Tambem usada como museu",
+		"diceRangeMin": 18,
+		"diceRangeMax": 18
+	},
+	"10" : {
+		"name": "Junto a um acervo de conhecimento",
+		"diceRangeMin": 19,
+		"diceRangeMax": 19
+	},
+	"11" : {
+		"name": "Engenhosamente moderna",
+		"diceRangeMin": 20,
+		"diceRangeMax": 20
+	},
+	"12" : {
+		"name": "Modernidade magica",
+		"diceRangeMin": 21,
+		"diceRangeMax": 1000
+	}
+}

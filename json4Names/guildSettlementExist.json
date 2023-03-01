@@ -1,0 +1,16 @@
+{
+	"1": {
+		"name" 				: "Assentamento humano",
+		"isHuman"			: true,
+		"existRangeMin"		: 8,
+		"existRangeMax"		: 1000,
+		"matrixRangeMin"	: 21,
+		"matrixRangeMax"	: 1000
+	},
+	"2": {
+		"name"				: "Assentamento nao humano",
+		"isHuman"			: false,
+		"existRangeMin"		: 21,
+		"existRangeMax"		: 1000
+	}
+}

@@ -1,0 +1,194 @@
+{
+	"1": {
+		"name": "Funcionario despreparado",
+		"amount": {
+			"hasDice": false,
+			"value": 1
+		},
+		"diceRangeMin": 1,
+		"diceRangeMax": 1,
+		"goersModifier": -1,
+		"contractModifier": -1,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": -2
+		}
+	},
+	"2": {
+		"name": "Funcionario despreparado",
+		"amount": {
+			"hasDice": true,
+			"diceAmount": 1,
+			"diceType": 4,
+			"diceBonus": 0
+		},
+		"diceRangeMin": 2,
+		"diceRangeMax": 4,
+		"goersModifier": -1,
+		"contractModifier": -1,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": -2
+		}
+	},
+	"3": {
+		"name": "Funcionario despreparado",
+		"amount": {
+			"hasDice": true,
+			"diceAmount": 1,
+			"diceType": 4,
+			"diceBonus": 2
+		},
+		"diceRangeMin": 5,
+		"diceRangeMax": 6,
+		"goersModifier": -1,
+		"contractModifier": -1,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": -2
+		}
+	},
+	"4": {
+		"name": "Funcionario experiente",
+		"amount": {
+			"hasDice": false,
+			"value": 1
+		},
+		"diceRangeMin": 7,
+		"diceRangeMax": 9,
+		"goersModifier": 1,
+		"contractModifier": 1,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 2
+		}
+	},
+	"5": {
+		"name": "Membros do clero",
+		"amount": {
+			"hasDice": true,
+			"diceAmount": 1,
+			"diceType": 4,
+			"diceBonus": 1
+		},
+		"diceRangeMin": 10,
+		"diceRangeMax": 10,
+		"goersModifier": 0,
+		"contractModifier": 0,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 0
+		}
+	},
+	"6": {
+		"name": "ex-Membros da guilda",
+		"amount": {
+			"hasDice": true,
+			"diceAmount": 1,
+			"diceType": 4,
+			"diceBonus": 1
+		},
+		"diceRangeMin": 11,
+		"diceRangeMax": 12,
+		"goersModifier": 0,
+		"contractModifier": 0,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 0
+		}
+	},
+	"7": {
+		"name": "Nobre e seus servicais",
+		"amount": {
+			"hasDice": false,
+			"value": 1
+		},
+		"diceRangeMin": 13,
+		"diceRangeMax": 14,
+		"goersModifier": 0,
+		"contractModifier": 0,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 0
+		}
+	},
+	"8": {
+		"name": "Aventureiro pagando dividas",
+		"amount": {
+			"hasDice": false,
+			"value": 1
+		},
+		"diceRangeMin": 15,
+		"diceRangeMax": 15,
+		"goersModifier": 0,
+		"contractModifier": 0,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 0
+		}
+	},
+	"9": {
+		"name": "Experiente explorador",
+		"amount": {
+			"hasDice": false,
+			"value": 1
+		},
+		"diceRangeMin": 16,
+		"diceRangeMax": 17,
+		"goersModifier": 0,
+		"contractModifier": 0,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 0
+		}
+	},
+	"10": {
+		"name": "Animal falante",
+		"amount": {
+			"hasDice": false,
+			"value": 1
+		},
+		"diceRangeMin": 19,
+		"diceRangeMax": 19,
+		"goersModifier": 0,
+		"contractModifier": 0,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 0
+		}
+	},
+	"11": {
+		"name": "ex-Aventureiros",
+		"amount": {
+			"hasDice": true,
+			"diceAmount": 1,
+			"diceType": 4,
+			"diceBonus": 0
+		},
+		"diceRangeMin": 20,
+		"diceRangeMax": 20,
+		"goersModifier": 0,
+		"contractModifier": 0,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 0
+		}
+	},
+	"12": {
+		"name": "Funcionarios experientes",
+		"amount": {
+			"hasDice": true,
+			"diceAmount": 1,
+			"diceType": 6,
+			"diceBonus": 3
+		},
+		"diceRangeMin": 21,
+		"diceRangeMax": 1000,
+		"goersModifier": 1,
+		"contractModifier": 1,
+		"rewardModifier": {
+			"valeuMod": 0,
+			"rewardMod": 2
+		}
+	}
+}

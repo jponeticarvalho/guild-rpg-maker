@@ -1,0 +1,502 @@
+{
+	"1": {
+		"localidade": "Castelo",
+		"objeto": "Espada",
+		"qualidade": "Eterno"
+	},
+	"2": {
+		"localidade": "Palacio",
+		"objeto": "Calice",
+		"qualidade": "Imortal"
+	},
+	"3": {
+		"localidade": "Templo",
+		"objeto": "Orbe",
+		"qualidade": "Perdido"
+	},
+	"4": {
+		"localidade": "Floresta",
+		"objeto": "Coroa",
+		"qualidade": "Sombrio"
+	},
+	"5": {
+		"localidade": "Pantano",
+		"objeto": "Joia",
+		"qualidade": "Dourado"
+	},
+	"6": {
+		"localidade": "Montanha",
+		"objeto": "Gema",
+		"qualidade": "Esmeralda"
+	},
+	"7": {
+		"localidade": "Cidadela",
+		"objeto": "Elmo",
+		"qualidade": "Sanciente"
+	},
+	"8": {
+		"localidade": "Piramide",
+		"objeto": "Bau",
+		"qualidade": "Divino"
+	},
+	"9": {
+		"localidade": "Tumba",
+		"objeto": "Casulo",
+		"qualidade": "Mortal"
+	},
+	"10": {
+		"localidade": "Deserto",
+		"objeto": "Forja",
+		"qualidade": "Subterraneo"
+	},
+	"11": {
+		"localidade": "Selva",
+		"objeto": "Gerador",
+		"qualidade": "Selvagem"
+	},
+	"12": {
+		"localidade": "Torre",
+		"objeto": "Globo",
+		"qualidade": "Onirico"
+	},
+	"13": {
+		"localidade": "Forte",
+		"objeto": "Urna",
+		"qualidade": "Batraquio"
+	},
+	"14": {
+		"localidade": "Refugio",
+		"objeto": "Relicario",
+		"qualidade": "Esquecido"
+	},
+	"15": {
+		"localidade": "Saloes",
+		"objeto": "Martelo",
+		"qualidade": "Proibido"
+	},
+	"16": {
+		"localidade": "Planicies",
+		"objeto": "Escudo",
+		"qualidade": "Das Trevas"
+	},
+	"17": {
+		"localidade": "Colinas",
+		"objeto": "Cajado",
+		"qualidade": "Do Caos"
+	},
+	"18": {
+		"localidade": "Abismo",
+		"objeto": "Capa",
+		"qualidade": "Da Ordem"
+	},
+	"19": {
+		"localidade": "Penhasco",
+		"objeto": "Monoculos",
+		"qualidade": "Psiquico"
+	},
+	"20": {
+		"localidade": "Cidade",
+		"objeto": "Sandalias",
+		"qualidade": "Prateado"
+	},
+	"21": {
+		"localidade": "Ruinas",
+		"objeto": "Bracadeiras",
+		"qualidade": "Sangrento"
+	},
+	"22": {
+		"localidade": "Fortaleza",
+		"objeto": "Boton",
+		"qualidade": "Lendario"
+	},
+	"23": {
+		"localidade": "Ilha",
+		"objeto": "Anel",
+		"qualidade": "Imprevisto"
+	},
+	"24": {
+		"localidade": "Arquipelago",
+		"objeto": "Tiara",
+		"qualidade": "Profana"
+	},
+	"25": {
+		"localidade": "Caverna",
+		"objeto": "Luvas",
+		"qualidade": "Vivo"
+	},
+	"26": {
+		"localidade": "Abadia",
+		"objeto": "Manoplas",
+		"qualidade": "Imovel"
+	},
+	"27": {
+		"localidade": "Ninho",
+		"objeto": "Botas",
+		"qualidade": "Escarlate"
+	},
+	"28": {
+		"localidade": "Covil",
+		"objeto": "Lira",
+		"qualidade": "Condenado"
+	},
+	"29": {
+		"localidade": "Hospicio",
+		"objeto": "Harpa",
+		"qualidade": "Flutuante"
+	},
+	"30": {
+		"localidade": "Bazar",
+		"objeto": "Trombeta",
+		"qualidade": "Imensa"
+	},
+	"31": {
+		"localidade": "Albergue",
+		"objeto": "Chifre",
+		"qualidade": "Mecanico"
+	},
+	"32": {
+		"localidade": "Pradarias",
+		"objeto": "Tomo",
+		"qualidade": "Secreto"
+	},
+	"33": {
+		"localidade": "Ponte",
+		"objeto": "Livro",
+		"qualidade": "Oculto"
+	},
+	"34": {
+		"localidade": "Mausoleu",
+		"objeto": "Grimorio",
+		"qualidade": "Das Estrelas"
+	},
+	"35": {
+		"localidade": "Circulo",
+		"objeto": "Carta",
+		"qualidade": "Cosmico"
+	},
+	"36": {
+		"localidade": "Desfiladeiro",
+		"objeto": "Coracao",
+		"qualidade": "Mutante"
+	},
+	"37": {
+		"localidade": "Carnaval",
+		"objeto": "Olhos",
+		"qualidade": "Terrivel"
+	},
+	"38": {
+		"localidade": "Catedral",
+		"objeto": "Estatuas",
+		"qualidade": "ultimo"
+	},
+	"39": {
+		"localidade": "Porao",
+		"objeto": "Pilares",
+		"qualidade": "Enfeiticado"
+	},
+	"40": {
+		"localidade": "Capela",
+		"objeto": "Fonte",
+		"qualidade": "Rastejante"
+	},
+	"41": {
+		"localidade": "Altar",
+		"objeto": "arvore",
+		"qualidade": "De Outro Mundo"
+	},
+	"42": {
+		"localidade": "Igreja",
+		"objeto": "Arcos",
+		"qualidade": "Artificial"
+	},
+	"43": {
+		"localidade": "Mosteiro",
+		"objeto": "Sino",
+		"qualidade": "Silencioso"
+	},
+	"44": {
+		"localidade": "Cabana",
+		"objeto": "Colar",
+		"qualidade": "Inimaginavel"
+	},
+	"45": {
+		"localidade": "Coliseu",
+		"objeto": "Arca",
+		"qualidade": "Inefavel"
+	},
+	"46": {
+		"localidade": "Corte",
+		"objeto": "Cranio",
+		"qualidade": "Estranho"
+	},
+	"47": {
+		"localidade": "Planeta",
+		"objeto": "Garras",
+		"qualidade": "Uivante"
+	},
+	"48": {
+		"localidade": "Plano",
+		"objeto": "Presas",
+		"qualidade": "Prismatico"
+	},
+	"49": {
+		"localidade": "Dimensao",
+		"objeto": "Lanca",
+		"qualidade": "Titanico"
+	},
+	"50": {
+		"localidade": "Cratera",
+		"objeto": "Machado",
+		"qualidade": "Desconhecido"
+	},
+	"51": {
+		"localidade": "Cripta",
+		"objeto": "Luneta",
+		"qualidade": "Misterioso"
+	},
+	"52": {
+		"localidade": "Semiplano",
+		"objeto": "Vaso",
+		"qualidade": "Draconico"
+	},
+	"53": {
+		"localidade": "Dominio",
+		"objeto": "Elixir",
+		"qualidade": "Impiedoso"
+	},
+	"54": {
+		"localidade": "Cupula",
+		"objeto": "Fruto",
+		"qualidade": "Cruel"
+	},
+	"55": {
+		"localidade": "Masmorra",
+		"objeto": "Rosa",
+		"qualidade": "Sadico"
+	},
+	"56": {
+		"localidade": "Morada",
+		"objeto": "Lotus",
+		"qualidade": "Canibal"
+	},
+	"57": {
+		"localidade": "Santuario",
+		"objeto": "Flor",
+		"qualidade": "Extraplanar"
+	},
+	"58": {
+		"localidade": "Fazenda",
+		"objeto": "Cerebro",
+		"qualidade": "Sem Cor"
+	},
+	"59": {
+		"localidade": "Fundicao",
+		"objeto": "Amuleto",
+		"qualidade": "Morto-vivo"
+	},
+	"60": {
+		"localidade": "Galeao",
+		"objeto": "Simbolo",
+		"qualidade": "De Cristal"
+	},
+	"61": {
+		"localidade": "Galerias",
+		"objeto": "Pergaminho",
+		"qualidade": "Flamejante"
+	},
+	"62": {
+		"localidade": "Navio",
+		"objeto": "Mapa",
+		"qualidade": "Gelido"
+	},
+	"63": {
+		"localidade": "Jardim",
+		"objeto": "Chave",
+		"qualidade": "Metalico"
+	},
+	"64": {
+		"localidade": "Quartel",
+		"objeto": "Cadeado",
+		"qualidade": "Espacial"
+	},
+	"65": {
+		"localidade": "Salao",
+		"objeto": "idolo",
+		"qualidade": "Maculado"
+	},
+	"66": {
+		"localidade": "Bosque",
+		"objeto": "Estatueta",
+		"qualidade": "Milenar"
+	},
+	"67": {
+		"localidade": "Gruta",
+		"objeto": "Tentaculos",
+		"qualidade": "Voador"
+	},
+	"68": {
+		"localidade": "Porto",
+		"objeto": "Mar",
+		"qualidade": "Das Profundezas"
+	},
+	"69": {
+		"localidade": "Incubadora",
+		"objeto": "Trono",
+		"qualidade": "Abissal"
+	},
+	"70": {
+		"localidade": "Abrigo",
+		"objeto": "Cetro",
+		"qualidade": "Celeste"
+	},
+	"71": {
+		"localidade": "Colmeia",
+		"objeto": "Manto",
+		"qualidade": "Medonho"
+	},
+	"72": {
+		"localidade": "Casa",
+		"objeto": "Corselete",
+		"qualidade": "Enigmatico"
+	},
+	"73": {
+		"localidade": "Toca",
+		"objeto": "Brincos",
+		"qualidade": "Implacavel"
+	},
+	"74": {
+		"localidade": "Choupana",
+		"objeto": "Incensario",
+		"qualidade": "Desumano"
+	},
+	"75": {
+		"localidade": "Canal",
+		"objeto": "Ovo",
+		"qualidade": "Iridescente"
+	},
+	"76": {
+		"localidade": "Canil",
+		"objeto": "Piscina",
+		"qualidade": "Invisivel"
+	},
+	"77": {
+		"localidade": "Labirinto",
+		"objeto": "Lagoa",
+		"qualidade": "Enevoado"
+	},
+	"78": {
+		"localidade": "Sepultura",
+		"objeto": "Involucro",
+		"qualidade": "Escuro"
+	},
+	"79": {
+		"localidade": "Farol",
+		"objeto": "Receptaculo",
+		"qualidade": "Ardente"
+	},
+	"80": {
+		"localidade": "Pousada",
+		"objeto": "Lampada",
+		"qualidade": "Sufocante"
+	},
+	"81": {
+		"localidade": "Mansao",
+		"objeto": "Cuba",
+		"qualidade": "Bizarro"
+	},
+	"82": {
+		"localidade": "Solar",
+		"objeto": "Cubo",
+		"qualidade": "Invertido"
+	},
+	"83": {
+		"localidade": "Charcos",
+		"objeto": "Dados",
+		"qualidade": "Afortunado"
+	},
+	"84": {
+		"localidade": "Obelisco",
+		"objeto": "Icosaedro",
+		"qualidade": "Azarado"
+	},
+	"85": {
+		"localidade": "Observatorio",
+		"objeto": "Lentes",
+		"qualidade": "Do Destino"
+	},
+	"86": {
+		"localidade": "Moinho",
+		"objeto": "Bussola",
+		"qualidade": "Pulsante"
+	},
+	"87": {
+		"localidade": "Minas",
+		"objeto": "Relogio",
+		"qualidade": "Moribundo"
+	},
+	"88": {
+		"localidade": "Monasterio",
+		"objeto": "Cha",
+		"qualidade": "Partido"
+	},
+	"89": {
+		"localidade": "Necropolis",
+		"objeto": "Moedas",
+		"qualidade": "Vagaroso"
+	},
+	"90": {
+		"localidade": "Monte",
+		"objeto": "Mascara",
+		"qualidade": "Obsidiano"
+	},
+	"91": {
+		"localidade": "Posto Avancado",
+		"objeto": "Molde",
+		"qualidade": "Dos Mil Olhos"
+	},
+	"92": {
+		"localidade": "Pavilhao",
+		"objeto": "Monumento",
+		"qualidade": "Tentacular"
+	},
+	"93": {
+		"localidade": "Pocos",
+		"objeto": "Escaravelho",
+		"qualidade": "Dos Mortos"
+	},
+	"94": {
+		"localidade": "Prisao",
+		"objeto": "Sarcofago",
+		"qualidade": "Maquiavelico"
+	},
+	"95": {
+		"localidade": "Fenda",
+		"objeto": "Maquina",
+		"qualidade": "Antigo"
+	},
+	"96": {
+		"localidade": "Laboratorio",
+		"objeto": "Totem",
+		"qualidade": "Ancestral"
+	},
+	"97": {
+		"localidade": "Espiral",
+		"objeto": "Espelho",
+		"qualidade": "Do Futuro"
+	},
+	"98": {
+		"localidade": "Biblioteca",
+		"objeto": "Esqueleto",
+		"qualidade": "Incorporeo"
+	},
+	"99": {
+		"localidade": "Muro",
+		"objeto": "Adaga",
+		"qualidade": "Faminto"
+	},
+	"100": {
+		"localidade": "Praias",
+		"objeto": "Caldeirao",
+		"qualidade": "Asqueroso"
+	}
+}

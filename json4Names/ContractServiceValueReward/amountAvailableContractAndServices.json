@@ -1,0 +1,223 @@
+{
+	"1": {
+		"diceRangeMin": 1,
+		"diceRangeMax": 4,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 0,
+					"diceType": 4,
+					"diceBonus": 0
+				},
+				"value": 1
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 1,
+					"diceType": 4,
+					"diceBonus": 1
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"2": {
+		"diceRangeMin": 5,
+		"diceRangeMax": 6,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 1,
+					"diceType": 4,
+					"diceBonus": 0
+				},
+				"value": 0
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 1,
+					"diceType": 4,
+					"diceBonus": 2
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"3": {
+		"diceRangeMin": 7,
+		"diceRangeMax": 9,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 0,
+					"diceType": 4,
+					"diceBonus": 0
+				},
+				"value": 1
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 1,
+					"diceType": 6,
+					"diceBonus": 2
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"4": {
+		"diceRangeMin": 10,
+		"diceRangeMax": 10,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 1,
+					"diceType": 64,
+					"diceBonus": 1
+				},
+				"value": 1
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 1,
+					"diceType": 4,
+					"diceBonus": 1
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"5": {
+		"name": "Quantidade cont. 2d6 serv. 1d4+2",
+		"diceRangeMin": 11,
+		"diceRangeMax": 11,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 2,
+					"diceType": 6,
+					"diceBonus": 0
+				},
+				"value": 0
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 1,
+					"diceType": 4,
+					"diceBonus": 2
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"6": {
+		"diceRangeMin": 12,
+		"diceRangeMax": 13,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 3,
+					"diceType": 6,
+					"diceBonus": 0
+				},
+				"value": 0
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 0,
+					"diceType": 4,
+					"diceBonus": 0
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"7": {
+		"diceRangeMin": 14,
+		"diceRangeMax": 16,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 2,
+					"diceType": 6,
+					"diceBonus": 2
+				},
+				"value": 0
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 2,
+					"diceType": 4,
+					"diceBonus": 1
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"8": {
+		"diceRangeMin": 17,
+		"diceRangeMax": 18,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 0,
+					"diceType": 4,
+					"diceBonus": 0
+				},
+				"value": 2
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 5,
+					"diceType": 6,
+					"diceBonus": 0
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"9": {
+		"diceRangeMin": 19,
+		"diceRangeMax": 19,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 3,
+					"diceType": 6,
+					"diceBonus": 0
+				},
+				"value": 0
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 3,
+					"diceType": 4,
+					"diceBonus": 0
+				},
+				"valeu": 0
+			}
+		}
+	},
+	"10": {
+		"diceRangeMin": 20,
+		"diceRangeMax": 1000,
+		"amount": {
+			"contract": {
+				"contractDice": {
+					"diceAmount": 5,
+					"diceType": 6,
+					"diceBonus": 0
+				},
+				"value": 0
+			},
+			"service": {
+				"serviceDice": {
+					"diceAmount": 0,
+					"diceType": 4,
+					"diceBonus": 0
+				},
+				"valeu": 0
+			}
+		}
+	}
+}

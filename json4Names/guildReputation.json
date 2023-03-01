@@ -1,0 +1,182 @@
+{
+	"govern": {
+		"1": {
+			"name": "Pessima",
+			"diceRangeMin": 1,
+			"diceRangeMax": 2,
+			"resourceModifier": -3,
+			"rewardModifier": {
+				"valeuMod": -25,
+				"rewardMod": -25
+			},
+			"contractorModifier": -4
+		},
+		"2": {
+			"name": "Ruim",
+			"diceRangeMin": 3,
+			"diceRangeMax": 4,
+			"resourceModifier": -2,
+			"rewardModifier": {
+				"valeuMod": -15,
+				"rewardMod": -20
+			},
+			"contractorModifier": -2
+		},
+		"3": {
+			"name": "Ruim, mas tentam manter a cordialidade",
+			"diceRangeMin": 5,
+			"diceRangeMax": 8,
+			"resourceModifier": -2,
+			"rewardModifier": {
+				"valeuMod": -15,
+				"rewardMod": -20
+			},
+			"contractorModifier": -2
+		},
+		"4": {
+			"name": "Diplomatica",
+			"diceRangeMin": 9,
+			"diceRangeMax": 14,
+			"resourceModifier": -1,
+			"rewardModifier": {
+				"valeuMod": -10,
+				"rewardMod": -15
+			},
+			"contractorModifier": 0
+		},
+		"5": {
+			"name": "Boa, mas o governo tenta mina-los secretamente",
+			"diceRangeMin": 15,
+			"diceRangeMax": 15,
+			"resourceModifier": 1,
+			"rewardModifier": {
+				"valeuMod": -5,
+				"rewardMod": -5
+			},
+			"contractorModifier": 1
+		},
+		"6": {
+			"name": "Boa",
+			"diceRangeMin": 16,
+			"diceRangeMax": 17,
+			"resourceModifier": 1,
+			"rewardModifier": {
+				"valeuMod": -5,
+				"rewardMod": -5
+			},
+			"contractorModifier": 1
+		},
+		"7": {
+			"name": "Muito boa, cooperam frequentemente",
+			"diceRangeMin": 18,
+			"diceRangeMax": 20,
+			"resourceModifier": 2,
+			"rewardModifier": {
+				"valeuMod": 5,
+				"rewardMod": 5
+			},
+			"contractorModifier": 2
+		},
+		"8": {
+			"name": "Excelente, governo e guilda sao quase como um",
+			"diceRangeMin": 21,
+			"diceRangeMax": 1000,
+			"resourceModifier": 3,
+			"rewardModifier": {
+				"valeuMod": 5,
+				"rewardMod": 10
+			},
+			"contractorModifier": 5
+		}
+	},
+	"population": {
+		"1": {
+			"name": "Pessima, puro odio",
+			"diceRangeMin": 1,
+			"diceRangeMax": 2,
+			"resourceModifier": -3,
+			"rewardModifier": {
+				"valeuMod": 5,
+				"rewardMod": -20
+			},
+			"contractorModifier": 4
+		},
+		"2": {
+			"name": "Ruim, vistos como mercenarios",
+			"diceRangeMin": 3,
+			"diceRangeMax": 8,
+			"resourceModifier": -2,
+			"rewardModifier": {
+				"valeuMod": -10,
+				"rewardMod": -15
+			},
+			"contractorModifier": 2
+		},
+		"3": {
+			"name": "Ruim, so causam problemas",
+			"diceRangeMin": 9,
+			"diceRangeMax": 12,
+			"resourceModifier": -2,
+			"rewardModifier": {
+				"valeuMod": -10,
+				"rewardMod": -15
+			},
+			"contractorModifier": 2
+		},
+		"4": {
+			"name": "Opiniao dividida",
+			"diceRangeMin": 13,
+			"diceRangeMax": 14,
+			"resourceModifier": -1,
+			"rewardModifier": {
+				"valeuMod": -5,
+				"rewardMod": -10
+			},
+			"contractorModifier": 0
+		},
+		"5": {
+			"name": "Boa, ajudam com problemas",
+			"diceRangeMin": 15,
+			"diceRangeMax": 16,
+			"resourceModifier": 1,
+			"rewardModifier": {
+				"valeuMod": 1,
+				"rewardMod": -5
+			},
+			"contractorModifier": -1
+		},
+		"6": {
+			"name": "Boa, \"nos mantem seguros\"",
+			"diceRangeMin": 17,
+			"diceRangeMax": 18,
+			"resourceModifier": 1,
+			"rewardModifier": {
+				"valeuMod": 1,
+				"rewardMod": -5
+			},
+			"contractorModifier": -1
+		},
+		"7": {
+			"name": "Muito boa, \"sem eles estariamos perdidos\"",
+			"diceRangeMin": 19,
+			"diceRangeMax": 20,
+			"resourceModifier": 2,
+			"rewardModifier": {
+				"valeuMod": 5,
+				"rewardMod": 5
+			},
+			"contractorModifier": -2
+		},
+		"8": {
+			"name": "Excelente, a guilda faz o assentamento funcionar",
+			"diceRangeMin": 21,
+			"diceRangeMax": 1000,
+			"resourceModifier": 3,
+			"rewardModifier": {
+				"valeuMod": 5,
+				"rewardMod": 10
+			},
+			"contractorModifier": -5
+		}
+	}
+}

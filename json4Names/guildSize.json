@@ -1,0 +1,183 @@
+{
+	"1": {
+		"name": "Minusculo (3m x 1,5m)",
+		"diceRangeMin": 1,
+		"diceRangeMax": 2,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 4,
+			"diceBonus": 0
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		}
+	},
+	"2": {
+		"name": "Muito pequeno (4,5m x 3m)",
+		"diceRangeMin": 3,
+		"diceRangeMax": 5,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 6,
+			"diceBonus": 0
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		}
+	},
+	"3": {
+		"name": "Pequeno e modesto (6m x 6m)",
+		"diceRangeMin": 6,
+		"diceRangeMax": 6,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 6,
+			"diceBonus": 1
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		}
+	},
+	"4": {
+		"name": "Pequeno e confortavel (7,5m x 6m +1 andar)",
+		"diceRangeMin": 7,
+		"diceRangeMax": 8,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 6,
+			"diceBonus": 1
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 0
+		}
+	},
+	"5": {
+		"name": "Mediano e comum (9m x 9m)",
+		"diceRangeMin": 9,
+		"diceRangeMax": 9,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 2
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 4
+		}
+	},
+	"6": {
+		"name": "Mediano em dobro (10,5m x 9m +1 andar",
+		"diceRangeMin": 10,
+		"diceRangeMax": 14,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 8,
+			"diceBonus": 2
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 4
+		}
+	},
+	"7": {
+		"name": "Grande (12m x 12m)",
+		"diceRangeMin": 15,
+		"diceRangeMax": 16,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 10,
+			"diceBonus": 2
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 4
+		}
+	},
+	"8": {
+		"name": "Luxuosamente grande (12m x 12m +2 andares)",
+		"diceRangeMin": 17,
+		"diceRangeMax": 17,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 12,
+			"diceBonus": 4
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 5
+		}
+	},
+	"9": {
+		"name": "Enorme (15m x 15m +1 andar)",
+		"diceRangeMin": 18,
+		"diceRangeMax": 18,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 4
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 10
+		}
+	},
+	"10": {
+		"name": "Enorme e confortavel (15m x 15m +2 andares)",
+		"diceRangeMin": 19,
+		"diceRangeMax": 19,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 4
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 10
+		}
+	},
+	"11": {
+		"name": "Colossal (20m x 20m +1 andar)",
+		"diceRangeMin": 20,
+		"diceRangeMax": 20,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 8
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 10
+		}
+	},
+	"12": {
+		"name": "Colossal e primorosa (20m x 20m +2 andares)",
+		"diceRangeMin": 21,
+		"diceRangeMax": 1000,
+		"contractDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 10
+		},
+		"contractDistanceDice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 10
+		}
+	}
+
+}

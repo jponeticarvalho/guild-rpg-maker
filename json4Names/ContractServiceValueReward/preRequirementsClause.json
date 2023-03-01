@@ -1,0 +1,178 @@
+{
+	"diceDefinition": {
+		"1-20": {
+			"diceRangeMin": 1,
+			"diceRangeMax": 20,
+			"dice": {
+				"diceAmount": 1,
+				"diceType": 20,
+				"diceBonus": -10
+			}
+		},
+		"21-40": {
+			"diceRangeMin": 21,
+			"diceRangeMax": 40,
+			"dice": {
+				"diceAmount": 1,
+				"diceType": 20,
+				"diceBonus": -5
+			}
+		},
+		"41-60": {
+			"diceRangeMin": 41,
+			"diceRangeMax": 60,
+			"dice": {
+				"diceAmount": 1,
+				"diceType": 20,
+				"diceBonus": 0
+			}
+		},
+		"61-80": {
+			"diceRangeMin": 61,
+			"diceRangeMax": 80,
+			"dice": {
+				"diceAmount": 1,
+				"diceType": 20,
+				"diceBonus": 5
+			}
+		},
+		"81-100": {
+			"diceRangeMin": 81,
+			"diceRangeMax": 100,
+			"dice": {
+				"diceAmount": 1,
+				"diceType": 20,
+				"diceBonus": 10
+			}
+		}
+	},
+	"preRequirements": {
+		"1-5": {
+			"name": "Nenhum",
+			"diceRangeMin": 1,
+			"diceRangeMax": 5
+		},
+		"6-7": {
+			"name": "5 de renome",
+			"diceRangeMin": 6,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Um conjurador",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Pericia treinada que envolve força",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-11": {
+			"name": "10 de renome",
+			"diceRangeMin": 10,
+			"diceRangeMax": 11
+		},
+		"12-12": {
+			"name": "Pericia treinada que envolve destreza",
+			"diceRangeMin": 12,
+			"diceRangeMax": 12
+		},
+		"13-13": {
+			"name": "Pericia treinada que envolve sabedoria",
+			"diceRangeMin": 13,
+			"diceRangeMax": 13
+		},
+		"14-15": {
+			"name": "15 de renome",
+			"diceRangeMin": 14,
+			"diceRangeMax": 15
+		},
+		"16-16": {
+			"name": "Pericia treinada que envolve carisma",
+			"diceRangeMin": 16,
+			"diceRangeMax": 16
+		},
+		"17-17": {
+			"name": "Um conjurador arcano e um divino",
+			"diceRangeMin": 17,
+			"diceRangeMax": 17
+		},
+		"18-18": {
+			"name": "Pericia treinada que envolve inteligencia",
+			"diceRangeMin": 18,
+			"diceRangeMax": 18
+		},
+		"19-20": {
+			"name": "50 de renome",
+			"diceRangeMin": 19,
+			"diceRangeMax": 20
+		},
+		"21+": {
+			"name": "Role duas vezes e use ambos",
+			"diceRangeMin": 21,
+			"diceRangeMax": 10000
+		}
+	},
+	"clause": {
+		"1-7": {
+			"name": "Nenhuma",
+			"diceRangeMin": 1,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Nenhum inimigo deve ser morto",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Uma criatura especifica nao pode ser ferida",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-11": {
+			"name": "Um trofeu e exigido",
+			"diceRangeMin": 10,
+			"diceRangeMax": 11
+		},
+		"12-12": {
+			"name": "Proibido o uso de magia",
+			"diceRangeMin": 12,
+			"diceRangeMax": 12
+		},
+		"13-13": {
+			"name": "Outro grupo tem o mesmo contrato. Apenas o primeiro a completa-lo e agraciado com a recompensa",
+			"diceRangeMin": 13,
+			"diceRangeMax": 13
+		},
+		"14-14": {
+			"name": "Exterminar a fonte do problema",
+			"diceRangeMin": 14,
+			"diceRangeMax": 14
+		},
+		"15-16": {
+			"name": "Um supervisor deve ser protegido e acompanhar o contratado",
+			"diceRangeMin": 15,
+			"diceRangeMax": 16
+		},
+		"17-17": {
+			"name": "Um relatorio completo deve ser escrito ao concluir ocontrato",
+			"diceRangeMin": 17,
+			"diceRangeMax": 17
+		},
+		"18-19": {
+			"name": "Todo tesouro conquistado é de posse do contratante",
+			"diceRangeMin": 18,
+			"diceRangeMax": 19
+		},
+		"20-20": {
+			"name": "Sigilo absoluto",
+			"diceRangeMin": 20,
+			"diceRangeMax": 20
+		},
+		"21+": {
+			"name": "Role duas vezes e use ambos",
+			"diceRangeMin": 21,
+			"diceRangeMax": 10000
+		}
+	}
+}

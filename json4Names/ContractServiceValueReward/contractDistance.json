@@ -1,0 +1,62 @@
+{
+	"1-2": {
+		"name": "Um hexagono ou menos",
+		"diceRangeMin": 1,
+		"diceRangeMax": 2,
+		"valueRewardModifier": -20
+	},
+	"3-4": {
+		"name": "Dois hexagonos ou menos",
+		"diceRangeMin": 3,
+		"diceRangeMax": 4,
+		"valueRewardModifier": -15
+	},
+	"5-6": {
+		"name": "Tres hexagonos ou menos",
+		"diceRangeMin": 5,
+		"diceRangeMax": 6,
+		"valueRewardModifier": -10
+	},
+	"7-8": {
+		"name": "Dois hexagonos ou mais",
+		"diceRangeMin": 7,
+		"diceRangeMax": 8,
+		"valueRewardModifier": -5
+	},
+	"9-13": {
+		"name": "Tres hexagonos ou mais",
+		"diceRangeMin": 9,
+		"diceRangeMax": 13,
+		"valueRewardModifier": 0
+	},
+	"14-16": {
+		"name": "Quatro hexagonos ou mais",
+		"diceRangeMin": 14,
+		"diceRangeMax": 16,
+		"valueRewardModifier": 5
+	},
+	"17-18": {
+		"name": "Cinco hexagonos ou mais",
+		"diceRangeMin": 17,
+		"diceRangeMax": 18,
+		"valueRewardModifier": 10
+	},
+	"19-19": {
+		"name": "Seis hexagonos ou mais",
+		"diceRangeMin": 19,
+		"diceRangeMax": 19,
+		"valueRewardModifier": 12
+	},
+	"20-20": {
+		"name": "Sete hexagonos ou mais",
+		"diceRangeMin": 20,
+		"diceRangeMax": 20,
+		"valueRewardModifier": 14
+	},
+	"21+": {
+		"name": "Oito hexagonos ou mais",
+		"diceRangeMin": 21,
+		"diceRangeMax": 10000,
+		"valueRewardModifier": 20
+	}
+}

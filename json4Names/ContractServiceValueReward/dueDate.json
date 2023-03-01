@@ -1,0 +1,132 @@
+{
+	"1-1": {
+		"diceRangeMin": 1,
+		"diceRangeMax": 1,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 1,
+				"diceType": 4,
+				"diceBonus": 0
+			},
+			"diceMultiplier": 1,
+			"value": 0
+		}
+	},
+	"2-2": {
+		"diceRangeMin": 2,
+		"diceRangeMax": 2,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 0,
+				"diceType": 4,
+				"diceBonus": 0
+			},
+			"diceMultiplier": 1,
+			"value": 3
+		}
+	},
+	"3-3": {
+		"diceRangeMin": 3,
+		"diceRangeMax": 3,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 1,
+				"diceType": 4,
+				"diceBonus": 2
+			},
+			"diceMultiplier": 1,
+			"value": 0
+		}
+	},
+	"4-4": {
+		"diceRangeMin": 4,
+		"diceRangeMax": 4,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 1,
+				"diceType": 6,
+				"diceBonus": 1
+			},
+			"diceMultiplier": 1,
+			"value": 0
+		}
+	},
+	"5-5": {
+		"diceRangeMin": 5,
+		"diceRangeMax": 5,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 1,
+				"diceType": 8,
+				"diceBonus": 2
+			},
+			"diceMultiplier": 1,
+			"value": 0
+		}
+	},
+	"6-6": {
+		"diceRangeMin": 6,
+		"diceRangeMax": 6,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 1,
+				"diceType": 12,
+				"diceBonus": 2
+			},
+			"diceMultiplier": 1,
+			"value": 0
+		}
+	},
+	"7-8": {
+		"diceRangeMin": 7,
+		"diceRangeMax": 8,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 0,
+				"diceType": 4,
+				"diceBonus": 0
+			},
+			"diceMultiplier": 1,
+			"value": 7
+		}
+	},
+	"9-9": {
+		"diceRangeMin": 9,
+		"diceRangeMax": 9,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 1,
+				"diceType": 4,
+				"diceBonus": 1
+			},
+			"diceMultiplier": 7,
+			"value": 0
+		}
+	},
+	"10-10": {
+		"diceRangeMin": 10,
+		"diceRangeMax": 10,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 1,
+				"diceType": 20,
+				"diceBonus": 2
+			},
+			"diceMultiplier": 1,
+			"value": 0
+		}
+	},
+	"11+": {
+		"diceRangeMin": 11,
+		"diceRangeMax": 10000,
+		"amount": {
+			"dueDateDice": {
+				"diceAmount": 0,
+				"diceType": 4,
+				"diceBonus": 0
+			},
+			"diceMultiplier": 1,
+			"value": 10000
+		}
+	}
+}
