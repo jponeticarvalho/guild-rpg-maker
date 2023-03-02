@@ -113,7 +113,8 @@ class ContractMaker:
 		f = open("json4Names/ContractServiceValueReward/valueReward.json")
 		data = json.load(f)
 
-		diceResult = self.rollDice(self.guildJson["size"]["contractDice"])
+		#diceResult = self.rollDice(self.guildJson["size"]["contractDice"])
+		diceResult = self.dice.roll(1,100)
 		diceResultValue 	= diceResult
 		diceResultReward 	= diceResult
 
@@ -235,12 +236,23 @@ class ContractMaker:
 
 	def updateReward(self):
 
-		#TODO Aplicar os somatorios de dados de clausula e recompensa
+		f = open("json4Names/ContractServiceValueReward/valueReward.json")
+		data = json.load(f)
 
-		#TODO Multiplicação é acrescentada no numero Valor final e nao no numero do dado rolado
-		#diceResultValue	*= self.contratJson["difficulty"]["valueMultiplier"]
-		#diceResultReward 	*= self.contratJson["difficulty"]["rewardMultiplier"]
+		diceResultReward 	= self.contratJson["reward"]["rolledDice"] 
 
+		diceResultReward += 5* ( self.contratJson["clause"]["amount"] + self.contratJson["preRequirement"]["amount"] )
+
+		for i in data:
+			if diceResultReward in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
+				self.contratJson["reward"] = data[str(i)]
+				self.contratJson["reward"]["rolledDice"] = diceResultReward
+
+		self.contratJson["reward"]["totalAmount"] 	*= self.contratJson["difficulty"]["rewardMultiplier"]
+		self.contratJson["value"]["totalAmount"] 	*= self.contratJson["difficulty"]["valueMultiplier"]
+
+		self.contratJson["reward"]["totalAmount"] 	= int(self.contratJson["reward"]["totalAmount"])
+		self.contratJson["value"]["totalAmount"]	= int(self.contratJson["value"]["totalAmount"])
 		pass
 
 	def defContractor(self):
