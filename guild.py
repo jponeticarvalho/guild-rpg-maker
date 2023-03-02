@@ -55,6 +55,11 @@ class GuildMaker:
 		guildNameStr = "guild" + time_string
 		self.guildJson["fileName"] = guildNameStr
 
+		try:
+			os.mkdir("generatedGuild/")
+		except:
+			pass
+
 		guildPath = "generatedGuild/" + guildNameStr + "/"
 		try:
 			os.mkdir(guildPath)
