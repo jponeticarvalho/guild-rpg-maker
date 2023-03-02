@@ -205,12 +205,19 @@ class ContractviewerApp:
 
 		display_info = json.loads("{}")
 
-		display_info["Objetivo"] = data["objective"]["generalObjectives"]['1']["name"]
-		display_info["Sub Objetivo 1"] = data["objective"][data["objective"]["generalObjectives"]["1"]["objectiveKey"]]["1"]["name"]
+		dataObjective = data["objective"]["generalObjectives"]
+		amountOfObjectives = 0
+		for i in dataObjective:
+			if dataObjective[str(i)]["diceRangeMin"] != 20:
+				amountOfObjectives += 1
+				display_info["Objetivo "+str(amountOfObjectives)] 		= dataObjective[str(i)]["name"]
+				display_info["Sub Objetivo "+str(amountOfObjectives)] 	= data["objective"][dataObjective[str(i)]["objectiveKey"]][str(i)]["name"]
 		display_info["TipoContrato"] = data["contractType"]["name"]
 		display_info["Contratante"] = data["contractors"]["name"]
-		display_info["Clausula"] = data["clause"]["1"]["name"]
-		display_info["PreRequisito"] = data["preRequirement"]["1"]["name"]
+		for i in range(1, data["clause"]["amount"] + 1):
+			display_info["Clausula "+str(i)] = data["clause"][str(i)]["name"]
+		for i in range(1, data["preRequirement"]["amount"] + 1):
+			display_info["PreRequisito "+str(i)] = data["preRequirement"][str(i)]["name"]
 		display_info["Distancia"] = data["distance"]["name"]
 		display_info["Dificuldade"] = data["difficulty"]["name"]
 		display_info["Valor"] = data["value"]["totalAmount"]
