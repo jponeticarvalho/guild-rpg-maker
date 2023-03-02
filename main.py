@@ -214,10 +214,16 @@ class ContractviewerApp:
 				display_info["Sub Objetivo "+str(amountOfObjectives)] 	= data["objective"][dataObjective[str(i)]["objectiveKey"]][str(i)]["name"]
 		display_info["TipoContrato"] = data["contractType"]["name"]
 		display_info["Contratante"] = data["contractors"]["name"]
+		amountOfObjects = 0
 		for i in range(1, data["clause"]["amount"] + 1):
-			display_info["Clausula "+str(i)] = data["clause"][str(i)]["name"]
+			if data["clause"][str(i)]["diceRangeMin"] < 21:
+				amountOfObjects += 1
+				display_info["Clausula "+str(amountOfObjects)] = data["clause"][str(i)]["name"]
+		amountOfObjects = 0
 		for i in range(1, data["preRequirement"]["amount"] + 1):
-			display_info["PreRequisito "+str(i)] = data["preRequirement"][str(i)]["name"]
+			if data["preRequirement"][str(i)]["diceRangeMin"] < 21:
+				amountOfObjects += 1
+				display_info["PreRequisito "+str(amountOfObjects)] = data["preRequirement"][str(i)]["name"]
 		display_info["Distancia"] = data["distance"]["name"]
 		display_info["Dificuldade"] = data["difficulty"]["name"]
 		display_info["Valor"] = data["value"]["totalAmount"]
