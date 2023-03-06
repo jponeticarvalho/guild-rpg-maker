@@ -4,6 +4,7 @@ import tkinter.ttk as ttk
 import json
 import os
 from contracts import ContractMaker
+from guild import GuildMaker
 
 class MyOptionMenu(tk.OptionMenu):
 	def __init__(self, *args, **kw):
@@ -23,7 +24,46 @@ class ContractviewerApp:
 		self.Gerador = tk.Tk() if master is None else tk.Toplevel(master)
 		self.Gerador.configure(height=600, padx=10, pady=10, width=800)
 		self.Gerador.resizable(False, False)
-		self.main_frame = tk.Frame(self.Gerador)
+		notebook1 = ttk.Notebook(self.Gerador)
+		notebook1.configure(height=680, width=820)
+		frame8 = tk.Frame(notebook1)
+		frame8.configure(height=200, width=200)
+		self.createGuildBtn = tk.Button(frame8)
+		self.createGuildBtn.configure(justify="left", text='Gerar Guilda')
+		self.createGuildBtn.grid(column=0, pady=5, row=1)
+		self.createGuildBtn.configure(command=self.createGuildBtnCallback)
+		self.guildShowerText = tk.Text(frame8)
+		self.guildShowerText.configure(height=35, width=100)
+		self.guildShowerText.grid(column=0, padx=8, pady=5, row=2)
+		label2 = tk.Label(frame8)
+		label2.configure(text='powered by twitch.tv/owneti')
+		label2.grid(column=0, row=3)
+		frame10 = tk.Frame(frame8)
+		frame10.configure(height=200, width=200)
+		frame13 = tk.Frame(frame10)
+		frame13.configure(height=200, width=200)
+		self.sizeStrVar = tk.StringVar(
+			value='Selecione o Tamanho do assentamento')
+		__values = ['tamanhos']
+		self.sizeOptMenu = MyOptionMenu(
+			frame13, self.sizeStrVar, *__values, command=None)
+		self.sizeOptMenu.pack(padx=20, pady=5)
+		self.sizeOptMenu.setVar(myOptMenuVar=self.sizeStrVar)
+		frame13.grid(column=0, row=0)
+		frame15 = tk.Frame(frame10)
+		frame15.configure(height=200, width=200)
+		self.isHumanBoolVar = tk.BooleanVar()
+		self.isHumanSettCheckBoxx = tk.Checkbutton(frame15)
+		self.isHumanSettCheckBoxx.configure(
+            cursor="arrow",
+            text='Assentamento humano?',
+            variable=self.isHumanBoolVar)
+		self.isHumanSettCheckBoxx.pack(padx=20, pady=5)
+		frame15.grid(column=1, row=0)
+		frame10.grid(column=0, pady=5, row=0)
+		frame8.pack()
+		notebook1.add(frame8, text='Gerar Guilda')
+		self.main_frame = tk.Frame(notebook1)
 		self.main_frame.configure(height=200, width=200)
 		self.guildSelectFrame = ttk.Frame(self.main_frame)
 		self.guildSelectFrame.configure(height=600, width=800)
@@ -39,8 +79,8 @@ class ContractviewerApp:
 			self.guildNameStr,
 			*__values,
 			command=self.guildSelectorCallback)
-		self.guildSlectOpMenu.setVar(myOptMenuVar=self.guildNameStr)
 		self.guildSlectOpMenu.grid(column=0, padx=20, pady="10 5", row=0)
+		self.guildSlectOpMenu.setVar(myOptMenuVar=self.guildNameStr)
 		frame5.grid(column=0, row=0)
 		self.guildSelectFrame.pack()
 		frame7 = ttk.Frame(self.main_frame)
@@ -63,6 +103,11 @@ class ContractviewerApp:
 			sticky="nse")
 		frame1 = ttk.Frame(frame7)
 		frame1.configure(height=200, width=200)
+		self.createContractBtn = tk.Button(frame1)
+		self.createContractBtn.configure(text='Gerar Contrato')
+		self.createContractBtn.grid(column=1, padx=20, pady="8 5", row=0)
+		self.createContractBtn.configure(
+			command=self.createContractBtnCallback)
 		self.contractOptMenuVar = tk.StringVar(value='Contratos')
 		__values = ['Contratos']
 		self.contractOptMenu = MyOptionMenu(
@@ -70,16 +115,15 @@ class ContractviewerApp:
 			self.contractOptMenuVar,
 			*__values,
 			command=self.contractsSelectorCallback)
+		self.contractOptMenu.grid(column=0, row=0)
 		self.contractOptMenu.setVar(myOptMenuVar=self.contractOptMenuVar)
-		self.contractOptMenu.grid(column=0, padx=20, pady="8 5", row=0)
-		self.createContractBtn = tk.Button(frame1)
-		self.createContractBtn.configure(text='Gerar Contrato')
-		self.createContractBtn.grid(column=1, padx=20, pady="8 5", row=0)
-		self.createContractBtn.configure(
-			command=self.createContractBtnCallback)
 		frame1.grid(column=0, row=0)
 		frame3 = ttk.Frame(frame7)
 		frame3.configure(height=200, width=200)
+		self.createServiceBtn = tk.Button(frame3)
+		self.createServiceBtn.configure(text='Gerar Servico')
+		self.createServiceBtn.grid(column=1, padx=20, pady="8 5", row=0)
+		self.createServiceBtn.configure(command=self.createServiceBtnCallback)
 		self.servicesOptMenuVar = tk.StringVar(value='Servicos')
 		__values = ['Servicos']
 		self.serviceOptMenu = MyOptionMenu(
@@ -87,21 +131,36 @@ class ContractviewerApp:
 			self.servicesOptMenuVar,
 			*__values,
 			command=self.servicesSelesctorCallback)
+		self.serviceOptMenu.grid(column=0, row=0)
 		self.serviceOptMenu.setVar(myOptMenuVar=self.servicesOptMenuVar)
-		self.serviceOptMenu.grid(column=0, padx=20, pady="8 5", row=0)
-		self.createServiceBtn = tk.Button(frame3)
-		self.createServiceBtn.configure(text='Gerar Servico')
-		self.createServiceBtn.grid(column=1, padx=20, pady="8 5", row=0)
-		self.createServiceBtn.configure(command=self.createServiceBtnCallback)
 		frame3.grid(column=1, row=0)
 		frame7.pack()
-		self.main_frame.grid(column=0, row=1)
+		label1 = tk.Label(self.main_frame)
+		label1.configure(text='powered by twitch.tv/owneti')
+		label1.pack(side="top")
+		self.main_frame.pack()
+		notebook1.add(self.main_frame, text='Gerar Contrato')
+		notebook1.grid()
 		self.Gerador.grid_anchor("center")
 
 		# Main widget
 		self.mainwindow = self.Gerador
 
 	def run(self):
+		
+		self.updateGuildList()
+
+		#FILL size settlement
+		f = open ("json4Names/guildSettlementSize.json")
+		dataSettlement = json.load(f)
+
+		self.sizeOptMenu.resetOptions()
+		for i in dataSettlement:
+			self.sizeOptMenu.addOption (label=dataSettlement[str(i)]["name"])
+
+		self.mainwindow.mainloop()
+
+	def updateGuildList(self):
 		path = "generatedGuild/"
 		dir_list =  os.walk(path)
 
@@ -114,8 +173,53 @@ class ContractviewerApp:
 			f = open(path + j + "/" + j + ".json")
 			data = json.load(f)
 			self.guildSlectOpMenu.addOption (label=data["name"])
-						
-		self.mainwindow.mainloop()
+		pass
+
+	def createGuildBtnCallback(self):
+		f = open ("json4Names/guildSettlementSize.json")
+		dataSettlement = json.load(f)
+
+		for i in dataSettlement:
+			if dataSettlement[str(i)]["name"] == self.sizeStrVar.get():
+				settlement = i
+		try:
+			settlement = int(settlement)
+		except:
+			return
+		
+		guildCreator = GuildMaker()
+		result = guildCreator.createGuild(settlement, self.isHumanBoolVar.get())
+
+		if result == "error":
+			return
+
+		display_info = json.loads("{}")
+
+		display_info["Nome da Guilda"] = result["name"]
+		display_info["Assentamento"] = result["settlementSize"]["name"]
+		display_info["Existe"] = result["exist"]
+		display_info["BonusDado"] = result["guildDiceBonus"]
+		display_info["DadoRolado"] = result["rolledDice"]
+		display_info["AssentamentoHumano"] = result["isHuman"]
+		if display_info["Existe"] == True:
+			display_info["Tamanho"] = result["size"]["name"]
+			display_info["Caracteristica"] = result["Characteristic"]["name"]
+			display_info["Reputação Governo"] = result["reputation"]["govern"]["name"]
+			display_info["Reputacao Populacao"] = result["reputation"]["population"]["name"]
+			display_info["Funcionarios"] = result["employees"]["name"]
+			display_info["QtdFunc"] = result["employees"]["amount"]["value"]
+			display_info["Recursos"] = result["resource"]["name"]
+			display_info["QtdMovimento"] = result["goers"]["name"]
+
+		#txt_guild["text"] = json.dumps(result, sort_keys=True, indent=4)
+		self.guildShowerText.config(state = tk.NORMAL)
+		self.guildShowerText.delete("1.0", "end")
+		for k in display_info:
+			self.guildShowerText.insert(tk.END, '{} = {}\n'.format(k,display_info[k]))
+		self.guildShowerText.config(state = tk.DISABLED)
+
+		self.updateGuildList()
+		pass
 
 	def guildSelectorCallback(self, option):
 		path = "generatedGuild/"
@@ -195,6 +299,33 @@ class ContractviewerApp:
 			self.serviceOptMenu.addOption (label=j)
 		pass
 
+	def createContractBtnCallback(self):
+		contractCreator = ContractMaker()
+
+		path = "generatedGuild/"
+		dir_list =  os.walk(path)
+
+		result = json.loads("{}")
+
+		for j in dir_list:
+			subFolders = j[1]
+			break
+
+		for j in subFolders:
+			f = open(path + j + "/" + j + ".json")
+			data = json.load(f)
+			if data["name"] == str(self.guildNameStr.get()):
+				guildJson = data
+		
+		result = contractCreator.creatContract(guildJson)
+
+		if result == "error":
+			return
+		
+		fileName = result["guild"]["fileName"]
+		self.fillContractOptMenu(fileName)
+		pass
+
 	def contractsSelectorCallback(self, option):
 		path = "generatedGuild/" + self.fileName + "/" + "contracts/" + option
 		f = open (path)
@@ -235,41 +366,13 @@ class ContractviewerApp:
 		self.contractText.config(state = tk.DISABLED)
 		pass
 
-	def createContractBtnCallback(self):
-		contractCreator = ContractMaker()
-
-		path = "generatedGuild/"
-		dir_list =  os.walk(path)
-
-		result = json.loads("{}")
-
-		for j in dir_list:
-			subFolders = j[1]
-			break
-
-		for j in subFolders:
-			f = open(path + j + "/" + j + ".json")
-			data = json.load(f)
-			if data["name"] == str(self.guildNameStr.get()):
-				guildJson = data
-		
-		result = contractCreator.creatContract(guildJson)
-
-		if result == "error":
-			return
-		
-		fileName = result["guild"]["fileName"]
-		self.fillContractOptMenu(fileName)
+	def createServiceBtnCallback(self):
 		pass
 
 	def servicesSelesctorCallback(self, option):
-		pass
-
-	def createServiceBtnCallback(self):
 		pass
 
 
 if __name__ == "__main__":
 	app = ContractviewerApp()
 	app.run()
-

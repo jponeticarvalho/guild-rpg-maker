@@ -113,7 +113,6 @@ class ContractMaker:
 		f = open("json4Names/ContractServiceValueReward/valueReward.json")
 		data = json.load(f)
 
-		#diceResult = self.rollDice(self.guildJson["size"]["contractDice"])
 		diceResult = self.dice.roll(1,100)
 		diceResultValue 	= diceResult
 		diceResultReward 	= diceResult
@@ -243,13 +242,18 @@ class ContractMaker:
 
 		diceResultReward += 5* ( self.contratJson["clause"]["amount"] + self.contratJson["preRequirement"]["amount"] )
 
+		if diceResultReward > 100:
+			diceResultReward = 100
+		elif diceResultReward < 1:
+			diceResultReward = 1
+
 		for i in data:
 			if diceResultReward in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
 				self.contratJson["reward"] = data[str(i)]
 				self.contratJson["reward"]["rolledDice"] = diceResultReward
 
-		self.contratJson["reward"]["totalAmount"] 	*= self.contratJson["difficulty"]["rewardMultiplier"]
-		self.contratJson["value"]["totalAmount"] 	*= self.contratJson["difficulty"]["valueMultiplier"]
+		self.contratJson["reward"]["totalAmount"] 	= self.contratJson["reward"]["totalAmount"]*self.contratJson["difficulty"]["rewardMultiplier"]
+		self.contratJson["value"]["totalAmount"] 	= self.contratJson["value"]["totalAmount"]*self.contratJson["difficulty"]["valueMultiplier"]
 
 		self.contratJson["reward"]["totalAmount"] 	= int(self.contratJson["reward"]["totalAmount"])
 		self.contratJson["value"]["totalAmount"]	= int(self.contratJson["value"]["totalAmount"])

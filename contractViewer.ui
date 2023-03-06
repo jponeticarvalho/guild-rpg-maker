@@ -10,62 +10,102 @@
       <property name="anchor">center</property>
     </containerlayout>
     <child>
-      <object class="tk.Frame" id="main_frame" named="True">
-        <property name="height">200</property>
-        <property name="width">200</property>
-        <layout manager="grid">
-          <property name="column">0</property>
-          <property name="row">1</property>
-        </layout>
+      <object class="ttk.Notebook" id="notebook1">
+        <property name="height">680</property>
+        <property name="width">820</property>
+        <layout manager="grid" />
         <child>
-          <object class="ttk.Frame" id="guildSelectFrame" named="True">
-            <property name="height">600</property>
-            <property name="width">800</property>
-            <layout manager="pack" />
+          <object class="ttk.Notebook.Tab" id="tab1">
+            <property name="text" translatable="yes">Gerar Guilda</property>
             <child>
-              <object class="tk.Text" id="guildNameTxt" named="True">
-                <property name="height">20</property>
-                <property name="width">100</property>
-                <layout manager="grid">
-                  <property name="column">0</property>
-                  <property name="padx">5 5</property>
-                  <property name="row">1</property>
-                  <property name="sticky">ew</property>
-                </layout>
-              </object>
-            </child>
-            <child>
-              <object class="ttk.Frame" id="frame5">
+              <object class="tk.Frame" id="frame8">
                 <property name="height">200</property>
                 <property name="width">200</property>
-                <layout manager="grid">
-                  <property name="column">0</property>
-                  <property name="row">0</property>
-                </layout>
+                <layout manager="pack" />
                 <child>
-                  <object class="tk.OptionMenu" id="guildSlectOpMenu" named="True">
-                    <property name="command" type="command" cbtype="simple">guildSelectorCallback</property>
-                    <property name="value">Selecione a Guilda</property>
-                    <property name="variable">string:guildNameStr</property>
+                  <object class="tk.Button" id="createGuildBtn" named="True">
+                    <property name="command" type="command" cbtype="simple">createGuildBtnCallback</property>
+                    <property name="justify">left</property>
+                    <property name="text" translatable="yes">Gerar Guilda</property>
                     <layout manager="grid">
                       <property name="column">0</property>
-                      <property name="padx">20</property>
-                      <property name="pady">10 5</property>
-                      <property name="row">0</property>
+                      <property name="pady">5</property>
+                      <property name="row">1</property>
                     </layout>
                   </object>
                 </child>
                 <child>
-                  <object class="tk.Button" id="createGuildBtn" named="True">
-                    <property name="command" type="command" cbtype="simple">createGuildBtnCallback</property>
-                    <property name="cursor">arrow</property>
-                    <property name="text" translatable="yes">Gerar Guilda Soon will be available</property>
+                  <object class="tk.Text" id="guildShowerText" named="True">
+                    <property name="height">35</property>
+                    <property name="width">100</property>
                     <layout manager="grid">
-                      <property name="column">1</property>
-                      <property name="padx">20</property>
-                      <property name="pady">10 5</property>
+                      <property name="column">0</property>
+                      <property name="padx">8</property>
+                      <property name="pady">5</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Label" id="label2">
+                    <property name="text" translatable="yes">powered by twitch.tv/owneti</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Frame" id="frame10">
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">5</property>
                       <property name="row">0</property>
                     </layout>
+                    <child>
+                      <object class="tk.Frame" id="frame13">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="grid">
+                          <property name="column">0</property>
+                          <property name="row">0</property>
+                        </layout>
+                        <child>
+                          <object class="tk.OptionMenu" id="sizeOptMenu" named="True">
+                            <property name="value">Selecione o Tamanho do assentamento</property>
+                            <property name="values">tamanhos</property>
+                            <property name="variable">string:sizeStrVar</property>
+                            <layout manager="pack">
+                              <property name="padx">20</property>
+                              <property name="pady">5</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="tk.Frame" id="frame15">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="grid">
+                          <property name="column">1</property>
+                          <property name="row">0</property>
+                        </layout>
+                        <child>
+                          <object class="tk.Checkbutton" id="isHumanSettCheckBoxx" named="True">
+                            <property name="cursor">arrow</property>
+                            <property name="text" translatable="yes">Assentamento humano?</property>
+                            <property name="variable">boolean:isHumanBoolVar</property>
+                            <layout manager="pack">
+                              <property name="padx">20</property>
+                              <property name="pady">5</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
@@ -73,101 +113,159 @@
           </object>
         </child>
         <child>
-          <object class="ttk.Frame" id="frame7">
-            <property name="height">200</property>
-            <property name="width">200</property>
-            <layout manager="pack" />
+          <object class="ttk.Notebook.Tab" id="tab2">
+            <property name="text" translatable="yes">Gerar Contrato</property>
             <child>
-              <object class="tk.Text" id="contractText" named="True">
-                <property name="height">15</property>
-                <property name="width">50</property>
-                <layout manager="grid">
-                  <property name="column">0</property>
-                  <property name="padx">5 2</property>
-                  <property name="pady">1 5</property>
-                  <property name="row">1</property>
-                  <property name="sticky">nsw</property>
-                </layout>
-              </object>
-            </child>
-            <child>
-              <object class="tk.Text" id="serviceText" named="True">
-                <property name="height">15</property>
-                <property name="width">50</property>
-                <layout manager="grid">
-                  <property name="column">1</property>
-                  <property name="padx">2 5</property>
-                  <property name="pady">1 5</property>
-                  <property name="row">1</property>
-                  <property name="sticky">nse</property>
-                </layout>
-              </object>
-            </child>
-            <child>
-              <object class="ttk.Frame" id="frame1">
+              <object class="tk.Frame" id="main_frame" named="True">
                 <property name="height">200</property>
                 <property name="width">200</property>
-                <layout manager="grid">
-                  <property name="column">0</property>
-                  <property name="row">0</property>
-                </layout>
+                <layout manager="pack" />
                 <child>
-                  <object class="ttk.OptionMenu" id="contractOptMenu" named="True">
-                    <property name="command" type="command" cbtype="simple">contractsSelectorCallback</property>
-                    <property name="value">Contratos</property>
-                    <property name="variable">string:contractOptMenuVar</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">20</property>
-                      <property name="pady">8 5</property>
-                      <property name="row">0</property>
-                    </layout>
+                  <object class="ttk.Frame" id="guildSelectFrame" named="True">
+                    <property name="height">600</property>
+                    <property name="width">800</property>
+                    <layout manager="pack" />
+                    <child>
+                      <object class="tk.Text" id="guildNameTxt" named="True">
+                        <property name="height">20</property>
+                        <property name="width">100</property>
+                        <layout manager="grid">
+                          <property name="column">0</property>
+                          <property name="padx">5 5</property>
+                          <property name="row">1</property>
+                          <property name="sticky">ew</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Frame" id="frame5">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="grid">
+                          <property name="column">0</property>
+                          <property name="row">0</property>
+                        </layout>
+                        <child>
+                          <object class="tk.OptionMenu" id="guildSlectOpMenu" named="True">
+                            <property name="command" type="command" cbtype="simple">guildSelectorCallback</property>
+                            <property name="value">Selecione a Guilda</property>
+                            <property name="variable">string:guildNameStr</property>
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="padx">20</property>
+                              <property name="pady">10 5</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
                   </object>
                 </child>
                 <child>
-                  <object class="tk.Button" id="createContractBtn" named="True">
-                    <property name="command" type="command" cbtype="simple">createContractBtnCallback</property>
-                    <property name="text" translatable="yes">Gerar Contrato</property>
-                    <layout manager="grid">
-                      <property name="column">1</property>
-                      <property name="padx">20</property>
-                      <property name="pady">8 5</property>
-                      <property name="row">0</property>
-                    </layout>
+                  <object class="ttk.Frame" id="frame7">
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="pack" />
+                    <child>
+                      <object class="tk.Text" id="contractText" named="True">
+                        <property name="height">15</property>
+                        <property name="width">50</property>
+                        <layout manager="grid">
+                          <property name="column">0</property>
+                          <property name="padx">5 2</property>
+                          <property name="pady">1 5</property>
+                          <property name="row">1</property>
+                          <property name="sticky">nsw</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="tk.Text" id="serviceText" named="True">
+                        <property name="height">15</property>
+                        <property name="width">50</property>
+                        <layout manager="grid">
+                          <property name="column">1</property>
+                          <property name="padx">2 5</property>
+                          <property name="pady">1 5</property>
+                          <property name="row">1</property>
+                          <property name="sticky">nse</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Frame" id="frame1">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="grid">
+                          <property name="column">0</property>
+                          <property name="row">0</property>
+                        </layout>
+                        <child>
+                          <object class="tk.Button" id="createContractBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">createContractBtnCallback</property>
+                            <property name="text" translatable="yes">Gerar Contrato</property>
+                            <layout manager="grid">
+                              <property name="column">1</property>
+                              <property name="padx">20</property>
+                              <property name="pady">8 5</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="tk.OptionMenu" id="contractOptMenu" named="True">
+                            <property name="command" type="command" cbtype="simple">contractsSelectorCallback</property>
+                            <property name="value">Contratos</property>
+                            <property name="variable">string:contractOptMenuVar</property>
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Frame" id="frame3">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="grid">
+                          <property name="column">1</property>
+                          <property name="row">0</property>
+                        </layout>
+                        <child>
+                          <object class="tk.Button" id="createServiceBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">createServiceBtnCallback</property>
+                            <property name="text" translatable="yes">Gerar Servico</property>
+                            <layout manager="grid">
+                              <property name="column">1</property>
+                              <property name="padx">20</property>
+                              <property name="pady">8 5</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="tk.OptionMenu" id="serviceOptMenu" named="True">
+                            <property name="command" type="command" cbtype="simple">servicesSelesctorCallback</property>
+                            <property name="value">Servicos</property>
+                            <property name="variable">string:servicesOptMenuVar</property>
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
                   </object>
                 </child>
-              </object>
-            </child>
-            <child>
-              <object class="ttk.Frame" id="frame3">
-                <property name="height">200</property>
-                <property name="width">200</property>
-                <layout manager="grid">
-                  <property name="column">1</property>
-                  <property name="row">0</property>
-                </layout>
                 <child>
-                  <object class="ttk.OptionMenu" id="serviceOptMenu" named="True">
-                    <property name="command" type="command" cbtype="simple">servicesSelesctorCallback</property>
-                    <property name="value">Servicos</property>
-                    <property name="variable">string:servicesOptMenuVar</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">20</property>
-                      <property name="pady">8 5</property>
-                      <property name="row">0</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="tk.Button" id="createServiceBtn" named="True">
-                    <property name="command" type="command" cbtype="simple">createServiceBtnCallback</property>
-                    <property name="text" translatable="yes">Gerar Servico</property>
-                    <layout manager="grid">
-                      <property name="column">1</property>
-                      <property name="padx">20</property>
-                      <property name="pady">8 5</property>
-                      <property name="row">0</property>
+                  <object class="tk.Label" id="label1">
+                    <property name="text" translatable="yes">powered by twitch.tv/owneti</property>
+                    <layout manager="pack">
+                      <property name="side">top</property>
                     </layout>
                   </object>
                 </child>
