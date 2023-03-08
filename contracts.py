@@ -44,6 +44,7 @@ class ContractMaker:
 			#return "error"
 
 		contractNumber = len(os.listdir(contractPath))
+		self.contratJson["fileName"] = "contract-" + str(contractNumber) + ".json"
 		contractPath = contractPath + "contract-" + str(contractNumber) + ".json"
 
 		with open(contractPath, "w+") as f:

@@ -324,6 +324,7 @@ class ContractviewerApp:
 		
 		fileName = result["guild"]["fileName"]
 		self.fillContractOptMenu(fileName)
+		self.contractsSelectorCallback(result["fileName"])
 		pass
 
 	def contractsSelectorCallback(self, option):
