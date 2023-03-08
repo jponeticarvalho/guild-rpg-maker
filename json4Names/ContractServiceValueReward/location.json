@@ -1,0 +1,694 @@
+{
+    "location": {
+        "1-4": {
+            "name": "Cidade grande*",
+            "diceRangeMin": 1,
+            "diceRangeMax": 4,
+            "locationKey": "greatCity"
+        },
+        "5-9": {
+            "name": "Ruínas ou masmorras",
+            "diceRangeMin": 5,
+            "diceRangeMax": 9,
+            "locationKey": "dungeon"
+        },
+        "10-12": {
+            "name": "Região selvagem",
+            "diceRangeMin": 10,
+            "diceRangeMax": 12,
+            "locationKey": "wildRegion"
+        },
+        "13-14": {
+            "name": "Lugar isolado",
+            "diceRangeMin": 13,
+            "diceRangeMax": 14,
+            "locationKey": "isolatedPlace"
+        },
+        "15-17": {
+            "name": "Zona rural",
+            "diceRangeMin": 15,
+            "diceRangeMax": 17,
+            "locationKey": "ruralZone"
+        },
+        "18-18": {
+            "name": "Localidade exótica",
+            "diceRangeMin": 18,
+            "diceRangeMax": 18,
+            "locationKey": "exoticLocation"
+        },
+        "19-19": {
+            "name": "Profundezas",
+            "diceRangeMin": 19,
+            "diceRangeMax": 19,
+            "locationKey": "deepness"
+        },
+        "20-20": {
+            "name": "Terras mórbidas",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20,
+            "locationKey": "morbidLands"
+        }
+    },
+    "isDistrict": {
+        "1-5": {
+            "name": "Marginalizado",
+            "diceRangeMin": 1,
+            "diceRangeMax": 5
+        },
+        "6-10": {
+            "name": "Plebeu",
+            "diceRangeMin": 6,
+            "diceRangeMax": 10
+        },
+        "11-13": {
+            "name": "Corporações de ofício",
+            "diceRangeMin": 11,
+            "diceRangeMax": 13
+        },
+        "14-15": {
+            "name": "Comercial",
+            "diceRangeMin": 14,
+            "diceRangeMax": 15
+        },
+        "16-16": {
+            "name": "Religioso",
+            "diceRangeMin": 16,
+            "diceRangeMax": 16
+        },
+        "17-18": {
+            "name": "Nobre",
+            "diceRangeMin": 17,
+            "diceRangeMax": 18
+        },
+        "19-19": {
+            "name": "Próximo a um distrito, mas fora do assentamento",
+            "diceRangeMin": 19,
+            "diceRangeMax": 19
+        },
+        "20-20": {
+            "name": "Role duas vezes e use ambos",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20
+        }
+    },
+    "locationImportance": {
+        "1-11": {
+            "name": "Aparentemente nenhuma",
+            "diceRangeMin": 1,
+            "diceRangeMax": 11
+        },
+        "12-12": {
+            "name": "Acontecimento histórico relevante",
+            "diceRangeMin": 12,
+            "diceRangeMax": 12
+        },
+        "13-13": {
+            "name": "Extração de recursos",
+            "diceRangeMin": 13,
+            "diceRangeMax": 13
+        },
+        "14-14": {
+            "name": "Local sagrado para algum culto",
+            "diceRangeMin": 14,
+            "diceRangeMax": 14
+        },
+        "15-15": {
+            "name": "Ponto de interesse de uma antiga civilização",
+            "diceRangeMin": 15,
+            "diceRangeMax": 15
+        },
+        "16-16": {
+            "name": "Local relevante para o contratante",
+            "diceRangeMin": 16,
+            "diceRangeMax": 16
+        },
+        "17-17": {
+            "name": "Berço de lendas/humanoides importantes",
+            "diceRangeMin": 17,
+            "diceRangeMax": 17
+        },
+        "18-18": {
+            "name": "Flutuação mágica na trama",
+            "diceRangeMin": 18,
+            "diceRangeMax": 18
+        },
+        "19-19": {
+            "name": "Local estrategicamente vantajoso",
+            "diceRangeMin": 19,
+            "diceRangeMax": 19
+        },
+        "20-20": {
+            "name": "Relíquia esquecida",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20
+        }
+    },
+    "peculiarity": {
+        "1-11": {
+            "name": "Aparentemente nenhuma",
+            "diceRangeMin": 1,
+            "diceRangeMax": 11
+        },
+        "12-12": {
+            "name": "Local relevante para o contratado",
+            "diceRangeMin": 12,
+            "diceRangeMax": 12
+        },
+        "13-13": {
+            "name": "Conjuradores frequentam o local",
+            "diceRangeMin": 13,
+            "diceRangeMax": 13
+        },
+        "14-14": {
+            "name": "Combatentes o evitam",
+            "diceRangeMin": 14,
+            "diceRangeMax": 14
+        },
+        "15-15": {
+            "name": "Adeptos estudam o local",
+            "diceRangeMin": 15,
+            "diceRangeMax": 15
+        },
+        "16-16": {
+            "name": "Especialistas usam como trabalho",
+            "diceRangeMin": 16,
+            "diceRangeMax": 16
+        },
+        "17-17": {
+            "name": "Tema de contos e canções",
+            "diceRangeMin": 17,
+            "diceRangeMax": 17
+        },
+        "18-18": {
+            "name": "Aventureiros são frequentes por lá",
+            "diceRangeMin": 18,
+            "diceRangeMax": 18
+        },
+        "19-19": {
+            "name": "Ponto de interesse de dragões",
+            "diceRangeMin": 19,
+            "diceRangeMax": 19
+        },
+        "20-20": {
+            "name": "Ponto de interesse de outros assentamentos",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20
+        }
+    },
+    "greatCity": {
+        "1-1": {
+            "name": "Esgotos/subterrâneo da cidade",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Na moradia do líder local",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Em um distrito específico",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": true
+        },
+        "4-4": {
+            "name": "Casarão nobre",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Em uma das tavernas",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Templo local",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Local de recuperação de enfermos",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Construção/local icônico",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Centro de treinamento/estudos",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Submundo urbano",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    },
+    "dungeon": {
+        "1-1": {
+            "name": "Complexo de cavernas",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Assentamento humanoide",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Torre/fortaleza esquecida",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": false
+        },
+        "4-4": {
+            "name": "Labirinto",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Mina abandonada",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Calabouço arruinado",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Tumba de um antigo Rei",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Estrutura soterrada/inundada",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Ilha amaldiçoada",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Masmorra",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    },
+    "wildRegion": {
+        "1-1": {
+            "name": "Floresta/bosque",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Deserto escaldante",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Pântano viscoso",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": false
+        },
+        "4-4": {
+            "name": "Complexo de cavernas",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Tundra esquecida",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Montanhas sinuosas",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Savana/descampado/pradaria",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Desfiladeiro/ravina mortal",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Região vulcânica",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Cânions profundos",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    },
+    "isolatedPlace": {
+        "1-1": {
+            "name": "Região não mapeada ou inexplorada",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Monastério",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Fortaleza distante",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": false
+        },
+        "4-4": {
+            "name": "Torre de um arcanista",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Floresta densa",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Covil de uma criatura rara",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Ilha exótica",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Posto avançado em zona de conflito",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Engenhoca monumental",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Masmorra inóspita",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    },
+    "ruralZone": {
+        "1-1": {
+            "name": "Pequena aldeia",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Vilarejo desprotegido",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Grande plantação/vinhedo",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": false
+        },
+        "4-4": {
+            "name": "Lugarejo",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Povoado humilde",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Fazenda",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Comunidade itinerante",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Celeiro/moinho/estábulo",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Criadouro/abatedouro",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Pousada isolada",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    },
+    "exoticLocation": {
+        "1-1": {
+            "name": "Plano Feérico",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Dentro de um objeto pequeno",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Floresta mágica",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": false
+        },
+        "4-4": {
+            "name": "Plano Elemental",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Dentro de uma criatura",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Pirâmide/Zigurate",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Assentamento submarino",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Plano Astral",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Abismo ou Inferno",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Umbra",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    },
+    "deepness": {
+        "1-1": {
+            "name": "Complexo de cavernas",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Despenhadeiro",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Ravina subterrânea",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": false
+        },
+        "4-4": {
+            "name": "Fossa abissal",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Tumba esquecida",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Cripta",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Assentamento de humanoides",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Fenda submarina",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Cemitério de monstruosidades",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Labirinto",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    },
+    "morbidLands": {
+        "1-1": {
+            "name": "Cemitério esquecido",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1,
+            "hasDistrict": false
+        },
+        "2-2": {
+            "name": "Catacumbas",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2,
+            "hasDistrict": false
+        },
+        "3-3": {
+            "name": "Templo profanado",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3,
+            "hasDistrict": false
+        },
+        "4-4": {
+            "name": "Campo de batalha devastado",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4,
+            "hasDistrict": false
+        },
+        "5-5": {
+            "name": "Zona morta",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "hasDistrict": false
+        },
+        "6-6": {
+            "name": "Vales rúnicos",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "hasDistrict": false
+        },
+        "7-7": {
+            "name": "Assentamento próximo",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7,
+            "hasDistrict": false
+        },
+        "8-8": {
+            "name": "Ruína maldita",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8,
+            "hasDistrict": false
+        },
+        "9-9": {
+            "name": "Covil monstruoso",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "hasDistrict": false
+        },
+        "10-10": {
+            "name": "Floresta assombrada",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10,
+            "hasDistrict": false
+        }
+    }
+}
