@@ -279,7 +279,11 @@ class ContractviewerApp:
 	def fillContractOptMenu(self, fileName):
 		##Fill contractselector and service selector
 		path = "generatedGuild/" + fileName + "/" + "contracts/"
-		subFolders = os.listdir(path)
+		try:
+			subFolders = os.listdir(path)
+		except:
+			self.contractOptMenu.resetOptions()
+			return
 
 		self.contractOptMenu.resetOptions()
 
