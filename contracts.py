@@ -19,6 +19,7 @@ class ContractMaker:
 	_MAX_NUMBER_OF_CLAUSES 				= 10
 	_MAX_NUMBER_OF_PRE_REQUIREMENTS 	= 10
 	_MAX_NUMBER_OF_OBJECTIVES			= 10
+	_MAX_NUMBER_OF_DISTRICTS			= 10
 
 	def creatContract(self, guildJson):
 		self.guildJson = guildJson
@@ -31,10 +32,11 @@ class ContractMaker:
 		self.defValeuReward		()
 		self.defPreRequirements	()
 		self.defClause			()
-		self.updateReward		()		#not implemented
+		self.updateReward		()
 		self.defContractor		()
 		self.defContractType	()
 		self.defObjective		()
+		self.defLocation		()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -362,6 +364,83 @@ class ContractMaker:
 					subObjectiveJson["locationOfObjective"]["rolledDice"] = diceResult
 
 		return subObjectiveJson
+
+	def defLocation(self):
+		f = open("json4Names/ContractServiceValueReward/location.json")
+		fullData = json.load(f)
+		locationJson = json.loads("{}")
+	
+		diceResult =  self.dice.roll(1, 20)
+		data = fullData["location"]
+		for i in data:
+			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
+				locationJson["location"] = data[str(i)]
+				locationJson["location"]["rolledDice"] = diceResult
+
+		diceResult =  self.dice.roll(1, 20)
+		data = fullData["locationImportance"]
+		for i in data:
+			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
+				locationJson["locationImportance"] = data[str(i)]
+				locationJson["locationImportance"]["rolledDice"] = diceResult
+
+		diceResult =  self.dice.roll(1, 20)
+		data = fullData["peculiarity"]
+		for i in data:
+			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
+				locationJson["peculiarity"] = data[str(i)]
+				locationJson["peculiarity"]["rolledDice"] = diceResult
+
+		locationKey = locationJson["location"]["locationKey"]
+		locationJson[locationKey] = self.rollSubLocation(fullData[locationKey])
+
+		self.contratJson["fullLocation"] = locationJson
+
+		f.close()
+		pass
+
+	def rollSubLocation(self, subLocJson):
+		resultJson = json.loads("{}")
+		diceResult =  self.dice.roll(1, 10)
+		for i in subLocJson:
+			if diceResult in range(subLocJson[str(i)]["diceRangeMin"], subLocJson[str(i)]["diceRangeMax"]+1):
+				resultJson = subLocJson[str(i)]
+				resultJson["rolledDice"] = diceResult
+		try:
+			if resultJson["hasDistrict"]:
+				resultJson["district"] = self.rollDistrict()
+		except:
+			return
+		return resultJson
+
+	def rollDistrict(self):
+		f = open("json4Names/ContractServiceValueReward/objectives.json")
+		fullData = json.load(f)
+		districtJson 	= fullData["isDistrict"]
+		resultJson		= json.loads("{}")
+
+		districtAmount = 1
+		districtNumber = 1
+		while districtAmount > 0:
+			diceResult =  self.dice.roll(1, 20)
+
+			for i in districtJson:
+				if diceResult in range(districtJson[str(i)]["diceRangeMin"], districtJson[str(i)]["diceRangeMax"]+1):
+					resultJson[str(districtNumber)] = districtJson[str(i)]
+					resultJson[str(districtNumber)]["rolledDice"] = diceResult
+
+			#TODO verificar um jeito que nao fique tao hardcoded
+			if diceResult in range(districtJson["20-20"]["diceRangeMin"], districtJson["20-20"]["diceRangeMax"]+1):
+				districtAmount += 2
+
+			districtAmount -= 1
+			districtNumber += 1
+
+			if districtNumber > self._MAX_NUMBER_OF_DISTRICTS:
+				break
+
+		resultJson["amount"] = districtNumber - 1
+		return resultJson
 
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao
 	def defVillain(self):
