@@ -359,6 +359,15 @@ class ContractviewerApp:
 				amountOfObjects += 1
 				display_info["PreRequisito "+str(amountOfObjects)] = data["preRequirement"][str(i)]["name"]
 		display_info["Distancia"] = data["distance"]["name"]
+		display_info["Localizacao"] = data["fullLocation"]["location"]["name"]
+		locationKey = data["fullLocation"]["location"]["locationKey"]
+		display_info["Esp. Local"] = data["fullLocation"][locationKey]["name"]
+		if data["fullLocation"][locationKey]["hasDistrict"] == True:
+			amountOfDistrict = 0
+			for i in range (1, data["fullLocation"][locationKey]["district"]["amount"]+1):
+				if data["fullLocation"][locationKey]["district"][str(i)]["diceRangeMin"] != 20:
+					amountOfDistrict += 1
+					display_info["Distrito "+str(amountOfDistrict)] = data["fullLocation"][locationKey]["district"][str(i)]["name"]
 		display_info["Dificuldade"] = data["difficulty"]["name"]
 		display_info["Valor"] = data["value"]["totalAmount"]
 		display_info["Recompensa"] = data["reward"]["totalAmount"]
