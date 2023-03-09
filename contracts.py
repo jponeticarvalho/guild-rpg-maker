@@ -414,7 +414,7 @@ class ContractMaker:
 		return resultJson
 
 	def rollDistrict(self):
-		f = open("json4Names/ContractServiceValueReward/objectives.json")
+		f = open("json4Names/ContractServiceValueReward/location.json")
 		fullData = json.load(f)
 		districtJson 	= fullData["isDistrict"]
 		resultJson		= json.loads("{}")
