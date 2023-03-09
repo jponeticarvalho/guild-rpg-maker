@@ -243,7 +243,17 @@ class ContractMaker:
 
 		diceResultReward 	= self.contratJson["reward"]["rolledDice"] 
 
-		diceResultReward += 5* ( self.contratJson["clause"]["amount"] + self.contratJson["preRequirement"]["amount"] )
+		points = 0
+
+		for i in range (1, self.contratJson["clause"]["amount"]+1):
+			if (self.contratJson["clause"][str(i)]["diceRangeMin"] != 1 ) and  (self.contratJson["clause"][str(i)]["diceRangeMin"] != 21):
+				points+=1
+
+		for i in range (1, self.contratJson["preRequirement"]["amount"]+1):
+			if (self.contratJson["preRequirement"][str(i)]["diceRangeMin"] != 1 ) and  (self.contratJson["preRequirement"][str(i)]["diceRangeMin"] != 21):
+				points+=1
+
+		diceResultReward += 5 * points
 
 		if diceResultReward > 100:
 			diceResultReward = 100
