@@ -346,6 +346,8 @@ class ContractviewerApp:
 				display_info["Sub Objetivo "+str(amountOfObjectives)] 	= data["objective"][dataObjective[str(i)]["objectiveKey"]][str(i)]["name"]
 		display_info["TipoContrato"] = data["contractType"]["name"]
 		display_info["Contratante"] = data["contractors"]["name"]
+		if display_info["Contratante"] == "Governo":
+			display_info["Sub-Contratante"] = data["contractors"]["subClass"]["name"]
 		amountOfObjects = 0
 		for i in range(1, data["clause"]["amount"] + 1):
 			if data["clause"][str(i)]["diceRangeMin"] < 21:
