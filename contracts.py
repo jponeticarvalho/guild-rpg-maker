@@ -20,6 +20,7 @@ class ContractMaker:
 	_MAX_NUMBER_OF_PRE_REQUIREMENTS 	= 10
 	_MAX_NUMBER_OF_OBJECTIVES			= 10
 	_MAX_NUMBER_OF_DISTRICTS			= 10
+	_MAX_NUMBER_OF_ANTAGONISTS			= 10
 
 	def creatContract(self, guildJson):
 		self.guildJson = guildJson
@@ -37,6 +38,7 @@ class ContractMaker:
 		self.defContractType	()
 		self.defObjective		()
 		self.defLocation		()
+		self.defAntagonist		()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -450,6 +452,51 @@ class ContractMaker:
 				break
 
 		resultJson["amount"] = districtNumber - 1
+		return resultJson
+
+	def defAntagonist(self):
+		f = open("json4Names/ContractServiceValueReward/antagonist.json")
+		fullData = json.load(f)
+		antagonistJson 	= fullData["antagonist"]
+		resultJson		= json.loads("{\"antagonist\":{}}")
+
+		antagonistAmount = 1
+		antagonistNumber = 1
+		while antagonistAmount > 0:
+			diceResult =  self.dice.roll(1, 20)
+
+			for i in antagonistJson:
+				if diceResult in range(antagonistJson[str(i)]["diceRangeMin"], antagonistJson[str(i)]["diceRangeMax"]+1):
+					resultJson["antagonist"][str(antagonistNumber)] = antagonistJson[str(i)]
+					resultJson["antagonist"][str(antagonistNumber)]["rolledDice"] = diceResult
+
+			#TODO verificar um jeito que nao fique tao hardcoded
+			if diceResult in range(antagonistJson["20-20"]["diceRangeMin"], antagonistJson["20-20"]["diceRangeMax"]+1):
+				antagonistAmount += 2
+			else:
+				antagonistKey = resultJson["antagonist"][str(antagonistNumber)]["antagonistKey"]
+
+				if antagonistKey not in resultJson:
+					resultJson[antagonistKey] = json.loads("{}")
+				resultJson[antagonistKey][antagonistNumber] = self.rollSubAntagonist(fullData[antagonistKey])
+
+			antagonistAmount -= 1
+			antagonistNumber += 1
+
+			if antagonistNumber > self._MAX_NUMBER_OF_ANTAGONISTS:
+				break
+
+		resultJson["antagonist"]["amount"] = antagonistNumber - 1
+		self.contratJson["fullAntagonist"] = resultJson
+		pass
+
+	def rollSubAntagonist(self, subAntagonistJson):
+		resultJson = json.loads("{}")
+		diceResult =  self.dice.roll(1, 10)
+		for i in subAntagonistJson:
+			if diceResult in range(subAntagonistJson[str(i)]["diceRangeMin"], subAntagonistJson[str(i)]["diceRangeMax"]+1):
+				resultJson = subAntagonistJson[str(i)]
+				resultJson["rolledDice"] = diceResult
 		return resultJson
 
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao

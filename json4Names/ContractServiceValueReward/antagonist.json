@@ -1,0 +1,531 @@
+{
+	"antagonist": {
+		"1-4": {
+			"name": "Humanoide poderoso",
+			"diceRangeMin": 1,
+			"diceRangeMax": 4,
+			"antagonistKey": "powerfullHumanoid"
+		},
+		"5-6": {
+			"name": "Artefato mágico",
+			"diceRangeMin": 5,
+			"diceRangeMax": 6,
+			"antagonistKey": "magicArtifact"
+		},
+		"7-9": {
+			"name": "Organização",
+			"diceRangeMin": 7,
+			"diceRangeMax": 9,
+			"antagonistKey": "organization"
+		},
+		"10-12": {
+			"name": "Perigo iminente",
+			"diceRangeMin": 10,
+			"diceRangeMax": 12,
+			"antagonistKey": "danger"
+		},
+		"13-14": {
+			"name": "Entidade sobrenatural",
+			"diceRangeMin": 13,
+			"diceRangeMax": 14,
+			"antagonistKey": "supernaturalEntity"
+		},
+		"15-16": {
+			"name": "Anomalia",
+			"diceRangeMin": 15,
+			"diceRangeMax": 16,
+			"antagonistKey": "anomaly"
+		},
+		"17-17": {
+			"name": "Desastre ou acidente",
+			"diceRangeMin": 17,
+			"diceRangeMax": 17,
+			"antagonistKey": "disaster"
+		},
+		"18-18": {
+			"name": "Crise",
+			"diceRangeMin": 18,
+			"diceRangeMax": 18,
+			"antagonistKey": "crisis"
+		},
+		"19-19": {
+			"name": "Mistério",
+			"diceRangeMin": 19,
+			"diceRangeMax": 19,
+			"antagonistKey": "mystery"
+		},
+		"20-20": {
+			"name": "Role duas vezes e use ambos",
+			"diceRangeMin": 20,
+			"diceRangeMax": 20
+		}
+	},
+	"powerfullHumanoid": {
+		"1-1": {
+			"name": "Mercenário/assassino",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Conjurador",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Nobre",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Líder importante",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Duplo",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Alquimista perturbado",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Rival do contratante",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Herói/aventureiro",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Fanático religioso",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Fugitivo",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"magicArtifact": {
+		"1-1": {
+			"name": "Constructo descontrolado",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Relíquia divina",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Artefato alienígena",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Joia com a alma de um lich",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Armadura enfeitiçada",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Arma senciente",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Grimório proibido",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Foco arcano danificado/corrompido",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Pergaminho milenar",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Objeto amaldiçoado",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"organization": {
+		"1-1": {
+			"name": "Grupo ameaçador",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Facção criminosa",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Seita cultista",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Alta sociedade",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Corte real inimiga",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Clã/família poderosa",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Sociedade secreta",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Grupo de aventureiros",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Revolucionários",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Sindicato",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"danger": {
+		"1-1": {
+			"name": "Humanoides tribais/canibais",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Animais selvagens",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Bestas pré-históricas",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Plantas guardiãs",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Licantropos",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Enxames de insetos",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Saqueadores frequentes",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Elementais",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Criaturas mitológicas",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Animais atrozes",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"supernaturalEntity": {
+		"1-1": {
+			"name": "Vampiro",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Ser incorpóreo",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Corruptor problemático",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Lich",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Morto-vivo poderoso",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Beholder",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Celestial descontrolado",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Fada",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Aboleth",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Devorador de mentes",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"anomaly": {
+		"1-1": {
+			"name": "Monstruosidade",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Demônio ou diabo ",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Fenda planar",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Yuan-ti ",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Névoa sobrenatural",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Invasão zumbi/esqueleto ",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Limo",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Anormalidades na natureza ",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Criatura poderosa adormecida",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Climática",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"disaster": {
+		"1-1": {
+			"name": "Inundação",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Terremoto",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Naufrágio",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Feitiço fora de controle",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Experimento que deu errado",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Construções depredadas/desabamento",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Incêndio",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Meteoro",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Nevasca impetuosa",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Acidente de trabalho",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"crisis": {
+		"1-1": {
+			"name": "Conflito político",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Doença",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Escassez de recursos básicos",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Parasita ou praga",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Guerra iminente/Disputa territorial",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Revolução/revolta",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Econômica",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Dragão",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Queda de uma figura importante",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Conflito religioso",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"mystery": {
+		"1-1": {
+			"name": "Conspiração",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Comportamento/fenômeno anormal",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Mortes misteriosas",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Roubos/Desaparecimentos",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Maldição/castigo divino",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Atentado",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Profecia",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Surtos de magia",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Rituais e símbolos",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Lenda urbana/local",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	}
+}

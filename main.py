@@ -373,6 +373,16 @@ class ContractviewerApp:
 					amountOfDistrict += 1
 					display_info["Distrito "+str(amountOfDistrict)] = data["fullLocation"][locationKey]["district"][str(i)]["name"]
 		display_info["Dificuldade"] = data["difficulty"]["name"]
+
+		antagonistJson = data["fullAntagonist"]["antagonist"]
+		amountOfAntagonist = 0
+		for i in antagonistJson:
+			if str(i) != "amount" and antagonistJson[str(i)]["diceRangeMin"] != 20:
+				amountOfAntagonist += 1
+				display_info["Antagonista " + str(amountOfAntagonist)] = antagonistJson[str(i)]["name"]
+				antagonistKey = antagonistJson[str(i)]["antagonistKey"]
+				display_info["Sub-Antagonista " + str(amountOfAntagonist)] = data["fullAntagonist"][antagonistKey][str(i)]["name"]
+		
 		display_info["Valor"] = data["value"]["totalAmount"]
 		display_info["Recompensa"] = data["reward"]["totalAmount"]
 		display_info["Prazo"] = str(data["dueDate"]["amount"]["value"]) + " Dias"
