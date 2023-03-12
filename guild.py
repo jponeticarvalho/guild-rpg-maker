@@ -50,6 +50,9 @@ class GuildMaker:
 		self.defGuildResources			()
 		self.defGuildGoers				()
 
+		if self.guildJson["exist"] == False:
+			return self.guildJson
+
 		named_tuple = time.localtime() # get struct_time
 		time_string = time.strftime("%m-%d-%Y-%H-%M-%S", named_tuple)
 		guildNameStr = "guild" + time_string
