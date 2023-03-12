@@ -172,16 +172,21 @@ class ContractviewerApp:
 		# Main widget
 		self.mainwindow = self.Gerador
 
+	def setup(self):
+		if not os.path.exists('generatedGuild'):
+			os.mkdir('generatedGuild')
+
 	def run(self):
+		self.setup()
 		self.updateGuildList()
 
 		#FILL size settlement
-		f = open ("json4Names/guildSettlementSize.json")
+		f = open("json4Names/guildSettlementSize.json")
 		dataSettlement = json.load(f)
 
 		self.sizeOptMenu.resetOptions()
 		for i in dataSettlement:
-			self.sizeOptMenu.addOption (label=dataSettlement[str(i)]["name"])
+			self.sizeOptMenu.addOption(label=dataSettlement[str(i)]["name"])
 
 		self.mainwindow.mainloop()
 
@@ -199,9 +204,9 @@ class ContractviewerApp:
 		for j in subFolders:
 			f = open(path + j + "/" + j + ".json")
 			data = json.load(f)
-			self.guildSelectOptMenu.addOption (label=data["name"])
-			self.contGuildSelOptMenu.addOption (label=data["name"])
-			self.servGuildSelOptMenu.addOption (label=data["name"])
+			self.guildSelectOptMenu.addOption(label=data["name"])
+			self.contGuildSelOptMenu.addOption(label=data["name"])
+			self.servGuildSelOptMenu.addOption(label=data["name"])
 		pass
 
 	def createGuildBtnCallback(self):
@@ -252,7 +257,7 @@ class ContractviewerApp:
 
 	def guildSelectCallback(self, option):
 		path = "generatedGuild/"
-		dir_list =  os.walk(path)
+		dir_list = os.walk(path)
 
 		result = json.loads("{}")
 		aux = 0 
@@ -446,7 +451,7 @@ class ContractviewerApp:
 		self.serviceOptMenu.resetOptions()
 
 		for j in subFolders:
-			self.serviceOptMenu.addOption (label=j)
+			self.serviceOptMenu.addOption(label=j)
 		pass
 
 	def createServiceBtnCallback(self):
