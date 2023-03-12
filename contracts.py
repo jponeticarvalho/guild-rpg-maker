@@ -39,6 +39,7 @@ class ContractMaker:
 		self.defObjective		()
 		self.defLocation		()
 		self.defAntagonist		()
+		self.defComplication	()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -496,6 +497,34 @@ class ContractMaker:
 		for i in subAntagonistJson:
 			if diceResult in range(subAntagonistJson[str(i)]["diceRangeMin"], subAntagonistJson[str(i)]["diceRangeMax"]+1):
 				resultJson = subAntagonistJson[str(i)]
+				resultJson["rolledDice"] = diceResult
+		return resultJson
+
+	def defComplication(self):
+		f = open("json4Names/ContractServiceValueReward/complications.json")
+		fullData = json.load(f)
+		complicationJson = fullData["complication"]
+		resultJson		 = json.loads("{}")
+
+		diceResult =  self.dice.roll(1, 20)
+
+		for i in complicationJson:
+			if diceResult in range(complicationJson[str(i)]["diceRangeMin"], complicationJson[str(i)]["diceRangeMax"]+1):
+				resultJson["complication"] = complicationJson[str(i)]
+				resultJson["complication"]["rolledDice"] = diceResult
+
+		complicationKey = resultJson["complication"]["complicationKey"]
+		resultJson[complicationKey] = self.rollSubComplication(fullData[complicationKey])
+
+		self.contratJson["complications"] = resultJson
+		pass
+
+	def rollSubComplication(self, subComplicationJson):
+		resultJson = json.loads("{}")
+		diceResult =  self.dice.roll(1, 10)
+		for i in subComplicationJson:
+			if diceResult in range(subComplicationJson[str(i)]["diceRangeMin"], subComplicationJson[str(i)]["diceRangeMax"]+1):
+				resultJson = subComplicationJson[str(i)]
 				resultJson["rolledDice"] = diceResult
 		return resultJson
 

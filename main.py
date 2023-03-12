@@ -385,7 +385,7 @@ class ContractviewerApp:
 			if dataObjective[str(i)]["diceRangeMin"] != 20:
 				amountOfObjectives += 1
 				display_info["Objetivo "+str(amountOfObjectives)] 		= dataObjective[str(i)]["name"]
-				display_info["Sub Objetivo "+str(amountOfObjectives)] 	= data["objective"][dataObjective[str(i)]["objectiveKey"]][str(i)]["name"]
+				display_info["Sub-Objetivo "+str(amountOfObjectives)] 	= data["objective"][dataObjective[str(i)]["objectiveKey"]][str(i)]["name"]
 		display_info["TipoContrato"] = data["contractType"]["name"]
 		display_info["Contratante"] = data["contractors"]["name"]
 		if display_info["Contratante"] == "Governo":
@@ -421,6 +421,10 @@ class ContractviewerApp:
 				antagonistKey = antagonistJson[str(i)]["antagonistKey"]
 				display_info["Sub-Antagonista " + str(amountOfAntagonist)] = data["fullAntagonist"][antagonistKey][str(i)]["name"]
 		
+		display_info["Complicacao"] = data["complications"]["complication"]["name"]
+		complicationKey = data["complications"]["complication"]["complicationKey"]
+		display_info["Sub-Complicacao"] = data["complications"][complicationKey]["name"]
+
 		display_info["Valor"] = data["value"]["totalAmount"]
 		display_info["Recompensa"] = data["reward"]["totalAmount"]
 		display_info["Prazo"] = str(data["dueDate"]["amount"]["value"]) + " Dias"
