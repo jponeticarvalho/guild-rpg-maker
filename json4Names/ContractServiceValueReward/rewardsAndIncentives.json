@@ -1,0 +1,597 @@
+{
+   "rewards":{
+      "1-13":{
+         "name":"Haverá recompensa extra",
+         "diceRangeMin":1,
+         "diceRangeMax":13,
+         "rewardCategoryKey":"rewardCategories"
+      },
+      "14-20":{
+         "name":"Não haverá recompensa extra",
+         "diceRangeMin":14,
+         "diceRangeMax":20
+      }
+   },
+   "rewardCategories":{
+      "1-2":{
+         "name":"Riquezas",
+         "diceRangeMin":1,
+         "diceRangeMax":2,
+         "rewardKey":"riches"
+      },
+      "3-4":{
+         "name":"Artefatos mágicos",
+         "diceRangeMin":3,
+         "diceRangeMax":4,
+         "rewardKey":"magicArtifacts"
+      },
+      "5-5":{
+         "name":"Poder",
+         "diceRangeMin":5,
+         "diceRangeMax":5,
+         "rewardKey":"power"
+      },
+      "6-6":{
+         "name":"Conhecimento",
+         "diceRangeMin":6,
+         "diceRangeMax":6,
+         "rewardKey":"knowledge"
+      },
+      "7-8":{
+         "name":"Influencia e renome",
+         "diceRangeMin":7,
+         "diceRangeMax":8,
+         "rewardKey":"influence"
+      },
+      "9-9":{
+         "name":"Glória",
+         "diceRangeMin":9,
+         "diceRangeMax":9,
+         "rewardKey":"glory"
+      },
+      "10-13":{
+         "name":"Moral",
+         "diceRangeMin":10,
+         "diceRangeMax":13,
+         "rewardKey":"moral"
+      },
+      "14-17":{
+         "name":"Pagamento diferenciado*",
+         "diceRangeMin":14,
+         "diceRangeMax":17,
+         "rewardKey":"unusualReward"
+      },
+      "18-18":{
+         "name":"Recompensa bizarra",
+         "diceRangeMin":18,
+         "diceRangeMax":18,
+         "rewardKey":"bizarreReward"
+      },
+      "19-20":{
+         "name":"Aparências enganam",
+         "diceRangeMin":19,
+         "diceRangeMax":20,
+         "rewardKey":"deceivingReward"
+      }
+   },
+   "riches":{
+      "1-1":{
+         "name":"Uma grande soma de ouro e prata",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Obra de arte/gema perdida",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Partes do lucro de um estabelecimento",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Escritura de um estabelecimento/construção",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Prole de criatura rara",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Item mágico",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Terras/fazendas",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Itens mundanos de alto valor e raridade",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Montaria/meio de transporte",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Engenhoca",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "magicArtifacts":{
+      "1-1":{
+         "name":"Arma mágica",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Pergaminho poderoso",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Grimório",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Itens maravilhosos",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Proteção mágica",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Varinha",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Cajado",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Anel mágico",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Bastão/cetro",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Item amaldiçoado",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "power":{
+      "1-1":{
+         "name":"Comando sobre um grupo",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Favor de alguém importante",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Contrato de casamento com figura poderosa",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Lugar de destaque em uma organização poderosa",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Contatos da classe alta local",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Cargo importante no governo local",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Permissão para explorar local restrito",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Pacto com entidade",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Vista grossa de autoridades da lei",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Bênção divina",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "knowledge":{
+      "1-1":{
+         "name":"Verdades sobre uma lenda",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Paradeiro de um tesouro esquecido",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Verdade sobre seu passado",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Fórmula de item mágico",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Acesso a biblioteca arcana renomada",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Descoberta de tecnologia ancestral",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Fofocas/segredos da nobreza",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Corrupção descoberta",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Fraqueza de um inimigo",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Magia poderosa",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "influence":{
+      "1-1":{
+         "name":"Sobre uma casa nobre",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Com a guilda",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Com uma facção criminosa/submundo",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Com uma sociedade secreta",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Ordem religiosa",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Seguidores",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Mercadores e comerciantes",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Tratado de aliança",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Organização/clã medíocre",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"População local",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "glory":{
+      "1-1":{
+         "name":"Feriado em sua homenagem",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Título de nobreza",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Estátua no centro do assentamento",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Conto sobre sua história",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Fama entre ladrões",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Magia/item com seu nome",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Herói local",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Local relevante com seu nome",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Festa/banquete em sua homenagem",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Carta de Duelo de Criaturas envolvendo você",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "moral":{
+      "1-1":{
+         "name":"Plebeus desafortunados salvos",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Prole nomeada em sua homenagem",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Trazer paz a um assentamento",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Felicidade genuína do contratante",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Liberdade",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Perdão por crimes/dividas",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Crianças desejam ser como você quando crescer",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Economia local alavancada",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Crescimento turístico",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Aumento da defesa do assentamento",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "unusualReward":{
+      "1-1":{
+         "name":"Trigo",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Vacas/bois",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Especiarias (Canela, pimenta, sal)",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Galinhas ou porcos",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Obras de arte/joias",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Hospedagem e suprimentos",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Tecidos e tapeçaria",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"O bem mais valioso do contratante",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"Ferro ou cobre",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Terras",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "bizarreReward":{
+      "1-1":{
+         "name":"Uma besta te vê como igual",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Tribo permite que faça o ritual de iniciação",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Uma noite de prazer",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Convite para uma irmandade/seita",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Moedas são cunhadas com seu rosto",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Começam a vender bugigangas com tema do herói",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"Uma criatura quer ser sua aprendiz",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"O contratante se apaixona por você",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"A melhor comida do assentamento tem seu nome",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"Uma carta de Duelo de Criaturas",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   },
+   "deceivingReward":{
+      "1-1":{
+         "name":"Mapa para um tesouro amaldiçoado",
+         "diceRangeMin":1,
+         "diceRangeMax":1
+      },
+      "2-2":{
+         "name":"Gemas e objetos de arte falsificados",
+         "diceRangeMin":2,
+         "diceRangeMax":2
+      },
+      "3-3":{
+         "name":"Item mágico falso",
+         "diceRangeMin":3,
+         "diceRangeMax":3
+      },
+      "4-4":{
+         "name":"Objeto valioso roubado",
+         "diceRangeMin":4,
+         "diceRangeMax":4
+      },
+      "5-5":{
+         "name":"Falsos rumores",
+         "diceRangeMin":5,
+         "diceRangeMax":5
+      },
+      "6-6":{
+         "name":"Item mágico amaldiçoado",
+         "diceRangeMin":6,
+         "diceRangeMax":6
+      },
+      "7-7":{
+         "name":"O contratante não paga/foge",
+         "diceRangeMin":7,
+         "diceRangeMax":7
+      },
+      "8-8":{
+         "name":"Caçado por caçadores de recompensa",
+         "diceRangeMin":8,
+         "diceRangeMax":8
+      },
+      "9-9":{
+         "name":"O contratante morre ou forja sua morte",
+         "diceRangeMin":9,
+         "diceRangeMax":9
+      },
+      "10-10":{
+         "name":"O contratante te leva para uma armadilha",
+         "diceRangeMin":10,
+         "diceRangeMax":10
+      }
+   }
+}

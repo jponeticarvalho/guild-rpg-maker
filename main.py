@@ -65,8 +65,8 @@ class ContractviewerApp:
 		frame3.grid(column=2, row=0)
 		frame10.grid(column=0, pady=5, row=0)
 		self.guildOptMenuVar = tk.StringVar(
-			value='Selecione uma guilda para vizualização')
-		__values = ['Selecione uma guilda para vizualização']
+			value='Selecione uma guilda para visualização')
+		__values = ['Selecione uma guilda para visualização']
 		self.guildSelectOptMenu = MyOptionMenu(
             self.guildFrame,
             self.guildOptMenuVar,
