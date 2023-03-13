@@ -17,37 +17,37 @@
          "name":"Riquezas",
          "diceRangeMin":1,
          "diceRangeMax":2,
-         "rewardKey":"riquezas"
+         "rewardKey":"riches"
       },
       "3-4":{
          "name":"Artefatos mágicos",
          "diceRangeMin":3,
          "diceRangeMax":4,
-         "rewardKey":"artefatosMagicos"
+         "rewardKey":"magicArtifacts"
       },
       "5-5":{
          "name":"Poder",
          "diceRangeMin":5,
          "diceRangeMax":5,
-         "rewardKey":"poder"
+         "rewardKey":"power"
       },
       "6-6":{
          "name":"Conhecimento",
          "diceRangeMin":6,
          "diceRangeMax":6,
-         "rewardKey":"conhecimento"
+         "rewardKey":"knowledge"
       },
       "7-8":{
          "name":"Influencia e renome",
          "diceRangeMin":7,
          "diceRangeMax":8,
-         "rewardKey":"influencia"
+         "rewardKey":"influence"
       },
       "9-9":{
          "name":"Glória",
          "diceRangeMin":9,
          "diceRangeMax":9,
-         "rewardKey":"gloria"
+         "rewardKey":"glory"
       },
       "10-13":{
          "name":"Moral",
@@ -59,22 +59,22 @@
          "name":"Pagamento diferenciado*",
          "diceRangeMin":14,
          "diceRangeMax":17,
-         "rewardKey":"pagamentoDiferenciado"
+         "rewardKey":"unusualReward"
       },
       "18-18":{
          "name":"Recompensa bizarra",
          "diceRangeMin":18,
          "diceRangeMax":18,
-         "rewardKey":"recompensaBizarra"
+         "rewardKey":"bizarreReward"
       },
       "19-20":{
          "name":"Aparências enganam",
          "diceRangeMin":19,
          "diceRangeMax":20,
-         "rewardKey":"aparenciasEnganam"
+         "rewardKey":"deceivingReward"
       }
    },
-   "riquezas":{
+   "riches":{
       "1-1":{
          "name":"Uma grande soma de ouro e prata",
          "diveRangeMin":1,
@@ -126,7 +126,7 @@
          "diveRangeMax":10
       }
    },
-   "artefatosMagicos":{
+   "magicArtifacts":{
       "1-1":{
          "name":"Arma mágica",
          "diveRangeMin":1,
@@ -178,7 +178,7 @@
          "diveRangeMax":10
       }
    },
-   "poder":{
+   "power":{
       "1-1":{
          "name":"Comando sobre um grupo",
          "diveRangeMin":1,
@@ -230,7 +230,7 @@
          "diveRangeMax":10
       }
    },
-   "conhecimento":{
+   "knowledge":{
       "1-1":{
          "name":"Verdades sobre uma lenda",
          "diveRangeMin":1,
@@ -282,7 +282,7 @@
          "diveRangeMax":10
       }
    },
-   "influencia":{
+   "influence":{
       "1-1":{
          "name":"Sobre uma casa nobre",
          "diveRangeMin":1,
@@ -334,7 +334,7 @@
          "diveRangeMax":10
       }
    },
-   "gloria":{
+   "glory":{
       "1-1":{
          "name":"Feriado em sua homenagem",
          "diveRangeMin":1,
@@ -438,7 +438,7 @@
          "diveRangeMax":10
       }
    },
-   "pagamentoDiferenciado":{
+   "unusualReward":{
       "1-1":{
          "name":"Trigo",
          "diveRangeMin":1,
@@ -490,7 +490,7 @@
          "diveRangeMax":10
       }
    },
-   "recompensaBizarra":{
+   "bizarreReward":{
       "1-1":{
          "name":"Uma besta te vê como igual",
          "diveRangeMin":1,
@@ -542,7 +542,7 @@
          "diveRangeMax":10
       }
    },
-   "aparenciasEnganam":{
+   "deceivingReward":{
       "1-1":{
          "name":"Mapa para um tesouro amaldiçoado",
          "diveRangeMin":1,
