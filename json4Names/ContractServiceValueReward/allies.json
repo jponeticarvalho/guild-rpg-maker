@@ -1,0 +1,648 @@
+{
+	"haveAlly": {
+		"1-10": {
+			"name": "Não",
+			"diceRangeMin": 1,
+			"diceRangeMax": 10
+        },
+		"11-20": {
+			"name": "Sim",
+			"diceRangeMin": 11,
+			"diceRangeMax": 20
+		}
+    },
+	"ally": {
+		"1-1": {
+			"name": "Artefato",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1,
+			"allyKey": "artifacts"
+		},
+		"2-4": {
+			"name": "Criatura poderosa",
+			"diceRangeMin": 2,
+			"diceRangeMax": 4,
+			"allyKey": "powerfullCreature"
+		},
+		"5-5": {
+			"name": "Inesperado",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5,
+			"allyKey": "unexpected"
+		},
+		"6-6": {
+			"name": "Ajuda sobrenatural",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6,
+			"allyKey": "supernaturalHelp"
+		},
+		"7-12": {
+			"name": "Civis ordinários",
+			"diceRangeMin": 7,
+			"diceRangeMax": 12,
+			"allyKey": "ordinaryCivil"
+		},
+		"13-13": {
+			"name": "Natureza",
+			"diceRangeMin": 13,
+			"diceRangeMax": 13,
+			"allyKey": "nature"
+		},
+		"14-16": {
+			"name": "Organização",
+			"diceRangeMin": 14,
+			"diceRangeMax": 16,
+			"allyKey": "organization"
+		},
+		"17-17": {
+			"name": "Refugio",
+			"diceRangeMin": 17,
+			"diceRangeMax": 17,
+			"allyKey": "refuge"
+		},
+		"18-19": {
+			"name": "Aventureiros",
+			"diceRangeMin": 18,
+			"diceRangeMax": 19,
+			"allyKey": "adventures"
+		},
+		"20-20": {
+			"name": "Monstruosidade amigável",
+			"diceRangeMin": 20,
+			"diceRangeMax": 20,
+			"allyKey": "monstrosity"
+		}
+	},
+	"whenHowAppear": {
+		"1-2": {
+			"name": "Correndo perigo",
+			"diceRangeMin": 1,
+			"diceRangeMax": 2
+		},
+		"3-5": {
+			"name": "De um jeito constrangedor",
+			"diceRangeMin": 3,
+			"diceRangeMax": 5
+		},
+		"6-11": {
+			"name": "De maneira comum e pacata",
+			"diceRangeMin": 6,
+			"diceRangeMax": 11
+		},
+		"12-12": {
+			"name": "Pedindo ajuda durante um descanso",
+			"diceRangeMin": 12,
+			"diceRangeMax": 12
+		},
+		"13-14": {
+			"name": "Ainda no assentamento",
+			"diceRangeMin": 13,
+			"diceRangeMax": 14
+		},
+		"15-16": {
+			"name": "Já estará lidando com a complicação",
+			"diceRangeMin": 15,
+			"diceRangeMax": 16
+		},
+		"17-17": {
+			"name": "1d4 dias após o começo do contrato",
+			"diceRangeMin": 17,
+			"diceRangeMax": 17
+		},
+		"18-18": {
+			"name": "2d4 dias após o começo do contrato",
+			"diceRangeMin": 18,
+			"diceRangeMax": 18
+		},
+		"19-19": {
+			"name": "Magicamente invocado",
+			"diceRangeMin": 19,
+			"diceRangeMax": 19
+		},
+		"20-20": {
+			"name": "Para salvar o dia",
+			"diceRangeMin": 20,
+			"diceRangeMax": 20
+		}
+	},
+	"artifacts": {
+		"1-1": {
+			"name": "Runa antiga",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Amuleto que ajuda a chegar ao objetivo",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Arma senciente",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Vestimenta/acessório vivo",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Totem de uma região próxima",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Livro com conhecimento necessário",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Criatura presa/transformada em objeto/animal",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Artefato perdido de uma divindade menor",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Item amaldiçoado",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Engenhoca voadora",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"powerfullCreature": {
+		"1-1": {
+			"name": "Elemental",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Mercenário veterano",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Humanoide buscando vingança",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Líder local",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Trabalhador braçal fora do comum",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Nobre longe de casa",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Herói renomado",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Criatura de outro plano",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Criminoso influente do submundo",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Avatar de uma divindade",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"unexpected": {
+		"1-1": {
+			"name": "Um antigo inimigo/rival",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Metamorfo",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Constructo",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Criatura do próximo encontro aleatório",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Inimigo desertor",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Objeto animado",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Velho conhecido de um dos jogadores",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Fã/interesse amoroso de um personagem",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Animal inteligente",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Informações de uma fonte inesperada",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"supernaturalHelp": {
+		"1-1": {
+			"name": "Deus maligno menor",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Espectro",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Infectados",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Sonhos/pesadelos/visões",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Portal mágico",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Elo mental",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Pseudo-dragão",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Forças divinas misteriosas",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Ressurgido vingativo",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Celestial",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"ordinaryCivil": {
+		"1-1": {
+			"name": "Taverneiro",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Grupo de nômades",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Mercador local",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Funcionário de estalagem",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Aventureiro aposentado",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Trabalhador braçal",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Plebeu",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Prole",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Adepto acadêmico/religioso",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Especialista",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"nature": {
+		"1-1": {
+			"name": "Matilha de lobos",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Águia/falcão",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Pequenos mamíferos",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Anomalia climática",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Ente ou árvore desperta",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Humanoides da floresta",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Fada",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Filhote de um monstro temido",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "A própria flora local",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Besta grande ou atroz",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"organization": {
+		"1-1": {
+			"name": "Companhia de mercenários",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Ordem religiosa",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Comunidade local",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Líder de um pequeno clã",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Sindicato de comerciantes",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Facção criminosa",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Grupo circense",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Companhia militar",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Revolucionários/rebeldes",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Espiões infiltrados",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"refuge": {
+		"1-1": {
+			"name": "Fortaleza abandonada",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Torre de arcanista vazia",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Pequena construção com recursos",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Esconderijo/sala secreta",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Santuário de um deus bondoso",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Calabouço esquecido",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Clareira magicamente segura",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Fonte de cura",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Caverna/gruta segura",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Máquina de guerra inativa",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	},
+	"adventures": {
+		"1-3": {
+			"name": "Bárbaro espirituoso",
+			"diceRangeMin": 1,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Arcanista erudito",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-7": {
+			"name": "Guerreiro destemido",
+			"diceRangeMin": 5,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Druida errante",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Clérigo fiel",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-11": {
+			"name": "Paladino honrado",
+			"diceRangeMin": 10,
+			"diceRangeMax": 11
+		},
+		"12-14": {
+			"name": "Ladino sagaz",
+			"diceRangeMin": 12,
+			"diceRangeMax": 14
+		},
+		"15-17": {
+			"name": "Ranger talentoso",
+			"diceRangeMin": 15,
+			"diceRangeMax": 17
+		},
+		"18-18": {
+			"name": "Monge disciplinado",
+			"diceRangeMin": 18,
+			"diceRangeMax": 18
+		},
+		"19-20": {
+			"name": "Bardo carismático",
+			"diceRangeMin": 19,
+			"diceRangeMax": 20
+		}
+	},
+	"monstrosity": {
+		"1-1": {
+			"name": "Que acredita ser de outra raça",
+			"diceRangeMin": 1,
+			"diceRangeMax": 1
+		},
+		"2-2": {
+			"name": "Erudito",
+			"diceRangeMin": 2,
+			"diceRangeMax": 2
+		},
+		"3-3": {
+			"name": "Fisicamente avantajado",
+			"diceRangeMin": 3,
+			"diceRangeMax": 3
+		},
+		"4-4": {
+			"name": "Sedutor",
+			"diceRangeMin": 4,
+			"diceRangeMax": 4
+		},
+		"5-5": {
+			"name": "Extremamente honrado",
+			"diceRangeMin": 5,
+			"diceRangeMax": 5
+		},
+		"6-6": {
+			"name": "Heroico",
+			"diceRangeMin": 6,
+			"diceRangeMax": 6
+		},
+		"7-7": {
+			"name": "Inocente e fofo",
+			"diceRangeMin": 7,
+			"diceRangeMax": 7
+		},
+		"8-8": {
+			"name": "Covarde",
+			"diceRangeMin": 8,
+			"diceRangeMax": 8
+		},
+		"9-9": {
+			"name": "Triste e desmotivado",
+			"diceRangeMin": 9,
+			"diceRangeMax": 9
+		},
+		"10-10": {
+			"name": "Amado pelos habitantes",
+			"diceRangeMin": 10,
+			"diceRangeMax": 10
+		}
+	}
+}
