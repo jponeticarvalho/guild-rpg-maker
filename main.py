@@ -430,6 +430,15 @@ class ContractviewerApp:
 		complicationKey = data["complications"]["complication"]["complicationKey"]
 		display_info["Sub-Complicacao"] = data["complications"][complicationKey]["name"]
 
+		if data["allies"]["exist"]:
+			display_info["Havera Aliados?"] = "Sim"
+			display_info["Aliado"] = data["allies"]["ally"]["name"]
+			allyKey = data["allies"]["ally"]["allyKey"]
+			display_info["Esp. Aliado"] = data["allies"][allyKey]["name"]
+			display_info["Quando/Como aparecera"] = data["allies"]["whenHowAppear"]["name"]
+		else:
+			display_info["Havera Aliados?"] = "Nao"
+
 		display_info["Valor"] = data["value"]["totalAmount"]
 		display_info["Recompensa"] = data["reward"]["totalAmount"]
 		display_info["Prazo"] = str(data["dueDate"]["amount"]["value"]) + " Dias"
