@@ -1,58 +1,108 @@
 {
+	"antagonistDice":{
+		"diceAmount": 1,
+		"diceType": 20,
+		"diceBonus": 0
+	},
 	"antagonist": {
 		"1-4": {
 			"name": "Humanoide poderoso",
 			"diceRangeMin": 1,
 			"diceRangeMax": 4,
-			"antagonistKey": "powerfullHumanoid"
+			"antagonistKey": "powerfullHumanoid",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"5-6": {
 			"name": "Artefato mágico",
 			"diceRangeMin": 5,
 			"diceRangeMax": 6,
-			"antagonistKey": "magicArtifact"
+			"antagonistKey": "magicArtifact",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"7-9": {
 			"name": "Organização",
 			"diceRangeMin": 7,
 			"diceRangeMax": 9,
-			"antagonistKey": "organization"
+			"antagonistKey": "organization",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"10-12": {
 			"name": "Perigo iminente",
 			"diceRangeMin": 10,
 			"diceRangeMax": 12,
-			"antagonistKey": "danger"
+			"antagonistKey": "danger",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"13-14": {
 			"name": "Entidade sobrenatural",
 			"diceRangeMin": 13,
 			"diceRangeMax": 14,
-			"antagonistKey": "supernaturalEntity"
+			"antagonistKey": "supernaturalEntity",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"15-16": {
 			"name": "Anomalia",
 			"diceRangeMin": 15,
 			"diceRangeMax": 16,
-			"antagonistKey": "anomaly"
+			"antagonistKey": "anomaly",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"17-17": {
 			"name": "Desastre ou acidente",
 			"diceRangeMin": 17,
 			"diceRangeMax": 17,
-			"antagonistKey": "disaster"
+			"antagonistKey": "disaster",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"18-18": {
 			"name": "Crise",
 			"diceRangeMin": 18,
 			"diceRangeMax": 18,
-			"antagonistKey": "crisis"
+			"antagonistKey": "crisis",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"19-19": {
 			"name": "Mistério",
 			"diceRangeMin": 19,
 			"diceRangeMax": 19,
-			"antagonistKey": "mystery"
+			"antagonistKey": "mystery",
+			"antagonistDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"20-20": {
 			"name": "Role duas vezes e use ambos",

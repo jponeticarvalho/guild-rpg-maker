@@ -461,31 +461,23 @@ class ContractMaker:
 	def defAntagonist(self):
 		f = open("json4Names/ContractServiceValueReward/antagonist.json")
 		fullData = json.load(f)
-		antagonistJson 	= fullData["antagonist"]
-		#antagonistDice	= fullData["antagonistDice"]
 		resultJson		= json.loads("{\"antagonist\":{}}")
 
 		antagonistAmount = 1
 		antagonistNumber = 1
 		while antagonistAmount > 0:
-			diceResult =  self.dice.roll(1, 20)
-
-			for i in antagonistJson:
-				if diceResult in range(antagonistJson[str(i)]["diceRangeMin"], antagonistJson[str(i)]["diceRangeMax"]+1):
-					resultJson["antagonist"][str(antagonistNumber)] = antagonistJson[str(i)]
-					resultJson["antagonist"][str(antagonistNumber)]["rolledDice"] = diceResult
-			#TODO Update roll table
-			#resultJson["antagonist"][str(antagonistNumber)] = self.rollSubClass(antagonistJson, antagonistDice)
+			resultJson["antagonist"][str(antagonistNumber)] = self.rollTable(fullData["antagonist"], fullData["antagonistDice"])
 
 			#TODO verificar um jeito que nao fique tao hardcoded
-			if diceResult in range(antagonistJson["20-20"]["diceRangeMin"], antagonistJson["20-20"]["diceRangeMax"]+1):
+			if resultJson["antagonist"][str(antagonistNumber)]["rolledDice"] in range(fullData["antagonist"]["20-20"]["diceRangeMin"], fullData["antagonist"]["20-20"]["diceRangeMax"]+1):
 				antagonistAmount += 2
 			else:
-				antagonistKey = resultJson["antagonist"][str(antagonistNumber)]["antagonistKey"]
+				antagonistKey 	= resultJson["antagonist"][str(antagonistNumber)]["antagonistKey"]
+				antagonistDice	= resultJson["antagonist"][str(antagonistNumber)]["antagonistDice"]
 
 				if antagonistKey not in resultJson:
 					resultJson[antagonistKey] = json.loads("{}")
-				resultJson[antagonistKey][antagonistNumber] = self.rollSubAntagonist(fullData[antagonistKey])
+				resultJson[antagonistKey][antagonistNumber] = self.rollTable(fullData[antagonistKey], antagonistDice)
 
 			antagonistAmount -= 1
 			antagonistNumber += 1
@@ -497,15 +489,6 @@ class ContractMaker:
 		self.contratJson["fullAntagonist"] = resultJson
 		f.close()
 		pass
-
-	def rollSubAntagonist(self, subAntagonistJson):
-		resultJson = json.loads("{}")
-		diceResult =  self.dice.roll(1, 10)
-		for i in subAntagonistJson:
-			if diceResult in range(subAntagonistJson[str(i)]["diceRangeMin"], subAntagonistJson[str(i)]["diceRangeMax"]+1):
-				resultJson = subAntagonistJson[str(i)]
-				resultJson["rolledDice"] = diceResult
-		return resultJson
 
 	def defComplication(self):
 		f = open("json4Names/ContractServiceValueReward/complications.json")
