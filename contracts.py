@@ -383,69 +383,40 @@ class ContractMaker:
 	def defLocation(self):
 		f = open("json4Names/ContractServiceValueReward/location.json")
 		fullData = json.load(f)
-		locationJson = json.loads("{}")
+		resultJson = json.loads("{}")
 	
-		diceResult =  self.dice.roll(1, 20)
-		data = fullData["location"]
-		for i in data:
-			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
-				locationJson["location"] = data[str(i)]
-				locationJson["location"]["rolledDice"] = diceResult
+		resultJson["location"] = self.rollTable(fullData["location"], fullData["locationDice"])
 
-		diceResult =  self.dice.roll(1, 20)
-		data = fullData["locationImportance"]
-		for i in data:
-			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
-				locationJson["locationImportance"] = data[str(i)]
-				locationJson["locationImportance"]["rolledDice"] = diceResult
+		resultJson["locationImportance"] = self.rollTable(fullData["locationImportance"], fullData["locationImportanceDice"])
 
-		diceResult =  self.dice.roll(1, 20)
-		data = fullData["peculiarity"]
-		for i in data:
-			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
-				locationJson["peculiarity"] = data[str(i)]
-				locationJson["peculiarity"]["rolledDice"] = diceResult
+		resultJson["peculiarity"] = self.rollTable(fullData["peculiarity"], fullData["peculiarityDice"])
 
-		locationKey = locationJson["location"]["locationKey"]
-		locationJson[locationKey] = self.rollSubLocation(fullData[locationKey])
+		locationKey = resultJson["location"]["locationKey"]
+		locationDice = resultJson["location"]["locationDice"]
+		resultJson[locationKey] = self.rollTable(fullData[locationKey], locationDice)
 
-		self.contratJson["fullLocation"] = locationJson
+		if resultJson[locationKey]["hasDistrict"]:
+			resultJson[locationKey]["district"] = self.rollDistrict()
+
+		self.contratJson["fullLocation"] = resultJson
 
 		f.close()
 		pass
-
-	def rollSubLocation(self, subLocJson):
-		resultJson = json.loads("{}")
-		diceResult =  self.dice.roll(1, 10)
-		for i in subLocJson:
-			if diceResult in range(subLocJson[str(i)]["diceRangeMin"], subLocJson[str(i)]["diceRangeMax"]+1):
-				resultJson = subLocJson[str(i)]
-				resultJson["rolledDice"] = diceResult
-		try:
-			if resultJson["hasDistrict"]:
-				resultJson["district"] = self.rollDistrict()
-		except:
-			return
-		return resultJson
 
 	def rollDistrict(self):
 		f = open("json4Names/ContractServiceValueReward/location.json")
 		fullData = json.load(f)
 		districtJson 	= fullData["isDistrict"]
+		districtDice	= fullData["isDistrictDice"]
 		resultJson		= json.loads("{}")
 
 		districtAmount = 1
 		districtNumber = 1
 		while districtAmount > 0:
-			diceResult =  self.dice.roll(1, 20)
-
-			for i in districtJson:
-				if diceResult in range(districtJson[str(i)]["diceRangeMin"], districtJson[str(i)]["diceRangeMax"]+1):
-					resultJson[str(districtNumber)] = districtJson[str(i)]
-					resultJson[str(districtNumber)]["rolledDice"] = diceResult
+			resultJson[str(districtNumber)] = self.rollTable(districtJson, districtDice)
 
 			#TODO verificar um jeito que nao fique tao hardcoded
-			if diceResult in range(districtJson["20-20"]["diceRangeMin"], districtJson["20-20"]["diceRangeMax"]+1):
+			if resultJson[str(districtNumber)]["rolledDice"] in range(districtJson["20-20"]["diceRangeMin"], districtJson["20-20"]["diceRangeMax"]+1):
 				districtAmount += 2
 
 			districtAmount -= 1

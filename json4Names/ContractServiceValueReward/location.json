@@ -1,53 +1,103 @@
 {
+    "locationDice": {
+        "diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
+    },
     "location": {
         "1-4": {
             "name": "Cidade grande*",
             "diceRangeMin": 1,
             "diceRangeMax": 4,
-            "locationKey": "greatCity"
+            "locationKey": "greatCity",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         },
         "5-9": {
             "name": "Ruínas ou masmorras",
             "diceRangeMin": 5,
             "diceRangeMax": 9,
-            "locationKey": "dungeon"
+            "locationKey": "dungeon",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         },
         "10-12": {
             "name": "Região selvagem",
             "diceRangeMin": 10,
             "diceRangeMax": 12,
-            "locationKey": "wildRegion"
+            "locationKey": "wildRegion",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         },
         "13-14": {
             "name": "Lugar isolado",
             "diceRangeMin": 13,
             "diceRangeMax": 14,
-            "locationKey": "isolatedPlace"
+            "locationKey": "isolatedPlace",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         },
         "15-17": {
             "name": "Zona rural",
             "diceRangeMin": 15,
             "diceRangeMax": 17,
-            "locationKey": "ruralZone"
+            "locationKey": "ruralZone",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         },
         "18-18": {
             "name": "Localidade exótica",
             "diceRangeMin": 18,
             "diceRangeMax": 18,
-            "locationKey": "exoticLocation"
+            "locationKey": "exoticLocation",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         },
         "19-19": {
             "name": "Profundezas",
             "diceRangeMin": 19,
             "diceRangeMax": 19,
-            "locationKey": "deepness"
+            "locationKey": "deepness",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         },
         "20-20": {
             "name": "Terras mórbidas",
             "diceRangeMin": 20,
             "diceRangeMax": 20,
-            "locationKey": "morbidLands"
+            "locationKey": "morbidLands",
+            "locationDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
         }
+    },
+    "isDistrictDice":{
+        "diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
     },
     "isDistrict": {
         "1-5": {
@@ -90,6 +140,11 @@
             "diceRangeMin": 20,
             "diceRangeMax": 20
         }
+    },
+    "locationImportanceDice":{
+        "diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
     },
     "locationImportance": {
         "1-11": {
@@ -142,6 +197,11 @@
             "diceRangeMin": 20,
             "diceRangeMax": 20
         }
+    },
+    "peculiarityDice":{
+        "diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
     },
     "peculiarity": {
         "1-11": {
