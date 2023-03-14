@@ -513,29 +513,15 @@ class ContractMaker:
 		complicationJson = fullData["complication"]
 		resultJson		 = json.loads("{}")
 
-		diceResult =  self.dice.roll(1, 20)
-
-		for i in complicationJson:
-			if diceResult in range(complicationJson[str(i)]["diceRangeMin"], complicationJson[str(i)]["diceRangeMax"]+1):
-				resultJson["complication"] = complicationJson[str(i)]
-				resultJson["complication"]["rolledDice"] = diceResult
-
+		resultJson["complication"] = self.rollTable(fullData["complication"], fullData["complicationDice"])
+		
 		complicationKey = resultJson["complication"]["complicationKey"]
-		resultJson[complicationKey] = self.rollSubComplication(fullData[complicationKey])
+		resultJson[complicationKey] = self.rollTable(fullData[complicationKey], resultJson["complication"]["complicationDice"])
 
 		self.contratJson["complications"] = resultJson
 		f.close()
 		pass
-
-	def rollSubComplication(self, subComplicationJson):
-		resultJson = json.loads("{}")
-		diceResult =  self.dice.roll(1, 10)
-		for i in subComplicationJson:
-			if diceResult in range(subComplicationJson[str(i)]["diceRangeMin"], subComplicationJson[str(i)]["diceRangeMax"]+1):
-				resultJson = subComplicationJson[str(i)]
-				resultJson["rolledDice"] = diceResult
-		return resultJson
-
+	
 	def defAllies(self):
 		f = open("json4Names/ContractServiceValueReward/allies.json")
 		fullData = json.load(f)

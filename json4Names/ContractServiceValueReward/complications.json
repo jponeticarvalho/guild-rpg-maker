@@ -1,64 +1,119 @@
 {
+    "complicationDice": {
+        "diceAmount": 1,
+		"diceType": 20,
+		"diceBonus": 0
+    },
     "complication": {
         "1-3": {
             "name": "Recursos",
             "diceRangeMin": 1,
             "diceRangeMax": 3,
-            "complicationKey": "resources"
+            "complicationKey": "resources",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "4-6": {
             "name": "Vitimas",
             "diceRangeMin": 4,
             "diceRangeMax": 6,
-            "complicationKey": "victims"
+            "complicationKey": "victims",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "7-8": {
             "name": "Organização",
             "diceRangeMin": 7,
             "diceRangeMax": 8,
-            "complicationKey": "organization"
+            "complicationKey": "organization",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "9-9": {
             "name": "Miraculoso",
             "diceRangeMin": 9,
             "diceRangeMax": 9,
-            "complicationKey": "miraculous"
+            "complicationKey": "miraculous",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "10-12": {
             "name": "Ambiente hostil",
             "diceRangeMin": 10,
             "diceRangeMax": 12,
-            "complicationKey": "hostileEnv"
+            "complicationKey": "hostileEnv",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "13-13": {
             "name": "Inusitado",
             "diceRangeMin": 13,
             "diceRangeMax": 13,
-            "complicationKey": "unusual"
+            "complicationKey": "unusual",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "14-15": {
             "name": "Problemas diplomáticos",
             "diceRangeMin": 14,
             "diceRangeMax": 15,
-            "complicationKey": "diplomaticIssue"
+            "complicationKey": "diplomaticIssue",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "16-16": {
             "name": "Proteção",
             "diceRangeMin": 16,
             "diceRangeMax": 16,
-            "complicationKey": "protection"
+            "complicationKey": "protection",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "17-17": {
             "name": "Contratempo amistoso",
             "diceRangeMin": 17,
             "diceRangeMax": 17,
-            "complicationKey": "friendlyAgainstTime"
+            "complicationKey": "friendlyAgainstTime",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "18-20": {
             "name": "Encontro hostil",
             "diceRangeMin": 18,
             "diceRangeMax": 20,
-            "complicationKey": "hostileMeeting"
+            "complicationKey": "hostileMeeting",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         }
     },
     "resources": {
