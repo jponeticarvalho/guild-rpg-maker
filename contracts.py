@@ -328,23 +328,28 @@ class ContractMaker:
 
 		data = fullData["generalObjectives"]
 		while objectiveAmount > 0:
-			diceResult =  self.dice.roll(1, 20)
-
-			for i in data:
-				if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
-					objectiveJson["generalObjectives"][str(objectiveNumber)] = data[str(i)]
-					objectiveJson["generalObjectives"][str(objectiveNumber)]["rolledDice"] = diceResult
+			
+			objectiveJson["generalObjectives"][str(objectiveNumber)] = self.rollTable(fullData["generalObjectives"], fullData["objectiveDice"])
 
 			#TODO verificar um jeito que nao fique tao hardcoded
-			if diceResult in range(data["20+"]["diceRangeMin"], data["20+"]["diceRangeMax"]+1):
+			diceResult	= objectiveJson["generalObjectives"][str(objectiveNumber)]["rolledDice"]
+			rangeMin	= fullData["generalObjectives"]["20+"]["diceRangeMin"]
+			rangeMax	= fullData["generalObjectives"]["20+"]["diceRangeMax"]+1
+
+			if diceResult in range(rangeMin, rangeMax):
 				objectiveAmount += 2
 			else:
-				if objectiveJson["generalObjectives"][str(objectiveNumber)]["objectiveKey"] not in objectiveJson:
-					objectiveJson[objectiveJson["generalObjectives"][str(objectiveNumber)]["objectiveKey"]] = json.loads("{}")
-					
-				objectiveJson[objectiveJson["generalObjectives"][str(objectiveNumber)]["objectiveKey"]][objectiveNumber] = 	\
-					self.rollSubObjective (																					\
-					fullData[objectiveJson["generalObjectives"][str(objectiveNumber)]["objectiveKey"]])
+				objectiveKey	= objectiveJson["generalObjectives"][str(objectiveNumber)]["objectiveKey"]
+				objectiveDice	= objectiveJson["generalObjectives"][str(objectiveNumber)]["objectiveDice"]
+				
+				if objectiveKey not in objectiveJson:
+					objectiveJson[objectiveKey] = json.loads("{}")
+
+				objectiveJson[objectiveKey][objectiveNumber] = self.rollTable (fullData[objectiveKey], objectiveDice)
+
+				if objectiveJson[objectiveKey][objectiveNumber]["needLocation"] == True:
+					locJson	= self.rollTable (fullData["locationOfObjective"], fullData["locationOfObjectiveDice"])
+					objectiveJson[objectiveKey][objectiveNumber]["locationOfObjective"] = locJson
 
 			objectiveAmount -= 1
 			objectiveNumber += 1
@@ -357,28 +362,6 @@ class ContractMaker:
 
 		f.close()
 		pass
-
-	def rollSubObjective(self, dataJson):
-		subObjectiveJson = json.loads("{}")
-		diceResult = self.dice.roll(1, 10)
-
-		for i in dataJson:
-			if diceResult in range(dataJson[str(i)]["diceRangeMin"], dataJson[str(i)]["diceRangeMax"]+1):
-				subObjectiveJson = dataJson[str(i)]
-				subObjectiveJson["rolledDice"] = diceResult
-		
-		if subObjectiveJson["needLocation"] == True:
-			f = open("json4Names/ContractServiceValueReward/objectives.json")
-			fullData = json.load(f)
-			locationJson = fullData["locationOfObjective"]
-			diceResult = self.dice.roll(1, 10)
-
-			for i in locationJson:
-				if diceResult in range(locationJson[str(i)]["diceRangeMin"], locationJson[str(i)]["diceRangeMax"]+1):
-					subObjectiveJson["locationOfObjective"] = locationJson[str(i)]
-					subObjectiveJson["locationOfObjective"]["rolledDice"] = diceResult
-
-		return subObjectiveJson
 
 	def defLocation(self):
 		f = open("json4Names/ContractServiceValueReward/location.json")
@@ -416,7 +399,11 @@ class ContractMaker:
 			resultJson[str(districtNumber)] = self.rollTable(districtJson, districtDice)
 
 			#TODO verificar um jeito que nao fique tao hardcoded
-			if resultJson[str(districtNumber)]["rolledDice"] in range(districtJson["20-20"]["diceRangeMin"], districtJson["20-20"]["diceRangeMax"]+1):
+			diceResult 	= resultJson[str(districtNumber)]["rolledDice"]
+			rangeMin 	= districtJson["20-20"]["diceRangeMin"]
+			rangeMax	= districtJson["20-20"]["diceRangeMax"]+1
+
+			if diceResult in range(rangeMin, rangeMax):
 				districtAmount += 2
 
 			districtAmount -= 1
@@ -440,7 +427,11 @@ class ContractMaker:
 			resultJson["antagonist"][str(antagonistNumber)] = self.rollTable(fullData["antagonist"], fullData["antagonistDice"])
 
 			#TODO verificar um jeito que nao fique tao hardcoded
-			if resultJson["antagonist"][str(antagonistNumber)]["rolledDice"] in range(fullData["antagonist"]["20-20"]["diceRangeMin"], fullData["antagonist"]["20-20"]["diceRangeMax"]+1):
+			diceResult 	= resultJson["antagonist"][str(antagonistNumber)]["rolledDice"]
+			rangeMin 	= fullData["antagonist"]["20-20"]["diceRangeMin"]
+			rangeMax	= fullData["antagonist"]["20-20"]["diceRangeMax"]+1
+
+			if diceResult in range(rangeMin, rangeMax):
 				antagonistAmount += 2
 			else:
 				antagonistKey 	= resultJson["antagonist"][str(antagonistNumber)]["antagonistKey"]
@@ -464,7 +455,6 @@ class ContractMaker:
 	def defComplication(self):
 		f = open("json4Names/ContractServiceValueReward/complications.json")
 		fullData = json.load(f)
-		complicationJson = fullData["complication"]
 		resultJson		 = json.loads("{}")
 
 		resultJson["complication"] = self.rollTable(fullData["complication"], fullData["complicationDice"])
@@ -483,8 +473,11 @@ class ContractMaker:
 
 		resultJson["exist"] = False
 
-		diceResult =  self.rollDice(fullData["haveAlly"]["dice"])
-		if diceResult in range(fullData["haveAlly"]["existRangeMin"], fullData["haveAlly"]["existRangeMax"]+1):
+		diceResult 	=  self.rollDice(fullData["haveAlly"]["dice"])
+		rangeMin	= fullData["haveAlly"]["existRangeMin"]
+		rangeMax	= fullData["haveAlly"]["existRangeMax"]+1
+
+		if diceResult in range(rangeMin, rangeMax):
 			resultJson["exist"] = True
 		resultJson["existRolledDice"] = diceResult
 

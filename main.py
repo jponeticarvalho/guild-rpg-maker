@@ -434,7 +434,7 @@ class ContractviewerApp:
 			display_info["Havera Aliados?"] = "Sim"
 			display_info["Aliado"] = data["allies"]["ally"]["name"]
 			allyKey = data["allies"]["ally"]["allyKey"]
-			display_info["Esp. Aliado"] = data["allies"][allyKey]["name"]
+			display_info["Especificacao de Aliado"] = data["allies"][allyKey]["name"]
 			display_info["Quando/Como aparecera"] = data["allies"]["whenHowAppear"]["name"]
 		else:
 			display_info["Havera Aliados?"] = "Nao"
