@@ -1,25 +1,45 @@
 {
+	"whoDice": {
+		"diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 2
+	},
 	"who": {
 		"1-12": {
 			"name": "Povo",
 			"diceRangeMin": 1,
 			"diceRangeMax": 12,
 			"hasSubClass": false,
-			"subClassName": ""
+			"subClassName": "",
+			"contractorDice": {
+				"diceAmount": 0,
+				"diceType": 20,
+				"diceBonus": 0
+			}
 		},
 		"13-14": {
 			"name": "Instituicao de oficio",
 			"diceRangeMin": 13,
 			"diceRangeMax": 14,
 			"hasSubClass": false,
-			"subClassName": ""
+			"subClassName": "",
+			"contractorDice": {
+				"diceAmount": 0,
+				"diceType": 20,
+				"diceBonus": 0
+			}
 		},
 		"15-20": {
 			"name": "Governo",
 			"diceRangeMin": 15,
 			"diceRangeMax": 10000,
 			"hasSubClass": true,
-			"subClassName": "governContractors"
+			"subClassName": "governContractors",
+			"contractorDice": {
+				"diceAmount": 0,
+				"diceType": 20,
+				"diceBonus": 0
+			}
 		}
 	},
 	"governContractors": {
@@ -63,6 +83,11 @@
 			"diceRangeMin": 20,
 			"diceRangeMax": 20
 		}
+	},
+	"contractTypeDice": {
+		"diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
 	},
 	"contractType": {
 		"1-18": {

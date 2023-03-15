@@ -281,26 +281,16 @@ class ContractMaker:
 		f = open("json4Names/ContractServiceValueReward/contractors.json")
 		data = json.load(f)
 
-		#TODO 
-		diceResult = self.dice.roll(1, 20)
-		diceResult += self.guildJson["reputation"]["govern"]["contractorModifier"]
-		diceResult += self.guildJson["reputation"]["population"]["contractorModifier"]
-		if diceResult <= 0:
-			diceResult = 1
+		whoDice =  data["whoDice"]
+		whoDice["diceBonus"] += self.guildJson["reputation"]["govern"]["contractorModifier"]
+		whoDice["diceBonus"] += self.guildJson["reputation"]["population"]["contractorModifier"]
 
-		for i in data["who"]:
-			if diceResult in range(data["who"][str(i)]["diceRangeMin"], data["who"][str(i)]["diceRangeMax"]+1):
-				self.contratJson["contractors"] = data["who"][str(i)]
-				self.contratJson["contractors"]["rolledDice"] = diceResult
+		self.contratJson["contractors"] = self.rollTable(data["who"], whoDice)
 
 		if self.contratJson["contractors"]["hasSubClass"] == True:
 			subClassData = data[str(self.contratJson["contractors"]["subClassName"])]
-			diceResult = self.dice.roll(1, 20)
-			for i in subClassData:
-				if diceResult in range(subClassData[str(i)]["diceRangeMin"], subClassData[str(i)]["diceRangeMax"]+1):
-					self.contratJson["contractors"]["subClass"] = subClassData[str(i)]
-					self.contratJson["contractors"]["subClass"]["rolledDice"] = diceResult
-
+			subclassDice = self.contratJson["contractors"]["contractorDice"]
+			self.contratJson["contractors"]["subClass"] = self.rollTable(subClassData, subclassDice)
 		f.close()
 		pass
 
@@ -308,12 +298,7 @@ class ContractMaker:
 		f = open("json4Names/ContractServiceValueReward/contractors.json")
 		data = json.load(f)
 
-		diceResult = self.dice.roll(1, 20)
-
-		for i in data["contractType"]:
-			if diceResult in range(data["contractType"][str(i)]["diceRangeMin"], data["contractType"][str(i)]["diceRangeMax"]+1):
-				self.contratJson["contractType"] = data["contractType"][str(i)]
-				self.contratJson["contractType"]["rolledDice"] = diceResult
+		self.contratJson["contractType"] = self.rollTable(data["contractType"], data["contractTypeDice"])
 
 		f.close()
 		pass
@@ -498,6 +483,10 @@ class ContractMaker:
 	def rollTable(self, tableJson, diceToRoll):
 		resultJson = json.loads("{}")
 		diceResult =  self.rollDice(diceToRoll)
+		if diceResult < 1:
+			diceResult = 1
+		elif diceResult > diceToRoll["diceType"]:
+			diceResult = diceToRoll["diceType"]
 		for i in tableJson:
 			if diceResult in range(tableJson[str(i)]["diceRangeMin"], tableJson[str(i)]["diceRangeMax"]+1):
 				resultJson = tableJson[str(i)]
