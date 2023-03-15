@@ -89,29 +89,20 @@ class ContractMaker:
 		pass
 	
 	def defDifficulty(self):
-		f = open("json4Names/ContractServiceValueReward/contractDistance.json")
+		f = open("json4Names/ContractServiceValueReward/contractDifficulty.json")
 		data = json.load(f)
 
-		diceResult = self.rollDice(self.guildJson["size"]["contractDistanceDice"])
-
-		for i in data:
-			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
-				self.contratJson["distance"] = data[str(i)]
-				self.contratJson["distance"]["rolledDice"] = diceResult
+		self.contratJson["difficulty"] = self.rollTable(data["difficulty"], data["difficultyDice"])
 
 		f.close()
 		pass
 
+
 	def defDistance(self):
-		f = open("json4Names/ContractServiceValueReward/contractDifficulty.json")
+		f = open("json4Names/ContractServiceValueReward/contractDistance.json")
 		data = json.load(f)
 
-		diceResult = self.dice.roll(1, 20)
-
-		for i in data:
-			if diceResult in range(data[str(i)]["diceRangeMin"], data[str(i)]["diceRangeMax"]+1):
-				self.contratJson["difficulty"] = data[str(i)]
-				self.contratJson["difficulty"]["rolledDice"] = diceResult
+		self.contratJson["distance"] = self.rollTable(data["distance"], data["distanceDice"])
 
 		f.close()
 		pass
