@@ -65,8 +65,20 @@ class ContractMaker:
 		diceResult += self.dice.roll(diceData["diceAmount"], diceData["diceType"])
 		diceResult += diceData["diceBonus"] # sede matriz influencia aqui?
 		print ("[ContractRollDice] Dice Result = " + str(diceResult))
-
 		return diceResult
+	
+	def rollTable(self, tableJson, diceToRoll):
+		resultJson = json.loads("{}")
+		diceResult =  self.rollDice(diceToRoll)
+		if diceResult < 1:
+			diceResult = 1
+		elif diceResult > diceToRoll["diceType"]:
+			diceResult = diceToRoll["diceType"]
+		for i in tableJson:
+			if diceResult in range(tableJson[str(i)]["diceRangeMin"], tableJson[str(i)]["diceRangeMax"]+1):
+				resultJson = tableJson[str(i)]
+				resultJson["rolledDice"] = diceResult
+		return resultJson
 
 	def defDueDate(self):
 		f = open("json4Names/ContractServiceValueReward/dueDate.json")
@@ -467,19 +479,6 @@ class ContractMaker:
 
 		self.contratJson["allies"] = resultJson
 		pass
-
-	def rollTable(self, tableJson, diceToRoll):
-		resultJson = json.loads("{}")
-		diceResult =  self.rollDice(diceToRoll)
-		if diceResult < 1:
-			diceResult = 1
-		elif diceResult > diceToRoll["diceType"]:
-			diceResult = diceToRoll["diceType"]
-		for i in tableJson:
-			if diceResult in range(tableJson[str(i)]["diceRangeMin"], tableJson[str(i)]["diceRangeMax"]+1):
-				resultJson = tableJson[str(i)]
-				resultJson["rolledDice"] = diceResult
-		return resultJson
 
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao
 	def defVillain(self):
