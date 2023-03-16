@@ -72,7 +72,8 @@ class ContractMaker:
 		f = open("json4Names/ContractServiceValueReward/dueDate.json")
 		data = json.load(f)
 
-		self.contratJson["dueDate"] = self.rollTable (data["dueDate"], data["dueDateDice"])
+		dueDateDice = self.contratJson["guild"]["size"]["contractDice"]
+		self.contratJson["dueDate"] = self.rollTable (data["dueDate"], dueDateDice)
 		
 		diceResult = 0
 		diceResult = self.rollDice(self.contratJson["dueDate"]["amount"]["dueDateDice"])
@@ -97,7 +98,8 @@ class ContractMaker:
 		f = open("json4Names/ContractServiceValueReward/contractDistance.json")
 		data = json.load(f)
 
-		self.contratJson["distance"] = self.rollTable (data["distance"], data["distanceDice"])
+		guildDice = self.contratJson["guild"]["size"]["contractDistanceDice"]
+		self.contratJson["distance"] = self.rollTable (data["distance"], guildDice)
 
 		f.close()
 		pass

@@ -1,9 +1,4 @@
 {
-	"distanceDice": {
-		"diceAmount": 1,
-        "diceType": 20,
-        "diceBonus": 2
-	},
 	"distance": {
 		"1-2": {
 			"name": "Um hexagono ou menos",

@@ -2,7 +2,7 @@
     "difficultyDice": {
 		"diceAmount": 1,
         "diceType": 20,
-        "diceBonus": 2
+        "diceBonus": 0
 	},
     "difficulty": {
         "1-10": {
