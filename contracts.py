@@ -41,6 +41,7 @@ class ContractMaker:
 		self.defAntagonist		()
 		self.defComplication	()
 		self.defAllies			()
+		self.defExtraReward		()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -81,8 +82,8 @@ class ContractMaker:
 		return resultJson
 
 	def defDueDate(self):
-		f = open("json4Names/ContractServiceValueReward/dueDate.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/dueDate.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		dueDateDice = self.contratJson["guild"]["size"]["contractDice"]
 		self.contratJson["dueDate"] = self.rollTable (data["dueDate"], dueDateDice)
@@ -97,8 +98,8 @@ class ContractMaker:
 		pass
 	
 	def defDifficulty(self):
-		f = open("json4Names/ContractServiceValueReward/contractDifficulty.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/contractDifficulty.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		self.contratJson["difficulty"] = self.rollTable (data["difficulty"], data["difficultyDice"])
 
@@ -107,8 +108,8 @@ class ContractMaker:
 
 
 	def defDistance(self):
-		f = open("json4Names/ContractServiceValueReward/contractDistance.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/contractDistance.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		guildDice = self.contratJson["guild"]["size"]["contractDistanceDice"]
 		self.contratJson["distance"] = self.rollTable (data["distance"], guildDice)
@@ -117,8 +118,8 @@ class ContractMaker:
 		pass
 
 	def defValeuReward(self):
-		f = open("json4Names/ContractServiceValueReward/valueReward.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/valueReward.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		diceResult = self.dice.roll(1,100)
 		diceResultValue 	= diceResult
@@ -162,8 +163,8 @@ class ContractMaker:
 		pass
 	
 	def defPreRequirements(self):
-		f = open("json4Names/ContractServiceValueReward/preRequirementsClause.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/preRequirementsClause.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		for i in data["diceDefinition"]:
 			if self.contratJson["value"]["rolledDice"] in range(data["diceDefinition"][str(i)]["diceRangeMin"], data["diceDefinition"][str(i)]["diceRangeMax"]+1):
@@ -202,8 +203,8 @@ class ContractMaker:
 		pass
 
 	def defClause(self):
-		f = open("json4Names/ContractServiceValueReward/preRequirementsClause.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/preRequirementsClause.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		for i in data["diceDefinition"]:
 			if self.contratJson["value"]["rolledDice"] in range(data["diceDefinition"][str(i)]["diceRangeMin"], data["diceDefinition"][str(i)]["diceRangeMax"]+1):
@@ -242,8 +243,8 @@ class ContractMaker:
 
 	def updateReward(self):
 
-		f = open("json4Names/ContractServiceValueReward/valueReward.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/valueReward.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		diceResultReward 	= self.contratJson["reward"]["rolledDice"] 
 
@@ -278,8 +279,8 @@ class ContractMaker:
 		pass
 
 	def defContractor(self):
-		f = open("json4Names/ContractServiceValueReward/contractors.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/contractors.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		whoDice =  data["whoDice"]
 		whoDice["diceBonus"] += self.guildJson["reputation"]["govern"]["contractorModifier"]
@@ -295,8 +296,8 @@ class ContractMaker:
 		pass
 
 	def defContractType(self):
-		f = open("json4Names/ContractServiceValueReward/contractors.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/contractors.json", encoding="utf-8") as f:
+			data = json.load(f)
 
 		self.contratJson["contractType"] = self.rollTable(data["contractType"], data["contractTypeDice"])
 
@@ -304,8 +305,8 @@ class ContractMaker:
 		pass
 
 	def defObjective(self):
-		f = open("json4Names/ContractServiceValueReward/objectives.json")
-		fullData = json.load(f)
+		with open("json4Names/ContractServiceValueReward/objectives.json", encoding="utf-8") as f:
+			fullData = json.load(f)
 		objectiveJson = json.loads("{\"generalObjectives\": {}}")
 
 		objectiveAmount = 1
@@ -344,13 +345,11 @@ class ContractMaker:
 
 		self.contratJson["objective"] = objectiveJson
 		self.contratJson["objective"]["amount"] = objectiveNumber - 1
-
-		f.close()
 		pass
 
 	def defLocation(self):
-		f = open("json4Names/ContractServiceValueReward/location.json")
-		fullData = json.load(f)
+		with open("json4Names/ContractServiceValueReward/location.json", encoding="utf-8") as f:
+			fullData = json.load(f)
 		resultJson = json.loads("{}")
 	
 		resultJson["location"] = self.rollTable(fullData["location"], fullData["locationDice"])
@@ -367,13 +366,11 @@ class ContractMaker:
 			resultJson[locationKey]["district"] = self.rollDistrict()
 
 		self.contratJson["fullLocation"] = resultJson
-
-		f.close()
 		pass
 
 	def rollDistrict(self):
-		f = open("json4Names/ContractServiceValueReward/location.json")
-		fullData = json.load(f)
+		with open("json4Names/ContractServiceValueReward/location.json", encoding="utf-8") as f:
+			fullData = json.load(f)
 		districtJson 	= fullData["isDistrict"]
 		districtDice	= fullData["isDistrictDice"]
 		resultJson		= json.loads("{}")
@@ -398,12 +395,11 @@ class ContractMaker:
 				break
 
 		resultJson["amount"] = districtNumber - 1
-		f.close()
 		return resultJson
 
 	def defAntagonist(self):
-		f = open("json4Names/ContractServiceValueReward/antagonist.json")
-		fullData = json.load(f)
+		with open("json4Names/ContractServiceValueReward/antagonist.json", encoding="utf-8") as f:
+			fullData = json.load(f)
 		resultJson		= json.loads("{\"antagonist\":{}}")
 
 		antagonistAmount = 1
@@ -434,12 +430,11 @@ class ContractMaker:
 
 		resultJson["antagonist"]["amount"] = antagonistNumber - 1
 		self.contratJson["fullAntagonist"] = resultJson
-		f.close()
 		pass
 
 	def defComplication(self):
-		f = open("json4Names/ContractServiceValueReward/complications.json")
-		fullData = json.load(f)
+		with open("json4Names/ContractServiceValueReward/complications.json", encoding="utf-8") as f:
+			fullData = json.load(f)
 		resultJson		 = json.loads("{}")
 
 		resultJson["complication"] = self.rollTable(fullData["complication"], fullData["complicationDice"])
@@ -448,12 +443,11 @@ class ContractMaker:
 		resultJson[complicationKey] = self.rollTable(fullData[complicationKey], resultJson["complication"]["complicationDice"])
 
 		self.contratJson["complications"] = resultJson
-		f.close()
 		pass
 	
 	def defAllies(self):
-		f = open("json4Names/ContractServiceValueReward/allies.json")
-		fullData = json.load(f)
+		with open("json4Names/ContractServiceValueReward/allies.json", encoding="utf-8") as f:
+			fullData = json.load(f)
 		resultJson = json.loads("{}")
 
 		resultJson["exist"] = False
@@ -480,13 +474,40 @@ class ContractMaker:
 		self.contratJson["allies"] = resultJson
 		pass
 
+	def defExtraReward(self):
+		with open("json4Names/ContractServiceValueReward/rewardsAndIncentives.json", encoding="utf-8") as f:
+			fullData = json.load(f)
+		resultJson = json.loads("{}")
+
+		resultJson["exist"] = False
+
+		diceResult 	=  self.rollDice(fullData["haveExtraReward"]["dice"])
+		rangeMin	= fullData["haveExtraReward"]["existRangeMin"]
+		rangeMax	= fullData["haveExtraReward"]["existRangeMax"]+1
+
+		if diceResult in range(rangeMin, rangeMax):
+			resultJson["exist"] = True
+		resultJson["existRolledDice"] = diceResult
+
+		if resultJson["exist"] == False:
+			self.contratJson["extraRewards"] = resultJson
+			return
+
+		resultJson["extraReward"] = self.rollTable(fullData["extraReward"], fullData["extraRewardDice"])
+
+		rewardKey = resultJson["extraReward"]["rewardKey"]
+		resultJson[rewardKey] = self.rollTable(fullData[rewardKey], resultJson["extraReward"]["extraRewardDice"])
+
+		self.contratJson["extraRewards"] = resultJson
+		pass
+
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao
 	def defVillain(self):
 		if self.contratJson["contractType"]["villainNeed"] == False:
 			return
 
-		f = open("json4Names/ContractServiceValueReward/villians.json")
-		data = json.load(f)
+		with open("json4Names/ContractServiceValueReward/villians.json", encoding="utf-8") as f:
+			data = json.load(f)
 		#TODO check this function, he are not working yet
 		diceResult = self.dice.roll(1, 20)
 
@@ -494,6 +515,4 @@ class ContractMaker:
 			if diceResult in range(data["contractType"][str(i)]["diceRangeMin"], data["contractType"][str(i)]["diceRangeMax"]+1):
 				self.contratJson["contractType"] = data["contractType"][str(i)]
 				self.contratJson["contractType"]["rolledDice"] = diceResult
-
-		f.close()
 		pass

@@ -1,77 +1,128 @@
 {
-   "rewards":{
-      "1-13":{
-         "name":"Haverá recompensa extra",
-         "diceRangeMin":1,
-         "diceRangeMax":13,
-         "rewardCategoryKey":"rewardCategories"
-      },
-      "14-20":{
-         "name":"Não haverá recompensa extra",
-         "diceRangeMin":14,
-         "diceRangeMax":20
-      }
-   },
-   "rewardCategories":{
+   "haveExtraReward": {
+		"dice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"existRangeMin": 14,
+		"existRangeMax": 20
+	},
+   "extraRewardDice": {
+		"diceAmount": 1,
+		"diceType": 20,
+		"diceBonus": 0
+	},
+   "extraReward":{
       "1-2":{
          "name":"Riquezas",
          "diceRangeMin":1,
          "diceRangeMax":2,
-         "rewardKey":"riches"
+         "rewardKey":"riches",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "3-4":{
-         "name":"Artefatos mágicos",
+         "name":"Artefatos magicos",
          "diceRangeMin":3,
          "diceRangeMax":4,
-         "rewardKey":"magicArtifacts"
+         "rewardKey":"magicArtifacts",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "5-5":{
          "name":"Poder",
          "diceRangeMin":5,
          "diceRangeMax":5,
-         "rewardKey":"power"
+         "rewardKey":"power",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "6-6":{
          "name":"Conhecimento",
          "diceRangeMin":6,
          "diceRangeMax":6,
-         "rewardKey":"knowledge"
+         "rewardKey":"knowledge",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "7-8":{
          "name":"Influencia e renome",
          "diceRangeMin":7,
          "diceRangeMax":8,
-         "rewardKey":"influence"
+         "rewardKey":"influence",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "9-9":{
-         "name":"Glória",
+         "name":"Gloria",
          "diceRangeMin":9,
          "diceRangeMax":9,
-         "rewardKey":"glory"
+         "rewardKey":"glory",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "10-13":{
          "name":"Moral",
          "diceRangeMin":10,
          "diceRangeMax":13,
-         "rewardKey":"moral"
+         "rewardKey":"moral",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "14-17":{
          "name":"Pagamento diferenciado*",
          "diceRangeMin":14,
          "diceRangeMax":17,
-         "rewardKey":"unusualReward"
+         "rewardKey":"unusualReward",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "18-18":{
          "name":"Recompensa bizarra",
          "diceRangeMin":18,
          "diceRangeMax":18,
-         "rewardKey":"bizarreReward"
+         "rewardKey":"bizarreReward",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       },
       "19-20":{
          "name":"Aparências enganam",
          "diceRangeMin":19,
          "diceRangeMax":20,
-         "rewardKey":"deceivingReward"
+         "rewardKey":"deceivingReward",
+			"extraRewardDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
       }
    },
    "riches":{
@@ -91,7 +142,7 @@
          "diceRangeMax":3
       },
       "4-4":{
-         "name":"Escritura de um estabelecimento/construção",
+         "name":"Escritura de um estabelecimento/construçao",
          "diceRangeMin":4,
          "diceRangeMax":4
       },
@@ -101,7 +152,7 @@
          "diceRangeMax":5
       },
       "6-6":{
-         "name":"Item mágico",
+         "name":"Item magico",
          "diceRangeMin":6,
          "diceRangeMax":6
       },
@@ -128,7 +179,7 @@
    },
    "magicArtifacts":{
       "1-1":{
-         "name":"Arma mágica",
+         "name":"Arma magica",
          "diceRangeMin":1,
          "diceRangeMax":1
       },
@@ -138,7 +189,7 @@
          "diceRangeMax":2
       },
       "3-3":{
-         "name":"Grimório",
+         "name":"Grimorio",
          "diceRangeMin":3,
          "diceRangeMax":3
       },
@@ -148,7 +199,7 @@
          "diceRangeMax":4
       },
       "5-5":{
-         "name":"Proteção mágica",
+         "name":"Proteçao magica",
          "diceRangeMin":5,
          "diceRangeMax":5
       },
@@ -163,12 +214,12 @@
          "diceRangeMax":7
       },
       "8-8":{
-         "name":"Anel mágico",
+         "name":"Anel magico",
          "diceRangeMin":8,
          "diceRangeMax":8
       },
       "9-9":{
-         "name":"Bastão/cetro",
+         "name":"Bastao/cetro",
          "diceRangeMin":9,
          "diceRangeMax":9
       },
@@ -185,7 +236,7 @@
          "diceRangeMax":1
       },
       "2-2":{
-         "name":"Favor de alguém importante",
+         "name":"Favor de alguem importante",
          "diceRangeMin":2,
          "diceRangeMax":2
       },
@@ -195,7 +246,7 @@
          "diceRangeMax":3
       },
       "4-4":{
-         "name":"Lugar de destaque em uma organização poderosa",
+         "name":"Lugar de destaque em uma organizaçao poderosa",
          "diceRangeMin":4,
          "diceRangeMax":4
       },
@@ -210,7 +261,7 @@
          "diceRangeMax":6
       },
       "7-7":{
-         "name":"Permissão para explorar local restrito",
+         "name":"Permissao para explorar local restrito",
          "diceRangeMin":7,
          "diceRangeMax":7
       },
@@ -225,7 +276,7 @@
          "diceRangeMax":9
       },
       "10-10":{
-         "name":"Bênção divina",
+         "name":"Bênçao divina",
          "diceRangeMin":10,
          "diceRangeMax":10
       }
@@ -247,7 +298,7 @@
          "diceRangeMax":3
       },
       "4-4":{
-         "name":"Fórmula de item mágico",
+         "name":"Formula de item magico",
          "diceRangeMin":4,
          "diceRangeMax":4
       },
@@ -267,7 +318,7 @@
          "diceRangeMax":7
       },
       "8-8":{
-         "name":"Corrupção descoberta",
+         "name":"Corrupçao descoberta",
          "diceRangeMin":8,
          "diceRangeMax":8
       },
@@ -294,7 +345,7 @@
          "diceRangeMax":2
       },
       "3-3":{
-         "name":"Com uma facção criminosa/submundo",
+         "name":"Com uma facçao criminosa/submundo",
          "diceRangeMin":3,
          "diceRangeMax":3
       },
@@ -324,12 +375,12 @@
          "diceRangeMax":8
       },
       "9-9":{
-         "name":"Organização/clã medíocre",
+         "name":"Organizaçao/cla mediocre",
          "diceRangeMin":9,
          "diceRangeMax":9
       },
       "10-10":{
-         "name":"População local",
+         "name":"Populaçao local",
          "diceRangeMin":10,
          "diceRangeMax":10
       }
@@ -341,22 +392,22 @@
          "diceRangeMax":1
       },
       "2-2":{
-         "name":"Título de nobreza",
+         "name":"Titulo de nobreza",
          "diceRangeMin":2,
          "diceRangeMax":2
       },
       "3-3":{
-         "name":"Estátua no centro do assentamento",
+         "name":"Estatua no centro do assentamento",
          "diceRangeMin":3,
          "diceRangeMax":3
       },
       "4-4":{
-         "name":"Conto sobre sua história",
+         "name":"Conto sobre sua historia",
          "diceRangeMin":4,
          "diceRangeMax":4
       },
       "5-5":{
-         "name":"Fama entre ladrões",
+         "name":"Fama entre ladroes",
          "diceRangeMin":5,
          "diceRangeMax":5
       },
@@ -366,7 +417,7 @@
          "diceRangeMax":6
       },
       "7-7":{
-         "name":"Herói local",
+         "name":"Heroi local",
          "diceRangeMin":7,
          "diceRangeMax":7
       },
@@ -403,7 +454,7 @@
          "diceRangeMax":3
       },
       "4-4":{
-         "name":"Felicidade genuína do contratante",
+         "name":"Felicidade genuina do contratante",
          "diceRangeMin":4,
          "diceRangeMax":4
       },
@@ -413,7 +464,7 @@
          "diceRangeMax":5
       },
       "6-6":{
-         "name":"Perdão por crimes/dividas",
+         "name":"Perdao por crimes/dividas",
          "diceRangeMin":6,
          "diceRangeMax":6
       },
@@ -428,7 +479,7 @@
          "diceRangeMax":8
       },
       "9-9":{
-         "name":"Crescimento turístico",
+         "name":"Crescimento turistico",
          "diceRangeMin":9,
          "diceRangeMax":9
       },
@@ -497,7 +548,7 @@
          "diceRangeMax":1
       },
       "2-2":{
-         "name":"Tribo permite que faça o ritual de iniciação",
+         "name":"Tribo permite que faça o ritual de iniciaçao",
          "diceRangeMin":2,
          "diceRangeMax":2
       },
@@ -512,12 +563,12 @@
          "diceRangeMax":4
       },
       "5-5":{
-         "name":"Moedas são cunhadas com seu rosto",
+         "name":"Moedas sao cunhadas com seu rosto",
          "diceRangeMin":5,
          "diceRangeMax":5
       },
       "6-6":{
-         "name":"Começam a vender bugigangas com tema do herói",
+         "name":"Começam a vender bugigangas com tema do heroi",
          "diceRangeMin":6,
          "diceRangeMax":6
       },
@@ -554,7 +605,7 @@
          "diceRangeMax":2
       },
       "3-3":{
-         "name":"Item mágico falso",
+         "name":"Item magico falso",
          "diceRangeMin":3,
          "diceRangeMax":3
       },
@@ -569,12 +620,12 @@
          "diceRangeMax":5
       },
       "6-6":{
-         "name":"Item mágico amaldiçoado",
+         "name":"Item magico amaldiçoado",
          "diceRangeMin":6,
          "diceRangeMax":6
       },
       "7-7":{
-         "name":"O contratante não paga/foge",
+         "name":"O contratante nao paga/foge",
          "diceRangeMin":7,
          "diceRangeMax":7
       },
