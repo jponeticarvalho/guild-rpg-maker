@@ -475,6 +475,13 @@ class ContractviewerApp:
 		display_info["Recompensa"] = data["reward"]["totalAmount"]
 		display_info["Prazo"] = str(data["dueDate"]["amount"]["value"]) + " Dias"
 
+		display_info[" "] = " "
+		if data["keywords"]["existRolledDice"] > 0:
+			keyNumber = 1
+			for i in range(1, data["keywords"]["existRolledDice"]+1):
+				display_info["Palavra-chave de Contrato "+str(keyNumber)] = data["keywords"]["keyword"+str(keyNumber)]["name"]
+				keyNumber += 1
+
 		for k in display_info:
 			self.contractText.insert(tk.END, '{} = {}\n'.format(k,display_info[k]))
 		self.contractText.config(state = tk.DISABLED)

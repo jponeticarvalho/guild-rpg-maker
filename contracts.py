@@ -43,6 +43,7 @@ class ContractMaker:
 		self.defAllies			()
 		self.defExtraReward		()
 		self.defTurnaround		()
+		self.defKeyWords		()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -529,7 +530,7 @@ class ContractMaker:
 
 		#Several consequence
 		resultJson["existConsequence"] = False
-		
+
 		diceResult 	=  self.rollDice(fullData["haveConsequences"]["dice"])
 		rangeMin	= fullData["haveConsequences"]["existRangeMin"]
 		rangeMax	= fullData["haveConsequences"]["existRangeMax"]+1
@@ -545,6 +546,32 @@ class ContractMaker:
 		resultJson["and3"] 				= self.rollTable(fullData["and3"], fullData["and3Dice"])
 
 		self.contratJson["turnarounds"] = resultJson
+		pass
+
+	def defKeyWords(self):
+		with open("json4Names/ContractServiceValueReward/keywordsContract.json", encoding="utf-8") as f:
+			fullData = json.load(f)
+		resultJson = json.loads("{}")
+
+		resultJson["exist"] = True
+
+		diceToRoll = json.loads('{"diceAmount":1,"diceType":6,"diceBonus":-1}')
+		diceResult = self.rollDice(diceToRoll)
+		resultJson["existRolledDice"] = diceResult
+		if diceResult == 0:
+			resultJson["exist"] = False
+			self.contratJson["keywords"] = resultJson
+			return
+
+		tables = random.sample(range(1, fullData["numberOfTable"]), diceResult)
+
+		keywordNumber = 1
+		for i in tables:
+			resultJson["keyword"+str(keywordNumber)] = self.rollTable(fullData[str(i)]["table"], fullData[str(i)]["dice"])
+			resultJson["keyword"+str(keywordNumber)]["originTable"] = i
+			keywordNumber += 1
+		
+		self.contratJson["keywords"] = resultJson
 		pass
 
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao

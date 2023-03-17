@@ -1,0 +1,507 @@
+{
+    "numberOfTable": 6,
+    "1": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 20,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Macabro",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Abobora",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Corvo",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Corte",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Cabeça",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Esqueleto",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Demônio",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Diabo",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Lua cheia",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Morcego",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            },
+            "11-11": {
+                "name": "Pacto",
+                "diceRangeMin": 11,
+                "diceRangeMax": 11
+            },
+            "12-12": {
+                "name": "Flagelo",
+                "diceRangeMin": 12,
+                "diceRangeMax": 12
+            },
+            "13-13": {
+                "name": "Invocaçao",
+                "diceRangeMin": 13,
+                "diceRangeMax": 13
+            },
+            "14-14": {
+                "name": "Fantasma",
+                "diceRangeMin": 14,
+                "diceRangeMax": 14
+            },
+            "15-15": {
+                "name": "Estatua",
+                "diceRangeMin": 15,
+                "diceRangeMax": 15
+            },
+            "16-16": {
+                "name": "Fantoche",
+                "diceRangeMin": 16,
+                "diceRangeMax": 16
+            },
+            "17-17": {
+                "name": "Profundeza",
+                "diceRangeMin": 17,
+                "diceRangeMax": 17
+            },
+            "18-18": {
+                "name": "Alma",
+                "diceRangeMin": 18,
+                "diceRangeMax": 18
+            },
+            "19-19": {
+                "name": "Cemiterio",
+                "diceRangeMin": 19,
+                "diceRangeMax": 19
+            },
+            "20-20": {
+                "name": "Trevas",
+                "diceRangeMin": 20,
+                "diceRangeMax": 20
+            }
+        }
+    },
+    "2": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 20,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Morte",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "General",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Tristeza",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Agonia",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Gritos",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Bandeira",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Castelo",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Fome",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Tortura",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Motivo",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            },
+            "11-11": {
+                "name": "Guerreiro",
+                "diceRangeMin": 11,
+                "diceRangeMax": 11
+            },
+            "12-12": {
+                "name": "Desonra",
+                "diceRangeMin": 12,
+                "diceRangeMax": 12
+            },
+            "13-13": {
+                "name": "Gloria",
+                "diceRangeMin": 13,
+                "diceRangeMax": 13
+            },
+            "14-14": {
+                "name": "Naçao",
+                "diceRangeMin": 14,
+                "diceRangeMax": 14
+            },
+            "15-15": {
+                "name": "Traiçao",
+                "diceRangeMin": 15,
+                "diceRangeMax": 15
+            },
+            "16-16": {
+                "name": "Sangue",
+                "diceRangeMin": 16,
+                "diceRangeMax": 16
+            },
+            "17-17": {
+                "name": "Assassinato",
+                "diceRangeMin": 17,
+                "diceRangeMax": 17
+            },
+            "18-18": {
+                "name": "Luto",
+                "diceRangeMin": 18,
+                "diceRangeMax": 18
+            },
+            "19-19": {
+                "name": "Conquista",
+                "diceRangeMin": 19,
+                "diceRangeMax": 19
+            },
+            "20-20": {
+                "name": "Espolios",
+                "diceRangeMin": 20,
+                "diceRangeMax": 20
+            }
+        }
+    },
+    "3": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 20,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Dragao",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Velho",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Ritual",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Feitiço",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Bruxa",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Armadura",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Lingua",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Divindade",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Imortal",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Lago",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            },
+            "11-11": {
+                "name": "Morto-vivo",
+                "diceRangeMin": 11,
+                "diceRangeMax": 11
+            },
+            "12-12": {
+                "name": "Grilhoes",
+                "diceRangeMin": 12,
+                "diceRangeMax": 12
+            },
+            "13-13": {
+                "name": "Miseravel",
+                "diceRangeMin": 13,
+                "diceRangeMax": 13
+            },
+            "14-14": {
+                "name": "Espelho",
+                "diceRangeMin": 14,
+                "diceRangeMax": 14
+            },
+            "15-15": {
+                "name": "Licantropo",
+                "diceRangeMin": 15,
+                "diceRangeMax": 15
+            },
+            "16-16": {
+                "name": "Sofrimento",
+                "diceRangeMin": 16,
+                "diceRangeMax": 16
+            },
+            "17-17": {
+                "name": "Engenhoca",
+                "diceRangeMin": 17,
+                "diceRangeMax": 17
+            },
+            "18-18": {
+                "name": "Amuleto",
+                "diceRangeMin": 18,
+                "diceRangeMax": 18
+            },
+            "19-19": {
+                "name": "Fazendeiro",
+                "diceRangeMin": 19,
+                "diceRangeMax": 19
+            },
+            "20-20": {
+                "name": "Brasao",
+                "diceRangeMin": 20,
+                "diceRangeMax": 20
+            }
+        }
+    },
+    "4": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Macabro",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Sono",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Nao existe",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Realizaçao",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Paixao",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Paz",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Curiosidade",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Alivio",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Euforia",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Aconchego",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    },
+    "5": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Maniaco",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Raiva",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Solidao",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Fome",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Desespero",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Dor",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Medo",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Ciumes",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Incapacidade",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Confusao",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    },
+    "6": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Bebida",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Bardo",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Briga",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Musica",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Taverneiro",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Comida",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Aventura",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Violento",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Barbaro",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Informaçoes",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    }
+}
