@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 import tkinter as tk
 import tkinter.ttk as ttk
+import sv_ttk
 import json
 import os
+
 from contracts import ContractMaker
 from guild import GuildMaker
 
@@ -177,6 +179,11 @@ class ContractviewerApp:
 			os.mkdir('generatedGuild')
 
 	def run(self):
+		#sv_ttk.set_theme("dark")
+		self.Gerador.tk.call('source', 'forest-dark.tcl')
+		# Set the theme with the theme_use method
+		ttk.Style().theme_use('forest-dark')
+
 		self.setup()
 		self.updateGuildList()
 
@@ -438,6 +445,31 @@ class ContractviewerApp:
 			display_info["Quando/Como aparecera"] = data["allies"]["whenHowAppear"]["name"]
 		else:
 			display_info["Havera Aliados?"] = "Nao"
+
+		if data["extraRewards"]["exist"]:
+			display_info["Havera Recompensa extra?"] = "Sim"
+			display_info["Recompensa Extra"] = data["extraRewards"]["extraReward"]["name"]
+			rewardKey = data["extraRewards"]["extraReward"]["rewardKey"]
+			display_info["Especificacao de R. extra"] = data["extraRewards"][rewardKey]["name"]
+		else:
+			display_info["Havera Recompensa extra?"] = "Nao"
+
+		if data["turnarounds"]["exist"]:
+			display_info["Havera Reviravolta?"] = "Sim"
+			display_info["Quem?"] = data["turnarounds"]["who"]["name"]
+			display_info["Na Verdade..."] = data["turnarounds"]["inTrue"]["name"]
+			display_info["Mas..."] = data["turnarounds"]["but"]["name"]
+			display_info["E..."] = data["turnarounds"]["and1"]["name"]
+			display_info["E...."] = data["turnarounds"]["and2"]["name"]
+
+			if data["turnarounds"]["existConsequence"]:
+				display_info["Havera consequencias mais severas?"] = "Sim"
+				display_info["Os contratados.."] = data["turnarounds"]["theContractors"]["name"]
+				display_info["E...."] = data["turnarounds"]["and3"]["name"]
+			else:
+				display_info["Havera consequencias mais severas?"] = "Nao"
+		else:
+			display_info["Havera Reviravolta?"] = "Nao"
 
 		display_info["Valor"] = data["value"]["totalAmount"]
 		display_info["Recompensa"] = data["reward"]["totalAmount"]

@@ -17,7 +17,7 @@
 			}
         },
         "5-9": {
-            "name": "Ruínas ou masmorras",
+            "name": "Ruinas ou masmorras",
             "diceRangeMin": 5,
             "diceRangeMax": 9,
             "locationKey": "dungeon",
@@ -28,7 +28,7 @@
 			}
         },
         "10-12": {
-            "name": "Região selvagem",
+            "name": "Regiao selvagem",
             "diceRangeMin": 10,
             "diceRangeMax": 12,
             "locationKey": "wildRegion",
@@ -61,7 +61,7 @@
 			}
         },
         "18-18": {
-            "name": "Localidade exótica",
+            "name": "Localidade exotica",
             "diceRangeMin": 18,
             "diceRangeMax": 18,
             "locationKey": "exoticLocation",
@@ -83,7 +83,7 @@
 			}
         },
         "20-20": {
-            "name": "Terras mórbidas",
+            "name": "Terras morbidas",
             "diceRangeMin": 20,
             "diceRangeMax": 20,
             "locationKey": "morbidLands",
@@ -111,7 +111,7 @@
             "diceRangeMax": 10
         },
         "11-13": {
-            "name": "Corporações de ofício",
+            "name": "Corporaçoes de oficio",
             "diceRangeMin": 11,
             "diceRangeMax": 13
         },
@@ -131,7 +131,7 @@
             "diceRangeMax": 18
         },
         "19-19": {
-            "name": "Próximo a um distrito, mas fora do assentamento",
+            "name": "Proximo a um distrito, mas fora do assentamento",
             "diceRangeMin": 19,
             "diceRangeMax": 19
         },
@@ -153,12 +153,12 @@
             "diceRangeMax": 11
         },
         "12-12": {
-            "name": "Acontecimento histórico relevante",
+            "name": "Acontecimento historico relevante",
             "diceRangeMin": 12,
             "diceRangeMax": 12
         },
         "13-13": {
-            "name": "Extração de recursos",
+            "name": "Extraçao de recursos",
             "diceRangeMin": 13,
             "diceRangeMax": 13
         },
@@ -168,7 +168,7 @@
             "diceRangeMax": 14
         },
         "15-15": {
-            "name": "Ponto de interesse de uma antiga civilização",
+            "name": "Ponto de interesse de uma antiga civilizaçao",
             "diceRangeMin": 15,
             "diceRangeMax": 15
         },
@@ -183,7 +183,7 @@
             "diceRangeMax": 17
         },
         "18-18": {
-            "name": "Flutuação mágica na trama",
+            "name": "Flutuaçao magica na trama",
             "diceRangeMin": 18,
             "diceRangeMax": 18
         },
@@ -193,7 +193,7 @@
             "diceRangeMax": 19
         },
         "20-20": {
-            "name": "Relíquia esquecida",
+            "name": "Reliquia esquecida",
             "diceRangeMin": 20,
             "diceRangeMax": 20
         }
@@ -235,17 +235,17 @@
             "diceRangeMax": 16
         },
         "17-17": {
-            "name": "Tema de contos e canções",
+            "name": "Tema de contos e cançoes",
             "diceRangeMin": 17,
             "diceRangeMax": 17
         },
         "18-18": {
-            "name": "Aventureiros são frequentes por lá",
+            "name": "Aventureiros sao frequentes por la",
             "diceRangeMin": 18,
             "diceRangeMax": 18
         },
         "19-19": {
-            "name": "Ponto de interesse de dragões",
+            "name": "Ponto de interesse de dragoes",
             "diceRangeMin": 19,
             "diceRangeMax": 19
         },
@@ -263,19 +263,19 @@
             "hasDistrict": false
         },
         "2-2": {
-            "name": "Na moradia do líder local",
+            "name": "Na moradia do lider local",
             "diceRangeMin": 2,
             "diceRangeMax": 2,
             "hasDistrict": false
         },
         "3-3": {
-            "name": "Em um distrito específico",
+            "name": "Em um distrito especifico",
             "diceRangeMin": 3,
             "diceRangeMax": 3,
             "hasDistrict": true
         },
         "4-4": {
-            "name": "Casarão nobre",
+            "name": "Casarao nobre",
             "diceRangeMin": 4,
             "diceRangeMax": 4,
             "hasDistrict": false
@@ -293,13 +293,13 @@
             "hasDistrict": false
         },
         "7-7": {
-            "name": "Local de recuperação de enfermos",
+            "name": "Local de recuperaçao de enfermos",
             "diceRangeMin": 7,
             "diceRangeMax": 7,
             "hasDistrict": false
         },
         "8-8": {
-            "name": "Construção/local icônico",
+            "name": "Construçao/local icônico",
             "diceRangeMin": 8,
             "diceRangeMax": 8,
             "hasDistrict": false
@@ -429,7 +429,7 @@
             "hasDistrict": false
         },
         "9-9": {
-            "name": "Região vulcânica",
+            "name": "Regiao vulcânica",
             "diceRangeMin": 9,
             "diceRangeMax": 9,
             "hasDistrict": false
@@ -443,13 +443,13 @@
     },
     "isolatedPlace": {
         "1-1": {
-            "name": "Região não mapeada ou inexplorada",
+            "name": "Regiao nao mapeada ou inexplorada",
             "diceRangeMin": 1,
             "diceRangeMax": 1,
             "hasDistrict": false
         },
         "2-2": {
-            "name": "Monastério",
+            "name": "Monasterio",
             "diceRangeMin": 2,
             "diceRangeMax": 2,
             "hasDistrict": false
@@ -479,7 +479,7 @@
             "hasDistrict": false
         },
         "7-7": {
-            "name": "Ilha exótica",
+            "name": "Ilha exotica",
             "diceRangeMin": 7,
             "diceRangeMax": 7,
             "hasDistrict": false
@@ -497,7 +497,7 @@
             "hasDistrict": false
         },
         "10-10": {
-            "name": "Masmorra inóspita",
+            "name": "Masmorra inospita",
             "diceRangeMin": 10,
             "diceRangeMax": 10,
             "hasDistrict": false
@@ -517,7 +517,7 @@
             "hasDistrict": false
         },
         "3-3": {
-            "name": "Grande plantação/vinhedo",
+            "name": "Grande plantaçao/vinhedo",
             "diceRangeMin": 3,
             "diceRangeMax": 3,
             "hasDistrict": false
@@ -547,7 +547,7 @@
             "hasDistrict": false
         },
         "8-8": {
-            "name": "Celeiro/moinho/estábulo",
+            "name": "Celeiro/moinho/estabulo",
             "diceRangeMin": 8,
             "diceRangeMax": 8,
             "hasDistrict": false
@@ -567,7 +567,7 @@
     },
     "exoticLocation": {
         "1-1": {
-            "name": "Plano Feérico",
+            "name": "Plano Feerico",
             "diceRangeMin": 1,
             "diceRangeMax": 1,
             "hasDistrict": false
@@ -579,7 +579,7 @@
             "hasDistrict": false
         },
         "3-3": {
-            "name": "Floresta mágica",
+            "name": "Floresta magica",
             "diceRangeMin": 3,
             "diceRangeMax": 3,
             "hasDistrict": false
@@ -677,7 +677,7 @@
             "hasDistrict": false
         },
         "9-9": {
-            "name": "Cemitério de monstruosidades",
+            "name": "Cemiterio de monstruosidades",
             "diceRangeMin": 9,
             "diceRangeMax": 9,
             "hasDistrict": false
@@ -691,7 +691,7 @@
     },
     "morbidLands": {
         "1-1": {
-            "name": "Cemitério esquecido",
+            "name": "Cemiterio esquecido",
             "diceRangeMin": 1,
             "diceRangeMax": 1,
             "hasDistrict": false
@@ -721,19 +721,19 @@
             "hasDistrict": false
         },
         "6-6": {
-            "name": "Vales rúnicos",
+            "name": "Vales runicos",
             "diceRangeMin": 6,
             "diceRangeMax": 6,
             "hasDistrict": false
         },
         "7-7": {
-            "name": "Assentamento próximo",
+            "name": "Assentamento proximo",
             "diceRangeMin": 7,
             "diceRangeMax": 7,
             "hasDistrict": false
         },
         "8-8": {
-            "name": "Ruína maldita",
+            "name": "Ruina maldita",
             "diceRangeMin": 8,
             "diceRangeMax": 8,
             "hasDistrict": false

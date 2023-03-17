@@ -42,6 +42,7 @@ class ContractMaker:
 		self.defComplication	()
 		self.defAllies			()
 		self.defExtraReward		()
+		self.defTurnaround		()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -499,6 +500,51 @@ class ContractMaker:
 		resultJson[rewardKey] = self.rollTable(fullData[rewardKey], resultJson["extraReward"]["extraRewardDice"])
 
 		self.contratJson["extraRewards"] = resultJson
+		pass
+
+	def defTurnaround(self):
+		with open("json4Names/ContractServiceValueReward/turnarounds.json", encoding="utf-8") as f:
+			fullData = json.load(f)
+		resultJson = json.loads("{}")
+
+		resultJson["exist"] = False
+
+		diceResult 	=  self.rollDice(fullData["haveTurnaround"]["dice"])
+		rangeMin	= fullData["haveTurnaround"]["existRangeMin"]
+		rangeMax	= fullData["haveTurnaround"]["existRangeMax"]+1
+
+		if diceResult in range(rangeMin, rangeMax):
+			resultJson["exist"] = True
+		resultJson["existRolledDice"] = diceResult
+
+		if resultJson["exist"] == False:
+			self.contratJson["turnarounds"] = resultJson
+			return
+
+		resultJson["who"] 		= self.rollTable(fullData["who"], fullData["whoDice"])
+		resultJson["inTrue"] 	= self.rollTable(fullData["inTrue"], fullData["inTrueDice"])
+		resultJson["but"] 		= self.rollTable(fullData["but"], fullData["butDice"])
+		resultJson["and1"] 		= self.rollTable(fullData["and1"], fullData["and1Dice"])
+		resultJson["and2"] 		= self.rollTable(fullData["and2"], fullData["and2Dice"])
+
+		#Several consequence
+		resultJson["existConsequence"] = False
+		
+		diceResult 	=  self.rollDice(fullData["haveConsequences"]["dice"])
+		rangeMin	= fullData["haveConsequences"]["existRangeMin"]
+		rangeMax	= fullData["haveConsequences"]["existRangeMax"]+1
+		if diceResult in range(rangeMin, rangeMax):
+			resultJson["existConsequence"] = True
+		resultJson["existConsequenceRolledDice"] = diceResult
+
+		if resultJson["existConsequenceRolledDice"] == False:
+			self.contratJson["turnarounds"] = resultJson
+			return
+
+		resultJson["theContractors"] 	= self.rollTable(fullData["theContractors"], fullData["theContractorsDice"])
+		resultJson["and3"] 				= self.rollTable(fullData["and3"], fullData["and3Dice"])
+
+		self.contratJson["turnarounds"] = resultJson
 		pass
 
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao
