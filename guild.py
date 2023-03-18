@@ -1,11 +1,4 @@
-from common import D4
-from common import D6
-from common import D8
-from common import D10
-from common import D12
-from common import D20
-from common import D100
-from common import random
+import random
 from dice import diceRoll
 from randomGuildNameGenerator import nameGen
 import json
