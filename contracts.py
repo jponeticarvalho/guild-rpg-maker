@@ -54,13 +54,15 @@ class ContractMaker:
 			print("[ContractMaker] ERROR when creating the folder to the contract returning without the guild")
 			#return "error"
 
+		self.contratJson["gptContextGen"] = json.loads("{}")
+		self.contratJson["gptContextGen"]["exist"] = False
+
 		contractNumber = len(os.listdir(contractPath))
 		self.contratJson["fileName"] = "contract-" + str(contractNumber) + ".json"
 		contractPath = contractPath + "contract-" + str(contractNumber) + ".json"
 
 		with open(contractPath, "w+") as f:
 			f.write (json.dumps(self.contratJson, indent=4))
-			f.close()
 
 		return self.contratJson
 	
