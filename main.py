@@ -488,6 +488,12 @@ class ContractviewerApp:
 				display_info["Palavra-chave de Contrato "+str(keyNumber)] = data["keywords"]["keyword"+str(keyNumber)]["name"]
 				keyNumber += 1
 
+		if data["keywordsContractor"]["existRolledDice"] > 0:
+			keyNumber = 1
+			for i in range(1, data["keywordsContractor"]["existRolledDice"]+1):
+				display_info["Palavra-chave de Contratante "+str(keyNumber)] = data["keywordsContractor"]["contractorKeyword"+str(keyNumber)]["name"]
+				keyNumber += 1
+
 		for k in display_info:
 			self.contractText.insert(tk.END, '{} = {}\n'.format(k,display_info[k]))
 		self.contractText.config(state = tk.DISABLED)

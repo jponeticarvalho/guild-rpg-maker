@@ -27,24 +27,25 @@ class ContractMaker:
 
 		self.contratJson["guild"] = guildJson #guildJson["name"]
 
-		self.defDueDate			()
-		self.defDifficulty		()
-		self.defDistance		()
-		self.defValeuReward		()
-		self.defPreRequirements	()
-		self.defClause			()
-		self.updateReward		()
-		self.defContractor		()
-		self.defContractType	()
-		self.defObjective		()
-		self.defLocation		()
-		self.defAntagonist		()
-		self.defComplication	()
-		self.defAllies			()
-		self.defExtraReward		()
-		self.defTurnaround		()
-		self.defKeyWords		()
-		self.defBiluteteia		()
+		self.defDueDate				()
+		self.defDifficulty			()
+		self.defDistance			()
+		self.defValeuReward			()
+		self.defPreRequirements		()
+		self.defClause				()
+		self.updateReward			()
+		self.defContractor			()
+		self.defContractType		()
+		self.defObjective			()
+		self.defLocation			()
+		self.defAntagonist			()
+		self.defComplication		()
+		self.defAllies				()
+		self.defExtraReward			()
+		self.defTurnaround			()
+		self.defKeyWords			()
+		self.defBiluteteia			()
+		self.defKeyWordsContractors	()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -556,8 +557,7 @@ class ContractMaker:
 
 		resultJson["exist"] = True
 
-		diceToRoll = json.loads('{"diceAmount":1,"diceType":6,"diceBonus":-1}')
-		diceResult = self.rollDice(diceToRoll)
+		diceResult = self.rollDice(fullData["keywordContractDice"])
 		resultJson["existRolledDice"] = diceResult
 		if diceResult == 0:
 			resultJson["exist"] = False
@@ -597,6 +597,31 @@ class ContractMaker:
 		resultJson["biluteteia"] = self.rollTable(fullData["biluteteia"], fullData["biluteteiaDice"])
 
 		self.contratJson["biluteteias"] = resultJson
+		pass
+
+	def defKeyWordsContractors(self):
+		with open("json4Names/ContractServiceValueReward/keywordContractor.json", encoding="utf-8") as f:
+			fullData = json.load(f)
+		resultJson = json.loads("{}")
+
+		resultJson["exist"] = True
+
+		diceResult = self.rollDice(fullData["keywordContractorDice"])
+		resultJson["existRolledDice"] = diceResult
+		if diceResult == 0:
+			resultJson["exist"] = False
+			self.contratJson["keywordsContractor"] = resultJson
+			return
+
+		tables = random.sample(range(1, fullData["numberOfTable"]), diceResult)
+
+		keywordNumber = 1
+		for i in tables:
+			resultJson["contractorKeyword"+str(keywordNumber)] = self.rollTable(fullData[str(i)]["table"], fullData[str(i)]["dice"])
+			resultJson["contractorKeyword"+str(keywordNumber)]["originTable"] = i
+			keywordNumber += 1
+		
+		self.contratJson["keywordsContractor"] = resultJson
 		pass
 
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao
