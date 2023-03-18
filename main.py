@@ -471,6 +471,12 @@ class ContractviewerApp:
 		else:
 			display_info["Havera Reviravolta?"] = "Nao"
 
+		if data["biluteteias"]["exist"]:
+			display_info["Tem biluteteia?"] = "Sim"
+			display_info["Biluteteia"] = display_info["biluteteias"]["biluteteia"]["name"]
+		else:
+			display_info["Tem biluteteia?"] = "Nao"
+
 		display_info["Valor"] = data["value"]["totalAmount"]
 		display_info["Recompensa"] = data["reward"]["totalAmount"]
 		display_info["Prazo"] = str(data["dueDate"]["amount"]["value"]) + " Dias"

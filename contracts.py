@@ -44,6 +44,7 @@ class ContractMaker:
 		self.defExtraReward		()
 		self.defTurnaround		()
 		self.defKeyWords		()
+		self.defBiluteteia		()
 
 		contractPath = "generatedGuild/" + self.guildJson["fileName"] + "/contracts/"
 		try:
@@ -572,6 +573,30 @@ class ContractMaker:
 			keywordNumber += 1
 		
 		self.contratJson["keywords"] = resultJson
+		pass
+
+	def defBiluteteia(self):
+		with open("json4Names/ContractServiceValueReward/unusualContractors.json", encoding="utf-8") as f:
+			fullData = json.load(f)
+		resultJson = json.loads("{}")
+
+		resultJson["exist"] = False
+
+		diceResult 	=  self.rollDice(fullData["haveUnusualContractors"]["dice"])
+		rangeMin	= fullData["haveUnusualContractors"]["existRangeMin"]
+		rangeMax	= fullData["haveUnusualContractors"]["existRangeMax"]+1
+
+		if diceResult in range(rangeMin, rangeMax):
+			resultJson["exist"] = True
+		resultJson["existRolledDice"] = diceResult
+
+		if resultJson["exist"] == False:
+			self.contratJson["biluteteias"] = resultJson
+			return
+
+		resultJson["biluteteia"] = self.rollTable(fullData["biluteteia"], fullData["biluteteiaDice"])
+
+		self.contratJson["biluteteias"] = resultJson
 		pass
 
 	#TODO precisa trazer a tabela de vilao e fazer a logica de rolagem de vilao
