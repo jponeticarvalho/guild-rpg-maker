@@ -606,6 +606,8 @@ class ContractviewerApp:
         for i in values:
             shutil.rmtree(i)
         
+        self.updateGuildList()
+
         pass
 
     def gptGuildSelectCb(self, event=None):
