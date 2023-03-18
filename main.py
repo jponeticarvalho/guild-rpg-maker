@@ -11,9 +11,10 @@ import openai
 from contracts import ContractMaker
 from guild import GuildMaker
 
-defaultConfig   = '{"theme": "dark","gptApiKey": "","gptEnabled": false}'
-_themes         = ['dark', 'light']
-_model_engine    = "gpt-3.5-turbo"
+defaultConfig       = '{"theme": "dark","gptApiKey": "","gptEnabled": false}'
+_themes             = ['dark', 'light']
+_model_engine       = "gpt-3.5-turbo"
+_config_file_path   = 'globalAppConfig.json'
 
 class ContractviewerApp:
     def __init__(self, master=None):
@@ -567,7 +568,7 @@ class ContractviewerApp:
         
         self.Gerador.tk.call('set_theme', self.savedConfig["theme"])
 
-        with open("config.json", 'w') as f:
+        with open(_config_file_path, 'w') as f:
             f.write(json.dumps(self.savedConfig, indent=4))
         pass
 
@@ -576,7 +577,7 @@ class ContractviewerApp:
                     message='Você deseja realmente restaurar as configurações?')
         if not answer:
             return
-        with open("config.json", 'w') as f:
+        with open(_config_file_path, 'w') as f:
             self.savedConfig = json.loads(defaultConfig)
             f.write(json.dumps(self.savedConfig, indent=4))
         self.readSavedConfigs()
@@ -795,12 +796,12 @@ class ContractviewerApp:
     def setup(self):
         if not os.path.exists('generatedGuild'):
             os.mkdir('generatedGuild')
-        if not os.path.isfile('config.json'):
-            with open('config.json', 'w+') as f:
+        if not os.path.isfile(_config_file_path):
+            with open(_config_file_path, 'w+') as f:
                 f.write(defaultConfig)
 
     def readSavedConfigs(self):
-        with open("config.json") as f:
+        with open(_config_file_path) as f:
             self.savedConfig = json.load(f)
         
         if self.savedConfig['gptEnabled']: 
