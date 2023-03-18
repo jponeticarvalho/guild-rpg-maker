@@ -2,6 +2,7 @@
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter import messagebox
+from tkinter.messagebox import askyesno
 import os
 import json
 import shutil
@@ -571,6 +572,10 @@ class ContractviewerApp:
         pass
 
     def restoreConfigBtnCb(self):
+        answer = askyesno(title='Confirmação',
+                    message='Você deseja realmente restaurar as configurações?')
+        if not answer:
+            return
         with open("config.json", 'w') as f:
             self.savedConfig = json.loads(defaultConfig)
             f.write(json.dumps(self.savedConfig, indent=4))
@@ -578,6 +583,11 @@ class ContractviewerApp:
         pass
 
     def deleteNonExistGuildBtnCb(self):
+        answer = askyesno(title='Confirmação',
+                    message='Você deseja realmente excluir as Guildas ano existentes?')
+        if not answer:
+            return
+        
         path = "generatedGuild/"
         dir_list =  os.walk(path)
 
@@ -842,7 +852,14 @@ class ContractviewerApp:
         self.gptGuildSelComboBox['values']  = [i for i in valuesExisted]
         pass
 
+    def on_close(self):
+        response=messagebox.askyesno('Exit','Are you sure you want to exit?')
+        if response:
+            self.Gerador.destroy()
+        pass
+
     def run(self):
+        self.Gerador.protocol('WM_DELETE_WINDOW', self.on_close)
         self.setup()
 
         self.Gerador.tk.call('source', 'azure.tcl')
