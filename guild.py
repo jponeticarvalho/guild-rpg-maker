@@ -1,20 +1,21 @@
 import random
-from dice import diceRoll
-from randomGuildNameGenerator import nameGen
 import json
 import time
 import os
 
-class GuildMaker:
-	dice 						= diceRoll();
-	exist 						= False;
-	guildDiceBonus 				= 0;
-	guildSize 					= 0;
-	settlement 					= 0;
-	resourceReputationModifier 	= 0;
-	goersModifier				= 0;
+from dice import diceRoll
+from randomGuildNameGenerator import nameGen
 
-	guildJson					= json.loads("{}");
+class GuildMaker:
+	dice 						= diceRoll()
+	exist 						= False
+	guildDiceBonus 				= 0
+	guildSize 					= 0
+	settlement 					= 0
+	resourceReputationModifier 	= 0
+	goersModifier				= 0
+
+	guildJson					= json.loads("{}")
 
 	def createGuild(self, settlementSize, isHumanSettlement):
 

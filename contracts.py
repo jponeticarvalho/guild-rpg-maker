@@ -1,8 +1,9 @@
 import random
-from dice import diceRoll
-from guild import GuildMaker
 import json
 import os
+
+from dice import diceRoll
+from guild import GuildMaker
 
 class ContractMaker:
 

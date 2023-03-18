@@ -1,9 +1,10 @@
-from dice import diceRoll
 import json
+
+from dice import diceRoll
 
 class nameGen():
 	def genName(self):
-		f1 = open ("json4Names/randomGuildName.json")
+		f1 = open('json4Names/randomGuildName.json')
 		data1 = json.load(f1)
 
 		dice = diceRoll();
