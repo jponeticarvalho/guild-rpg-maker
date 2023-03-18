@@ -1,64 +1,119 @@
 {
+	"objectiveDice": {
+		"diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
+	},
 	"generalObjectives": {
 		"1-3": {
 			"name": "Atacar ou Destruir",
 			"diceRangeMin": 1,
 			"diceRangeMax": 3,
-			"objectiveKey": "attackObjectives"
+			"objectiveKey": "attackObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"4-6": {
 			"name": "Encontrar ou recuperar",
 			"diceRangeMin": 4,
 			"diceRangeMax": 6,
-			"objectiveKey": "findObjectives"
+			"objectiveKey": "findObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"7-8": {
 			"name": "Capturar",
 			"diceRangeMin": 7,
 			"diceRangeMax": 8,
-			"objectiveKey": "captureObjectives"
+			"objectiveKey": "captureObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"9-9": {
 			"name": "Proteger ou salvar",
 			"diceRangeMin": 9,
 			"diceRangeMax": 9,
-			"objectiveKey": "protectObjectives"
+			"objectiveKey": "protectObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"10-11": {
 			"name": "Explorar ou descobrir",
 			"diceRangeMin": 10,
 			"diceRangeMax": 11,
-			"objectiveKey": "exploreObjectives"
+			"objectiveKey": "exploreObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"12-12": {
 			"name": "Entregar ou receber",
 			"diceRangeMin": 12,
 			"diceRangeMax": 12,
-			"objectiveKey": "deliveryObjectives"
+			"objectiveKey": "deliveryObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"13-13": {
 			"name": "Investigar ou sabotar",
 			"diceRangeMin": 13,
 			"diceRangeMax": 13,
-			"objectiveKey": "investigateObjectives"
+			"objectiveKey": "investigateObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"14-18": {
 			"name": "Servicos perigosos",
 			"diceRangeMin": 14,
 			"diceRangeMax": 18,
-			"objectiveKey": "dangerJobObjectives"
+			"objectiveKey": "dangerJobObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"19-19": {
 			"name": "Religioso",
 			"diceRangeMin": 19,
 			"diceRangeMax": 19,
-			"objectiveKey": "churchObjectives"
+			"objectiveKey": "churchObjectives",
+			"objectiveDice": {
+				"diceAmount": 1,
+				"diceType": 10,
+				"diceBonus": 0
+			}
 		},
 		"20+": {
 			"name": "Role duas vezes e use ambos",
 			"diceRangeMin": 20,
 			"diceRangeMax": 10000
 		}
+	},
+	"locationOfObjectiveDice": {
+		"diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
 	},
 	"locationOfObjective": {
 		"1-11": {

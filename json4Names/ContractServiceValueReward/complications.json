@@ -1,84 +1,139 @@
 {
+    "complicationDice": {
+        "diceAmount": 1,
+		"diceType": 20,
+		"diceBonus": 0
+    },
     "complication": {
         "1-3": {
             "name": "Recursos",
             "diceRangeMin": 1,
             "diceRangeMax": 3,
-            "complicationKey": "resources"
+            "complicationKey": "resources",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "4-6": {
             "name": "Vitimas",
             "diceRangeMin": 4,
             "diceRangeMax": 6,
-            "complicationKey": "victims"
+            "complicationKey": "victims",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "7-8": {
-            "name": "Organização",
+            "name": "Organizaçao",
             "diceRangeMin": 7,
             "diceRangeMax": 8,
-            "complicationKey": "organization"
+            "complicationKey": "organization",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "9-9": {
             "name": "Miraculoso",
             "diceRangeMin": 9,
             "diceRangeMax": 9,
-            "complicationKey": "miraculous"
+            "complicationKey": "miraculous",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "10-12": {
             "name": "Ambiente hostil",
             "diceRangeMin": 10,
             "diceRangeMax": 12,
-            "complicationKey": "hostileEnv"
+            "complicationKey": "hostileEnv",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "13-13": {
             "name": "Inusitado",
             "diceRangeMin": 13,
             "diceRangeMax": 13,
-            "complicationKey": "unusual"
+            "complicationKey": "unusual",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "14-15": {
-            "name": "Problemas diplomáticos",
+            "name": "Problemas diplomaticos",
             "diceRangeMin": 14,
             "diceRangeMax": 15,
-            "complicationKey": "diplomaticIssue"
+            "complicationKey": "diplomaticIssue",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "16-16": {
-            "name": "Proteção",
+            "name": "Proteçao",
             "diceRangeMin": 16,
             "diceRangeMax": 16,
-            "complicationKey": "protection"
+            "complicationKey": "protection",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "17-17": {
             "name": "Contratempo amistoso",
             "diceRangeMin": 17,
             "diceRangeMax": 17,
-            "complicationKey": "friendlyAgainstTime"
+            "complicationKey": "friendlyAgainstTime",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         },
         "18-20": {
             "name": "Encontro hostil",
             "diceRangeMin": 18,
             "diceRangeMax": 20,
-            "complicationKey": "hostileMeeting"
+            "complicationKey": "hostileMeeting",
+            "complicationDice": {
+                "diceAmount": 1,
+                "diceType": 10,
+                "diceBonus": 0
+            }
         }
     },
     "resources": {
         "1-1": {
-            "name": "Um grande tesouro está em risco",
+            "name": "Um grande tesouro esta em risco",
             "diceRangeMin": 1,
             "diceRangeMax": 1
         },
         "2-2": {
-            "name": "O inimigo possui recursos infindáveis",
+            "name": "O inimigo possui recursos infindaveis",
             "diceRangeMin": 2,
             "diceRangeMax": 2
         },
         "3-3": {
-            "name": "As armas dos aventureiros não são eficazes",
+            "name": "As armas dos aventureiros nao sao eficazes",
             "diceRangeMin": 3,
             "diceRangeMax": 3
         },
         "4-4": {
-            "name": "Algo torna a magia mais caótica",
+            "name": "Algo torna a magia mais caotica",
             "diceRangeMin": 4,
             "diceRangeMax": 4
         },
@@ -88,17 +143,17 @@
             "diceRangeMax": 5
         },
         "6-6": {
-            "name": "Fonte de água/comida contaminada",
+            "name": "Fonte de agua/comida contaminada",
             "diceRangeMin": 6,
             "diceRangeMax": 6
         },
         "7-7": {
-            "name": "Artefato mágico fora de controle",
+            "name": "Artefato magico fora de controle",
             "diceRangeMin": 7,
             "diceRangeMax": 7
         },
         "8-8": {
-            "name": "Todos os tesouros são bugigangas",
+            "name": "Todos os tesouros sao bugigangas",
             "diceRangeMin": 8,
             "diceRangeMax": 8
         },
@@ -115,7 +170,7 @@
     },
     "victims": {
         "1-1": {
-            "name": "Grande número de inocentes afetados",
+            "name": "Grande numero de inocentes afetados",
             "diceRangeMin": 1,
             "diceRangeMax": 1
         },
@@ -145,12 +200,12 @@
             "diceRangeMax": 6
         },
         "7-7": {
-            "name": "Vitimas agem como vilões",
+            "name": "Vitimas agem como viloes",
             "diceRangeMin": 7,
             "diceRangeMax": 7
         },
         "8-8": {
-            "name": "Reféns com risco de morte",
+            "name": "Refens com risco de morte",
             "diceRangeMin": 8,
             "diceRangeMax": 8
         },
@@ -172,7 +227,7 @@
             "diceRangeMax": 1
         },
         "2-2": {
-            "name": "Grupo de mercenários",
+            "name": "Grupo de mercenarios",
             "diceRangeMin": 2,
             "diceRangeMax": 2
         },
@@ -187,12 +242,12 @@
             "diceRangeMax": 4
         },
         "5-5": {
-            "name": "Facção criminosa",
+            "name": "Facçao criminosa",
             "diceRangeMin": 5,
             "diceRangeMax": 5
         },
         "6-6": {
-            "name": "Clã/família de grande renome",
+            "name": "Cla/familia de grande renome",
             "diceRangeMin": 6,
             "diceRangeMax": 6
         },
@@ -202,7 +257,7 @@
             "diceRangeMax": 7
         },
         "8-8": {
-            "name": "Realeza é contra a conclusão do objetivo",
+            "name": "Realeza e contra a conclusao do objetivo",
             "diceRangeMin": 8,
             "diceRangeMax": 8
         },
@@ -212,14 +267,14 @@
             "diceRangeMax": 9
         },
         "10-10": {
-            "name": "Revolucionários tem o mesmo objetivo",
+            "name": "Revolucionarios tem o mesmo objetivo",
             "diceRangeMin": 10,
             "diceRangeMax": 10
         }
     },
     "miraculous": {
         "1-1": {
-            "name": "Maldição ancestral",
+            "name": "Maldiçao ancestral",
             "diceRangeMin": 1,
             "diceRangeMax": 1
         },
@@ -234,7 +289,7 @@
             "diceRangeMax": 3
         },
         "4-4": {
-            "name": "A magia parece ter vida própria",
+            "name": "A magia parece ter vida propria",
             "diceRangeMin": 4,
             "diceRangeMax": 4
         },
@@ -249,17 +304,17 @@
             "diceRangeMax": 6
         },
         "7-7": {
-            "name": "Tempestade de neve não natural",
+            "name": "Tempestade de neve nao natural",
             "diceRangeMin": 7,
             "diceRangeMax": 7
         },
         "8-8": {
-            "name": "Objetos mágicos tem mal funcionamento",
+            "name": "Objetos magicos tem mal funcionamento",
             "diceRangeMin": 8,
             "diceRangeMax": 8
         },
         "9-9": {
-            "name": "Comunicação impossível",
+            "name": "Comunicaçao impossivel",
             "diceRangeMin": 9,
             "diceRangeMax": 9
         },
@@ -271,7 +326,7 @@
     },
     "hostileEnv": {
         "1-1": {
-            "name": "Difícil acesso",
+            "name": "Dificil acesso",
             "diceRangeMin": 1,
             "diceRangeMax": 1
         },
@@ -328,27 +383,27 @@
             "diceRangeMax": 1
         },
         "2-2": {
-            "name": "Não existe/está nesse plano",
+            "name": "Nao existe/esta nesse plano",
             "diceRangeMin": 2,
             "diceRangeMax": 2
         },
         "3-3": {
-            "name": "Atitudes questionáveis",
+            "name": "Atitudes questionaveis",
             "diceRangeMin": 3,
             "diceRangeMax": 3
         },
         "4-4": {
-            "name": "Disfarce imperceptível",
+            "name": "Disfarce imperceptivel",
             "diceRangeMin": 4,
             "diceRangeMax": 4
         },
         "5-5": {
-            "name": "Está em constante movimento",
+            "name": "Esta em constante movimento",
             "diceRangeMin": 5,
             "diceRangeMax": 5
         },
         "6-6": {
-            "name": "Informação equivocada",
+            "name": "Informaçao equivocada",
             "diceRangeMin": 6,
             "diceRangeMax": 6
         },
@@ -375,12 +430,12 @@
     },
     "diplomaticIssue": {
         "1-1": {
-            "name": "Problemas de jurisdição",
+            "name": "Problemas de jurisdiçao",
             "diceRangeMin": 1,
             "diceRangeMax": 1
         },
         "2-2": {
-            "name": "Interferência política",
+            "name": "Interferência politica",
             "diceRangeMin": 2,
             "diceRangeMax": 2
         },
@@ -395,7 +450,7 @@
             "diceRangeMax": 4
         },
         "5-5": {
-            "name": "Corrupção",
+            "name": "Corrupçao",
             "diceRangeMin": 5,
             "diceRangeMax": 5
         },
@@ -405,7 +460,7 @@
             "diceRangeMax": 6
         },
         "7-7": {
-            "name": "Líder manipulado",
+            "name": "Lider manipulado",
             "diceRangeMin": 7,
             "diceRangeMax": 7
         },
@@ -432,7 +487,7 @@
             "diceRangeMax": 1
         },
         "2-2": {
-            "name": "Protegido por magias e maldições",
+            "name": "Protegido por magias e maldiçoes",
             "diceRangeMin": 2,
             "diceRangeMax": 2
         },
@@ -462,12 +517,12 @@
             "diceRangeMax": 7
         },
         "8-8": {
-            "name": "Construção anã antiga",
+            "name": "Construçao ana antiga",
             "diceRangeMin": 8,
             "diceRangeMax": 8
         },
         "9-9": {
-            "name": "Protegido por um dragão adormecido",
+            "name": "Protegido por um dragao adormecido",
             "diceRangeMin": 9,
             "diceRangeMax": 9
         },
@@ -484,7 +539,7 @@
             "diceRangeMax": 1
         },
         "2-2": {
-            "name": "Um grande herói tem o objetivo contrário",
+            "name": "Um grande heroi tem o objetivo contrario",
             "diceRangeMin": 2,
             "diceRangeMax": 2
         },
@@ -519,7 +574,7 @@
             "diceRangeMax": 8
         },
         "9-9": {
-            "name": "Clérigos que evitam conflito",
+            "name": "Clerigos que evitam conflito",
             "diceRangeMin": 9,
             "diceRangeMax": 9
         },
@@ -546,17 +601,17 @@
             "diceRangeMax": 3
         },
         "4-4": {
-            "name": "Todo encontro é hostil",
+            "name": "Todo encontro e hostil",
             "diceRangeMin": 4,
             "diceRangeMax": 4
         },
         "5-5": {
-            "name": "Se o encontro não for hostil, ele não acontece",
+            "name": "Se o encontro nao for hostil, ele nao acontece",
             "diceRangeMin": 5,
             "diceRangeMax": 5
         },
         "6-6": {
-            "name": "Inimigos hostis são mais poderosos",
+            "name": "Inimigos hostis sao mais poderosos",
             "diceRangeMin": 6,
             "diceRangeMax": 6
         },
@@ -571,7 +626,7 @@
             "diceRangeMax": 8
         },
         "9-9": {
-            "name": "Inimigos hostis SEMPRE tem itens mágicos",
+            "name": "Inimigos hostis SEMPRE tem itens magicos",
             "diceRangeMin": 9,
             "diceRangeMax": 9
         },

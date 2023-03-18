@@ -1,30 +1,37 @@
 {
-    "1-10": {
-        "name": "Facil",
-        "diceRangeMin": 1,
-        "diceRangeMax": 10,
-        "valueMultiplier": 2,
-        "rewardMultiplier": 0.666
-    },
-    "11-16": {
-        "name": "Medio",
-        "diceRangeMin": 11,
-        "diceRangeMax": 16,
-        "valueMultiplier": 4,
-        "rewardMultiplier": 1
-    },
-    "17-19": {
-        "name": "Dificil",
-        "diceRangeMin": 17,
-        "diceRangeMax": 19,
-        "valueMultiplier": 6,
-        "rewardMultiplier": 2
-    },
-    "20": {
-        "name": "Mortal",
-        "diceRangeMin": 20,
-        "diceRangeMax": 20,
-        "valueMultiplier": 8,
-        "rewardMultiplier": 3
+    "difficultyDice": {
+		"diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
+	},
+    "difficulty": {
+        "1-10": {
+            "name": "Facil",
+            "diceRangeMin": 1,
+            "diceRangeMax": 10,
+            "valueMultiplier": 2,
+            "rewardMultiplier": 0.666
+        },
+        "11-16": {
+            "name": "Medio",
+            "diceRangeMin": 11,
+            "diceRangeMax": 16,
+            "valueMultiplier": 4,
+            "rewardMultiplier": 1
+        },
+        "17-19": {
+            "name": "Dificil",
+            "diceRangeMin": 17,
+            "diceRangeMax": 19,
+            "valueMultiplier": 6,
+            "rewardMultiplier": 2
+        },
+        "20": {
+            "name": "Mortal",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20,
+            "valueMultiplier": 8,
+            "rewardMultiplier": 3
+        }
     }
 }

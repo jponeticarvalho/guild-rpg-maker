@@ -1,0 +1,279 @@
+{
+    "haveTurnaround": {
+		"dice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"existRangeMin": 18,
+		"existRangeMax": 20
+	},
+	"whoDice": {
+		"diceAmount": 1,
+		"diceType": 6,
+		"diceBonus": 0
+	},
+    "who": {
+        "1-1": {
+            "name": "O contratante",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Um aliado",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "A complicação",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "O objetivo",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "A vítima/um inocente",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Um velho conhecido surge e...",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "inTrueDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "inTrue": {
+        "1-1": {
+            "name": "É o verdadeiro inimigo",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "É um parente próximo",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "É um herói lendário dado como morto",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Não é o que parece",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Auxilia o antagonista secretamente",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "É um fantasma",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "butDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "but": {
+        "1-1": {
+            "name": "Faz isso pelas crianças",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "O antagonista não tem culpa",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Ele é assassinado misteriosamente",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "O objetivo está ligado a uma profecia",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Faz isso pra proteger a natureza",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "O objetivo exige um sacrifício",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "and1Dice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "and1": {
+        "1-1": {
+            "name": "Todos já estão mortos",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "O contratado é o verdadeiro vilão",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Um novo antagonista surge em paralelo",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "As informações fornecidas são falsas",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "O antagonista é um parente próximo",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Outro grupo cumpre o objetivo",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "and2Dice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "and2": {
+        "1-1": {
+            "name": "Há cumplicidade da(s) vítima(s) com o vilão",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Era tudo parte de um jogo",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Cumprir o objetivo afeta negativamente outro plano",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "O contratado está sendo manipulado por dois antagonistas",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Tudo não passa de um sonho",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Tudo foi uma vingança friamente planejada",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "haveConsequences": {
+        "dice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"existRangeMin": 1,
+		"existRangeMax": 1
+    },
+    "theContractorsDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "theContractors": {
+        "1-1": {
+            "name": "Acabam enfurecendo uma divindade",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Acabam tendo sua reputação manchada",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Saem de mãos abanando",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Criam uma inimizade forte com um dragão metálico",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Tem um prêmio por suas cabeças",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Agora são odiados por uma raça especifica  ",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "and3Dice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "and3": {
+        "1-1": {
+            "name": "Acabam enfurecendo um dragão cromático",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Atrapalham os planos de um Lich vingativo",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Ajudam na conclusão de um ritual maligno",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Auxiliaram conquistadores de outras terras",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Não são mais bem-vindos em um assentamento importante",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "As ações afetam negativamente muitos inocentes",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    }
+}

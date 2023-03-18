@@ -1,0 +1,362 @@
+{
+    "numberOfTable": 6,
+    "keywordContractorDice":{
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "1": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Vazio",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Demônio",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Abismo",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Verde",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Ritual",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Dragão",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Horrível",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Vampiro",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Amaldiçoado",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Asas",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    },
+    "2": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Roubo",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Tesouro",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Caveira",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Prata",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Saquear",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Bandeira",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Fantasma",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Sujo",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Molusco",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Pirata",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    },
+    "3": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Anel",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Braço",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Orbe",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Cálice",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Pedra",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Divindade",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Botas",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Bastão",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Brilho",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Vingança",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    },
+    "4": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Macabro",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Sono",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Não existe",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Realização",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Paixão",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Paz",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Curiosidade",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Alívio",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Euforia",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Aconchego",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    },
+    "5": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Maníaco",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Raiva",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Solidão",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Fome",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Desespero",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Dor",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Medo",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Ciúmes",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Incapacidade",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Confusão",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    },
+    "6": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 10,
+            "diceBonus": 0
+        },
+        "table": {
+            "1-1": {
+                "name": "Bebida",
+                "diceRangeMin": 1,
+                "diceRangeMax": 1
+            },
+            "2-2": {
+                "name": "Bardo",
+                "diceRangeMin": 2,
+                "diceRangeMax": 2
+            },
+            "3-3": {
+                "name": "Briga",
+                "diceRangeMin": 3,
+                "diceRangeMax": 3
+            },
+            "4-4": {
+                "name": "Musica",
+                "diceRangeMin": 4,
+                "diceRangeMax": 4
+            },
+            "5-5": {
+                "name": "Taverneiro",
+                "diceRangeMin": 5,
+                "diceRangeMax": 5
+            },
+            "6-6": {
+                "name": "Comida",
+                "diceRangeMin": 6,
+                "diceRangeMax": 6
+            },
+            "7-7": {
+                "name": "Aventura",
+                "diceRangeMin": 7,
+                "diceRangeMax": 7
+            },
+            "8-8": {
+                "name": "Violento",
+                "diceRangeMin": 8,
+                "diceRangeMax": 8
+            },
+            "9-9": {
+                "name": "Bárbaro",
+                "diceRangeMin": 9,
+                "diceRangeMax": 9
+            },
+            "10-10": {
+                "name": "Informações",
+                "diceRangeMin": 10,
+                "diceRangeMax": 10
+            }
+        }
+    }
+}
