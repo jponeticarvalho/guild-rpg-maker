@@ -9,7 +9,8 @@
 				"valeuMod": -25,
 				"rewardMod": -25
 			},
-			"contractorModifier": -4
+			"contractorModifier": -4,
+			"serviceContractorMod": -4
 		},
 		"2": {
 			"name": "Ruim",
@@ -20,7 +21,8 @@
 				"valeuMod": -15,
 				"rewardMod": -20
 			},
-			"contractorModifier": -2
+			"contractorModifier": -2,
+			"serviceContractorMod": -2
 		},
 		"3": {
 			"name": "Ruim, mas tentam manter a cordialidade",
@@ -31,7 +33,8 @@
 				"valeuMod": -15,
 				"rewardMod": -20
 			},
-			"contractorModifier": -2
+			"contractorModifier": -2,
+			"serviceContractorMod": -2
 		},
 		"4": {
 			"name": "Diplomatica",
@@ -42,7 +45,8 @@
 				"valeuMod": -10,
 				"rewardMod": -15
 			},
-			"contractorModifier": 0
+			"contractorModifier": 0,
+			"serviceContractorMod": 0
 		},
 		"5": {
 			"name": "Boa, mas o governo tenta mina-los secretamente",
@@ -53,7 +57,8 @@
 				"valeuMod": -5,
 				"rewardMod": -5
 			},
-			"contractorModifier": 1
+			"contractorModifier": 1,
+			"serviceContractorMod": 1
 		},
 		"6": {
 			"name": "Boa",
@@ -64,7 +69,8 @@
 				"valeuMod": -5,
 				"rewardMod": -5
 			},
-			"contractorModifier": 1
+			"contractorModifier": 1,
+			"serviceContractorMod": 1
 		},
 		"7": {
 			"name": "Muito boa, cooperam frequentemente",
@@ -75,7 +81,8 @@
 				"valeuMod": 5,
 				"rewardMod": 5
 			},
-			"contractorModifier": 2
+			"contractorModifier": 2,
+			"serviceContractorMod": 2
 		},
 		"8": {
 			"name": "Excelente, governo e guilda sao quase como um",
@@ -86,7 +93,8 @@
 				"valeuMod": 5,
 				"rewardMod": 10
 			},
-			"contractorModifier": 5
+			"contractorModifier": 5,
+			"serviceContractorMod": 5
 		}
 	},
 	"population": {
@@ -99,7 +107,8 @@
 				"valeuMod": 5,
 				"rewardMod": -20
 			},
-			"contractorModifier": 4
+			"contractorModifier": 4,
+			"serviceContractorMod": 4
 		},
 		"2": {
 			"name": "Ruim, vistos como mercenarios",
@@ -110,7 +119,8 @@
 				"valeuMod": -10,
 				"rewardMod": -15
 			},
-			"contractorModifier": 2
+			"contractorModifier": 2,
+			"serviceContractorMod": 2
 		},
 		"3": {
 			"name": "Ruim, so causam problemas",
@@ -121,7 +131,8 @@
 				"valeuMod": -10,
 				"rewardMod": -15
 			},
-			"contractorModifier": 2
+			"contractorModifier": 2,
+			"serviceContractorMod": 2
 		},
 		"4": {
 			"name": "Opiniao dividida",
@@ -132,7 +143,8 @@
 				"valeuMod": -5,
 				"rewardMod": -10
 			},
-			"contractorModifier": 0
+			"contractorModifier": 0,
+			"serviceContractorMod": 0
 		},
 		"5": {
 			"name": "Boa, ajudam com problemas",
@@ -143,7 +155,8 @@
 				"valeuMod": 1,
 				"rewardMod": -5
 			},
-			"contractorModifier": -1
+			"contractorModifier": -1,
+			"serviceContractorMod": -1
 		},
 		"6": {
 			"name": "Boa, \"nos mantem seguros\"",
@@ -154,7 +167,8 @@
 				"valeuMod": 1,
 				"rewardMod": -5
 			},
-			"contractorModifier": -1
+			"contractorModifier": -1,
+			"serviceContractorMod": -1
 		},
 		"7": {
 			"name": "Muito boa, \"sem eles estariamos perdidos\"",
@@ -165,7 +179,8 @@
 				"valeuMod": 5,
 				"rewardMod": 5
 			},
-			"contractorModifier": -2
+			"contractorModifier": -2,
+			"serviceContractorMod": -2
 		},
 		"8": {
 			"name": "Excelente, a guilda faz o assentamento funcionar",
@@ -176,7 +191,8 @@
 				"valeuMod": 5,
 				"rewardMod": 10
 			},
-			"contractorModifier": -5
+			"contractorModifier": -5,
+			"serviceContractorMod": -5
 		}
 	}
 }

@@ -9,6 +9,7 @@ import shutil
 import openai
 
 from contracts import ContractMaker
+from services import ServiceMaker
 from guild import GuildMaker
 
 defaultConfig       = '{"theme": "dark","gptApiKey": "","gptEnabled": false}'
@@ -550,12 +551,92 @@ class ContractviewerApp:
         pass
 
     def serviceGuildSelectCb(self, event=None):
+        path = "generatedGuild/"
+        dir_list =  os.walk(path)
+        fileName = ""
+
+        for j in dir_list:
+            subFolders = j[1]
+            break
+
+        for j in subFolders:
+            with open(path + j + "/" + j + ".json", encoding="utf-8") as f:
+                data = json.load(f)
+            if data["name"] == str(self.servGuildSelComboBox.get()):
+                fileName = j
+
+        self.fileName = fileName
+        self.fillServiceComboBox(fileName)
+        pass
+
+    def fillServiceComboBox(self, fileName):
+        ##Fill contractselector and service selector
+        path = "generatedGuild/" + fileName + "/" + "services/"
+        try:
+            subFolders = os.listdir(path)
+        except:
+            self.serviceComboBox['values'] = ''
+            return
+        self.serviceComboBox['values'] = [j for j in subFolders]
         pass
 
     def serviceSelectorCb(self, event=None):
+        path = "generatedGuild/" + self.fileName + "/" + "services/" + self.serviceComboBox.get()
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+
+        self.serviceShowerText.config(state = tk.NORMAL)
+        self.serviceShowerText.delete("1.0", "end")
+
+        display_info = json.loads("{}")
+
+        display_info["Contratante"] = data["contractors"]["name"]
+        if display_info["Contratante"] == "Governo":
+            display_info["Sub-Contratante"] = data["contractors"]["subClass"]["name"]
+
+        for k in display_info:
+            self.serviceShowerText.insert(tk.END, '{} = {}\n'.format(k,display_info[k]))
+        self.serviceShowerText.config(state = tk.DISABLED)
         pass
 
     def createServiceBtnCb(self):
+        if self.servGuildSelComboBox.get() == 'Selecione uma guilda para vizualização':
+            messagebox.showerror('Python Error', 'É necessario selecionar a guilda!')
+            return
+
+        serviceGenerator = ServiceMaker()
+
+        path = "generatedGuild/"
+        dir_list =  os.walk(path)
+
+        result = json.loads("{}")
+
+        for j in dir_list:
+            subFolders = j[1]
+            break
+
+        for j in subFolders:
+            with open(path + j + "/" + j + ".json", encoding="utf-8") as f:
+                data = json.load(f)
+            if data["name"] == str(self.servGuildSelComboBox.get()):
+                guildJson = data
+        
+        result = serviceGenerator.createService(guildJson)
+
+        if result == "error":
+            return
+        
+        fileName = result["guild"]["fileName"]
+        self.fillServiceComboBox(fileName)
+
+        iterator = 0
+        for i in self.serviceComboBox['values']:
+            if i == result['fileName']:
+                newId = iterator
+                break
+            iterator += 1
+        self.serviceComboBox.current(newId)
+        self.serviceSelectorCb()
         pass
 
     def saveConfigBtnCb(self):
