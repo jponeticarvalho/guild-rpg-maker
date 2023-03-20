@@ -506,6 +506,9 @@ class ContractviewerApp:
         if self.contGuildSelComboBox.get() == 'Selecione uma guilda para vizualização':
             messagebox.showerror('Python Error', 'É necessario selecionar a guilda!')
             return
+        updateGptContComboBox = True
+        if self.gptGuildSelComboBox.get() == 'Selecione uma guilda para vizualização':
+            updateGptContComboBox = False
 
         contractCreator = ContractMaker()
 
@@ -523,6 +526,8 @@ class ContractviewerApp:
                 data = json.load(f)
             if data["name"] == str(self.contGuildSelComboBox.get()):
                 guildJson = data
+            if updateGptContComboBox and data['name'] == str(self.gptGuildSelComboBox.get()):
+                gptGuildJson = data
         
         result = contractCreator.creatContract(guildJson)
 
@@ -531,6 +536,8 @@ class ContractviewerApp:
         
         fileName = result["guild"]["fileName"]
         self.fillContractOptMenu(fileName)
+        if updateGptContComboBox:
+            self.fillGptContractOptMenu(gptGuildJson["fileName"])
 
         iterator = 0
         for i in self.contractComboBox['values']:
