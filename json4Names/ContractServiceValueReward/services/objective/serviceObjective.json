@@ -1,0 +1,150 @@
+{
+    "objectiveDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "objective": {
+        "1-1": {
+            "name": "Limpar construção/local",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Cobrar impostos/dividas",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Criar/ajudar em um evento",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Desmentir boatos/fofocas",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Traduzir/transcrever material",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Trabalho rural",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "forDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "for": {
+        "1-1": {
+            "name": "Um nobre soberbo",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Um humanoide ranzinza",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Um mercador",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Plebeu enfermo",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Uma criatura muito desconfiada",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Um criminoso/mafioso",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "butDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "but": {
+        "1-1": {
+            "name": "Há uma cláusula adicional biruta",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Deve ser feito durante a madrugada",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Um humanoide insiste em te atrapalhar",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Você está constantemente sendo vigiado",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "O prazo é muito curto",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Vai contra a moral e os bons costumes",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "ruralJobDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "ruralJob": {
+        "1-1": {
+            "name": "Pecuária",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Lavoura",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Lavoura",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Produtos florestais",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Pecuária",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Extrativismo",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    }
+}

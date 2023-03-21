@@ -17,6 +17,7 @@ class ServiceMaker:
         self.guildJson = guildJson
 
         self.defContractor          ()
+        self.defObjective           ()
 
         self.serviceJson["guild"] = guildJson #guildJson["name"]
         
@@ -74,4 +75,149 @@ class ServiceMaker:
             subClassData = data[str(self.serviceJson["contractors"]["subClassName"])]
             subclassDice = self.serviceJson["contractors"]["contractorDice"]
             self.serviceJson["contractors"]["subClass"] = self.rollTable(subClassData, subclassDice)
+        pass
+
+    def defObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/objective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        amountOfObj = 0
+        numberOfObj = 1
+        while numberOfObj > 0:
+            amountOfObj += 1
+            resultJson[f'objective{amountOfObj}'] = self.rollTable(data["objective"], data['objectiveDice'])
+
+            if resultJson[f'objective{amountOfObj}']['subFileName'] == '2roll':
+                numberOfObj+=2
+            else:
+                subFileName = resultJson[f'objective{amountOfObj}']['subFileName']
+                resultJson[f'objective{amountOfObj}'][subFileName] = self.rollSubObjective(subFileName)
+
+            numberOfObj-=1
+
+        resultJson['amount'] = amountOfObj-1
+
+        self.serviceJson['objectives'] = resultJson
+        pass
+
+    def rollSubObjective(self, filename):
+        with open(f'{self._SERVICE_PATH}objective/{filename}.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        if filename == 'serviceObjective' and resultJson['objective'] == 'Trabalho rural':
+            resultJson['ruralJob'] = self.rollTable(data['ruralJob'], data['ruralJobDice'])
+
+        return resultJson
+        pass
+
+    def rollRecruitObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/recruitObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
+        pass
+
+    def rollHealObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/healObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
+        pass
+
+    def rollNegociationObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/negociationObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
+        pass
+
+    def rollHelpObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/helpObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
+        pass
+
+    def rollExtractObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/extractObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
+        pass
+
+    def rollBuildObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/buildObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
+        pass
+
+    def rollServiceObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/serviceObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
+        pass
+
+    def rollReligiousObjective(self):
+        with open(f'{self._SERVICE_PATH}objective/religiousObjective.json', encoding="utf-8") as f:
+            data = json.load(f)
+
+        resultJson = json.loads('{}')
+
+        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
+        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
+        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+
+        return resultJson
         pass

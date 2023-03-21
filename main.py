@@ -590,6 +590,18 @@ class ContractviewerApp:
 
         display_info = json.loads("{}")
 
+        dataObjective = data["objectives"]
+        amountOfObjectives = 0
+        for i in dataObjective:
+            if str(i) != 'amount' and dataObjective[str(i)]["diceRangeMin"] != 20:
+                amountOfObjectives += 1
+                display_info[f'Objetivo {str(amountOfObjectives)}']  = dataObjective[str(i)]["name"]
+                subName = dataObjective[str(i)]['subFileName']
+                display_info[f'Sub-Objetivo {(amountOfObjectives)}'] = f'{dataObjective[str(i)][subName]["objective"]["name"]} PARA {dataObjective[str(i)][subName]["for"]["name"]} MAS {dataObjective[str(i)][subName]["but"]["name"]}'
+                if dataObjective[str(i)][subName]["objective"]["name"] == 'Trabalho rural':
+                    display_info[f'Trabalho Rural {amountOfObjectives}'] = dataObjective[str(i)][subName]["ruralJob"]["name"]
+
+
         display_info["Contratante"] = data["contractors"]["name"]
         if display_info["Contratante"] == "Governo":
             display_info["Sub-Contratante"] = data["contractors"]["subClass"]["name"]

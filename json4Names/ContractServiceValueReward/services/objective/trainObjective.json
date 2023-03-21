@@ -1,0 +1,113 @@
+{
+    "objectiveDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "objective": {
+        "1-1": {
+            "name": "Uma nova língua",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Uma perícia",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "A arte do combate",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Arcanismo/magias",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Boas maneiras",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Conhecimentos gerais",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "forDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "for": {
+        "1-1": {
+            "name": "Uma besta",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Um humanoide nada habilidoso",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Um humanoide hostil",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Prole desinteressada",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Para crianças órfãs",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Combatentes",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "butDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "but": {
+        "1-1": {
+            "name": "Contra a vontade/discorda de tudo",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "O conhecimento será usado contra você",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Trauma sobre o que será ensinado",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Você não sabe nada sobre o assunto",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "O treinado tem dificuldade de aprendizado",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "O conhecimento é proibido no loca",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    }
+}

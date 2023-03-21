@@ -1,0 +1,113 @@
+{
+    "objectiveDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "objective": {
+        "1-1": {
+            "name": "Local histórico",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Item especifico e mundano",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Ponte/aqueduto/barco",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Torre/fortaleza/muralha/proteção",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Estabelecimento/moradia",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Um relacionamento",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "forDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "for": {
+        "1-1": {
+            "name": "Instituição de caridade",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Nobre poderoso",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Líder local",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Adepto religioso/arcano",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Um marinheiro/corsário",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Uma organização",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "butDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "but": {
+        "1-1": {
+            "name": "Recursos adquiridos de maneira ilegal",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Roubam os materiais/ferramentas",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Outro especialista discorda de você",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "O serviço deve ser perfeito",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "O local é afastado e inóspito",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Deve ser feito em segredo/escondido",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    }
+}
