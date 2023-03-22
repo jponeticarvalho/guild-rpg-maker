@@ -606,6 +606,31 @@ class ContractviewerApp:
         if display_info["Contratante"] == "Governo":
             display_info["Sub-Contratante"] = data["contractors"]["subClass"]["name"]
 
+        if data['complications']['exist']:
+            display_info['Há complicações?'] = 'Sim'
+            display_info['Complicação'] = f'{data["complications"]["complication"]["name"]} E {data["complications"]["and"]["name"]}'
+        else:
+            display_info['Há complicações?'] = 'Nao'
+
+        if data['rivals']['exist']:
+            display_info['Há Rivais?'] = 'Sim'
+            display_info['Rival'] = f'{data["rivals"]["rival"]["name"]} MAS {data["rivals"]["but"]["name"]}'
+        else:
+            display_info['Há Rivais?'] = 'Nao'
+
+        if data['addQuests']['exist']:
+            display_info['Há Desafio adicional?'] = 'Sim'
+            display_info['Desafio adicional'] = f'{data["addQuests"]["addQuest"]["name"]}'
+        else:
+            display_info['Há Desafio adicional?'] = 'Nao'
+
+        display_info[" "] = " "
+        if data["keywords"]["existRolledDice"] > 0:
+            keyNumber = 1
+            for i in range(1, data["keywords"]["existRolledDice"]+1):
+                display_info["Palavra-chave de Serviço "+str(keyNumber)] = data["keywords"]["keyword"+str(keyNumber)]["name"]
+                keyNumber += 1
+
         for k in display_info:
             self.serviceShowerText.insert(tk.END, '{} = {}\n'.format(k,display_info[k]))
         self.serviceShowerText.config(state = tk.DISABLED)
@@ -979,7 +1004,9 @@ class ContractviewerApp:
 
         self.mainwindow.mainloop()
 
-
-if __name__ == "__main__":
+def main():
     app = ContractviewerApp()
     app.run()
+
+if __name__ == "__main__":
+    main()

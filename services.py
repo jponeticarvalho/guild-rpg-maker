@@ -18,6 +18,10 @@ class ServiceMaker:
 
         self.defContractor          ()
         self.defObjective           ()
+        self.defComplication        ()
+        self.defRival               ()
+        self.defAditionalQuest      ()
+        self.defKeyWords            ()
 
         self.serviceJson["guild"] = guildJson #guildJson["name"]
         
@@ -116,108 +120,101 @@ class ServiceMaker:
             resultJson['ruralJob'] = self.rollTable(data['ruralJob'], data['ruralJobDice'])
 
         return resultJson
+
+    def defComplication(self):
+        with open(f'{self._SERVICE_PATH}complications.json', encoding="utf-8") as f:
+            fullData = json.load(f)
+        resultJson = json.loads("{}")
+
+        resultJson["exist"] = False
+
+        diceResult 	=  self.rollDice(fullData["haveComplication"]["dice"])
+        rangeMin	= fullData["haveComplication"]["existRangeMin"]
+        rangeMax	= fullData["haveComplication"]["existRangeMax"]+1
+
+        if diceResult in range(rangeMin, rangeMax):
+            resultJson["exist"] = True
+        resultJson["existRolledDice"] = diceResult
+
+        if resultJson["exist"] == False:
+            self.serviceJson["complications"] = resultJson
+            return
+
+        resultJson["complication"] = self.rollTable(fullData["complication"], fullData["complicationDice"])
+        resultJson["and"] = self.rollTable(fullData["and"], fullData["andDice"])
+
+        self.serviceJson["complications"] = resultJson
         pass
 
-    def rollRecruitObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/recruitObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
+    def defRival(self):
+        with open(f'{self._SERVICE_PATH}rivals.json', encoding="utf-8") as f:
+            fullData = json.load(f)
+        resultJson = json.loads("{}")
 
-        resultJson = json.loads('{}')
+        resultJson["exist"] = False
 
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+        diceResult 	=  self.rollDice(fullData["haveRival"]["dice"])
+        rangeMin	= fullData["haveRival"]["existRangeMin"]
+        rangeMax	= fullData["haveRival"]["existRangeMax"]+1
 
-        return resultJson
+        if diceResult in range(rangeMin, rangeMax):
+            resultJson["exist"] = True
+        resultJson["existRolledDice"] = diceResult
+
+        if resultJson["exist"] == False:
+            self.serviceJson["rivals"] = resultJson
+            return
+
+        resultJson["rival"] = self.rollTable(fullData["rival"], fullData["rivalDice"])
+        resultJson["but"] = self.rollTable(fullData["but"], fullData["butDice"])
+
+        self.serviceJson["rivals"] = resultJson
         pass
 
-    def rollHealObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/healObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
+    def defAditionalQuest(self):
+        with open(f'{self._SERVICE_PATH}aditionalQuest.json', encoding="utf-8") as f:
+            fullData = json.load(f)
+        resultJson = json.loads("{}")
 
-        resultJson = json.loads('{}')
+        resultJson["exist"] = False
 
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+        diceResult 	=  self.rollDice(fullData["haveAddQuest"]["dice"])
+        rangeMin	= fullData["haveAddQuest"]["existRangeMin"]
+        rangeMax	= fullData["haveAddQuest"]["existRangeMax"]+1
 
-        return resultJson
+        if diceResult in range(rangeMin, rangeMax):
+            resultJson["exist"] = True
+        resultJson["existRolledDice"] = diceResult
+
+        if resultJson["exist"] == False:
+            self.serviceJson["addQuests"] = resultJson
+            return
+
+        resultJson["addQuest"] = self.rollTable(fullData["addQuest"], fullData["addQuestDice"])
+        self.serviceJson["addQuests"] = resultJson
         pass
 
-    def rollNegociationObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/negociationObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
+    def defKeyWords(self):
+        with open(f'{self._SERVICE_PATH}keywordsService.json', encoding="utf-8") as f:
+            fullData = json.load(f)
+        resultJson = json.loads("{}")
 
-        resultJson = json.loads('{}')
+        resultJson["exist"] = True
 
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
+        diceResult = self.rollDice(fullData["keywordServiceDice"])
+        resultJson["existRolledDice"] = diceResult
+        if diceResult == 0:
+            resultJson["exist"] = False
+            self.serviceJson["keywords"] = resultJson
+            return
 
-        return resultJson
-        pass
+        tables = random.sample(range(1, fullData["numberOfTable"]), diceResult)
 
-    def rollHelpObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/helpObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
-
-        resultJson = json.loads('{}')
-
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
-
-        return resultJson
-        pass
-
-    def rollExtractObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/extractObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
-
-        resultJson = json.loads('{}')
-
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
-
-        return resultJson
-        pass
-
-    def rollBuildObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/buildObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
-
-        resultJson = json.loads('{}')
-
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
-
-        return resultJson
-        pass
-
-    def rollServiceObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/serviceObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
-
-        resultJson = json.loads('{}')
-
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
-
-        return resultJson
-        pass
-
-    def rollReligiousObjective(self):
-        with open(f'{self._SERVICE_PATH}objective/religiousObjective.json', encoding="utf-8") as f:
-            data = json.load(f)
-
-        resultJson = json.loads('{}')
-
-        resultJson['objective'] = self.rollTable(data['objective'], data['objectiveDice'])
-        resultJson['for'] = self.rollTable(data['for'], data['forDice'])
-        resultJson['but'] = self.rollTable(data['but'], data['butDice'])
-
-        return resultJson
+        keywordNumber = 1
+        for i in tables:
+            resultJson["keyword"+str(keywordNumber)] = self.rollTable(fullData[str(i)]["table"], fullData[str(i)]["dice"])
+            resultJson["keyword"+str(keywordNumber)]["originTable"] = i
+            keywordNumber += 1
+        
+        self.serviceJson["keywords"] = resultJson
         pass
