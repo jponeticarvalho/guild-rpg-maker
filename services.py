@@ -209,7 +209,7 @@ class ServiceMaker:
             self.serviceJson["keywords"] = resultJson
             return
 
-        tables = random.sample(range(1, fullData["numberOfTable"]), diceResult)
+        tables = random.sample(range(1, fullData["numberOfTable"]+1), diceResult)
 
         keywordNumber = 1
         for i in tables:

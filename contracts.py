@@ -563,7 +563,7 @@ class ContractMaker:
             self.contratJson["keywords"] = resultJson
             return
 
-        tables = random.sample(range(1, fullData["numberOfTable"]), diceResult)
+        tables = random.sample(range(1, fullData["numberOfTable"]+1), diceResult)
 
         keywordNumber = 1
         for i in tables:
@@ -612,7 +612,7 @@ class ContractMaker:
             self.contratJson["keywordsContractor"] = resultJson
             return
 
-        tables = random.sample(range(1, fullData["numberOfTable"]), diceResult)
+        tables = random.sample(range(1, fullData["numberOfTable"]+1), diceResult)
 
         keywordNumber = 1
         for i in tables:
