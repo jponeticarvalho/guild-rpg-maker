@@ -226,17 +226,17 @@ class ContractviewerApp:
             add="")
         frame15 = ttk.Frame(self.frame14)
         frame15.configure(height=200, width=200)
-        self.gptContractoSelComboBox = ttk.Combobox(frame15)
-        self.gptContractoSelComboBoxVar = tk.StringVar()
-        self.gptContractoSelComboBox.configure(
+        self.gptContractSelComboBox = ttk.Combobox(frame15)
+        self.gptContractSelComboBoxVar = tk.StringVar()
+        self.gptContractSelComboBox.configure(
             height=10,
             state="readonly",
-            textvariable=self.gptContractoSelComboBoxVar,
+            textvariable=self.gptContractSelComboBoxVar,
             values=['Contratos'],
             width=40)
-        self.gptContractoSelComboBox.current(0)
-        self.gptContractoSelComboBox.grid(column=0, padx=20, row=0)
-        self.gptContractoSelComboBox.bind(
+        self.gptContractSelComboBox.current(0)
+        self.gptContractSelComboBox.grid(column=0, padx=20, row=0)
+        self.gptContractSelComboBox.bind(
             "<<ComboboxSelected>>", self.gptContractSelectorCb, add="")
         self.createContractContextBtn = ttk.Button(frame15)
         self.createContractContextBtn.configure(
@@ -256,6 +256,51 @@ class ContractviewerApp:
             self.frame14,
             state="hidden",
             text='Gerar Contrato ChatGPT')
+        self.frame1 = ttk.Frame(self.notebook1)
+        self.frame1.configure(height=200, width=200)
+        self.gptServGuildSelComboBox = ttk.Combobox(self.frame1)
+        self.gptServGuildSelComboBoxVar = tk.StringVar()
+        self.gptServGuildSelComboBox.configure(
+            height=10,
+            state="readonly",
+            textvariable=self.gptServGuildSelComboBoxVar,
+            values=['Selecione uma guilda para vizualização'],
+            width=50)
+        self.gptServGuildSelComboBox.current(0)
+        self.gptServGuildSelComboBox.grid(column=0, padx=20, pady=10, row=0)
+        self.gptServGuildSelComboBox.bind(
+            "<<ComboboxSelected>>", self.gptServGuildSelectCb, add="")
+        frame2 = ttk.Frame(self.frame1)
+        frame2.configure(height=200, width=200)
+        self.gptServiceSelComboBox = ttk.Combobox(frame2)
+        self.gptServiceSelComboBoxVar = tk.StringVar()
+        self.gptServiceSelComboBox.configure(
+            height=10,
+            state="readonly",
+            textvariable=self.gptServiceSelComboBoxVar,
+            values=['Servicos'],
+            width=40)
+        self.gptServiceSelComboBox.current(0)
+        self.gptServiceSelComboBox.grid(column=0, padx=20, row=0)
+        self.gptServiceSelComboBox.bind(
+            "<<ComboboxSelected>>", self.gptServiceSelectorCb, add="")
+        self.createServiceContextBtn = ttk.Button(frame2)
+        self.createServiceContextBtn.configure(text='Gerar Contexto', width=25)
+        self.createServiceContextBtn.grid(column=1, padx=20, row=0)
+        self.createServiceContextBtn.configure(
+            command=self.createServiceContextBtnCb)
+        frame2.grid(column=0, pady=5, row=1)
+        self.gptServContextText = tk.Text(self.frame1)
+        self.gptServContextText.configure(height=35, width=100)
+        self.gptServContextText.grid(column=0, padx=8, pady="0 3", row=2)
+        label2 = ttk.Label(self.frame1)
+        label2.configure(text='powered by twitch.tv/Owneti')
+        label2.grid(column=0, row=3)
+        self.frame1.pack(side="top")
+        self.notebook1.add(
+            self.frame1,
+            state="hidden",
+            text='Gerar Servico ChatGPT')
         self.notebook1.grid()
         self.Gerador.grid_anchor("center")
 
@@ -363,10 +408,10 @@ class ContractviewerApp:
                 fileName = j
 
         self.fileName = fileName
-        self.fillContractOptMenu(fileName)
+        self.fillContractComboBox(fileName)
         pass
 
-    def fillContractOptMenu(self, fileName):
+    def fillContractComboBox(self, fileName):
         ##Fill contractselector and service selector
         path = "generatedGuild/" + fileName + "/" + "contracts/"
         try:
@@ -536,9 +581,9 @@ class ContractviewerApp:
             return
         
         fileName = result["guild"]["fileName"]
-        self.fillContractOptMenu(fileName)
+        self.fillContractComboBox(fileName)
         if updateGptContComboBox:
-            self.fillGptContractOptMenu(gptGuildJson["fileName"])
+            self.fillGptContractComboBox(gptGuildJson["fileName"])
 
         iterator = 0
         for i in self.contractComboBox['values']:
@@ -624,6 +669,17 @@ class ContractviewerApp:
         else:
             display_info['Há Desafio adicional?'] = 'Nao'
 
+        display_info["Dificuldade"] = data["rewardsAndChallenges"]["difficulty"]["name"]
+        display_info["Condicoes"] = data["rewardsAndChallenges"]["difficulty"]["requirement"]
+
+        display_info["Nivel de CD"] = data["rewardsAndChallenges"]["rewardAndChallenge"]["cd"]
+        display_info["Recompensa"] = f'{data["rewardsAndChallenges"]["rewardAndChallenge"]["value"]} {data["rewardsAndChallenges"]["rewardAndChallenge"]["coin"]}'
+        display_info["Taxa de Recorrencia"] = data["rewardsAndChallenges"]["rewardAndChallenge"]["recurrency"]
+
+        successCaseJson = data["rewardsAndChallenges"]["difficulty"]["successCases"]
+        for i in successCaseJson:
+            display_info[f'Numero de sucessos {successCaseJson[str(i)]["successNumber"]}'] = successCaseJson[str(i)]["status"]
+
         display_info[" "] = " "
         if data["keywords"]["existRolledDice"] > 0:
             keyNumber = 1
@@ -690,6 +746,7 @@ class ContractviewerApp:
         else:
             new_state = "hidden"
         self.notebook1.tab(4, state=new_state)
+        self.notebook1.tab(5, state=new_state)
         
         self.Gerador.tk.call('set_theme', self.savedConfig["theme"])
 
@@ -752,22 +809,22 @@ class ContractviewerApp:
                 fileName = j
 
         self.fileName = fileName
-        self.fillGptContractOptMenu(fileName)
+        self.fillGptContractComboBox(fileName)
         pass
 
-    def fillGptContractOptMenu(self, fileName):
+    def fillGptContractComboBox(self, fileName):
         ##Fill contractselector and service selector
         path = "generatedGuild/" + fileName + "/" + "contracts/"
         try:
             subFolders = os.listdir(path)
         except:
-            self.gptContractoSelComboBox['values'] = ''
+            self.gptContractSelComboBox['values'] = ''
             return
-        self.gptContractoSelComboBox['values'] = [j for j in subFolders]
+        self.gptContractSelComboBox['values'] = [j for j in subFolders]
         pass
 
     def gptContractSelectorCb(self, event=None):
-        path = "generatedGuild/" + self.fileName + "/" + "contracts/" + self.gptContractoSelComboBox.get()
+        path = "generatedGuild/" + self.fileName + "/" + "contracts/" + self.gptContractSelComboBox.get()
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
 
@@ -785,11 +842,11 @@ class ContractviewerApp:
         if self.gptGuildSelComboBox.get() == 'Selecione uma guilda para vizualização':
             messagebox.showerror('Python Error', 'É necessario selecionar a guilda!')
             return
-        if self.gptContractoSelComboBox.get() == 'Contratos':
+        if self.gptContractSelComboBox.get() == 'Contratos':
             messagebox.showerror('Python Error', 'É necessario selecionar um contrato!')
             return
         
-        path = "generatedGuild/" + self.fileName + "/" + "contracts/" + self.gptContractoSelComboBox.get()
+        path = "generatedGuild/" + self.fileName + "/" + "contracts/" + self.gptContractSelComboBox.get()
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
 
@@ -878,7 +935,8 @@ class ContractviewerApp:
 
         if data["keywords"]["existRolledDice"] > 0:
             keyNumber = 1
-            gptMsgToSend += '-Palavras-chave para a missao: '
+            #gptMsgToSend += '-Palavras-chave para a missao: '
+            gptMsgToSend += f'-Para a criacao do contexto da missao utilize as seguintes palavras-chave: '
             for i in range(1, data["keywords"]["existRolledDice"]+1):
                 gptMsgToSend += f'{data["keywords"]["keyword"+str(keyNumber)]["name"]}, '
                 keyNumber += 1
@@ -886,7 +944,8 @@ class ContractviewerApp:
 
         if data["keywordsContractor"]["existRolledDice"] > 0:
             keyNumber = 1
-            gptMsgToSend += '-Palavras-chave para o contratante: '
+            #gptMsgToSend += '-Palavras-chave para o contratante: '
+            gptMsgToSend += f'-Para a criacao do contratante utilize as seguintes palavras-chave: '
             for i in range(1, data["keywordsContractor"]["existRolledDice"]+1):
                 gptMsgToSend += f'{data["keywordsContractor"]["contractorKeyword"+str(keyNumber)]["name"]}, '
                 keyNumber += 1
@@ -905,7 +964,134 @@ class ContractviewerApp:
         else:
              self.gptContContextShowerText.insert(tk.END, "Esse contrato ainda nao possui um contexto gerado pelo ChatGPT")
         self.gptContContextShowerText.config(state = tk.DISABLED)
+        pass
 
+    def gptServGuildSelectCb(self, event=None):
+        path = "generatedGuild/"
+        dir_list =  os.walk(path)
+        fileName = ""
+
+        for j in dir_list:
+            subFolders = j[1]
+            break
+
+        for j in subFolders:
+            with open(path + j + "/" + j + ".json", encoding="utf-8") as f:
+                data = json.load(f)
+            if data["name"] == str(self.gptServGuildSelComboBox.get()):
+                fileName = j
+
+        self.fileName = fileName
+        self.fillGptServiceComboBox(fileName)
+        pass
+
+    def fillGptServiceComboBox(self, fileName):
+        ##Fill contractselector and service selector
+        path = "generatedGuild/" + fileName + "/" + "services/"
+        try:
+            subFolders = os.listdir(path)
+        except:
+            self.gptServiceSelComboBox['values'] = ''
+            return
+        self.gptServiceSelComboBox['values'] = [j for j in subFolders]
+        pass
+
+    def gptServiceSelectorCb(self, event=None):
+        path = "generatedGuild/" + self.fileName + "/" + "services/" + self.gptServiceSelComboBox.get()
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+
+        self.gptServContextText.config(state = tk.NORMAL)
+        self.gptServContextText.delete("1.0", "end")
+
+        if data["gptContextGen"]["exist"]:
+            self.gptServContextText.insert(tk.END, data["gptContextGen"]["text"])
+        else:
+             self.gptServContextText.insert(tk.END, "Esse service ainda nao possui um contexto gerado pelo ChatGPT")
+        self.gptServContextText.config(state = tk.DISABLED)
+        pass
+
+    def createServiceContextBtnCb(self):
+        if self.gptServGuildSelComboBox.get() == 'Selecione uma guilda para vizualização':
+            messagebox.showerror('Python Error', 'É necessario selecionar a guilda!')
+            return
+        if self.gptServiceSelComboBox.get() == 'Servicos':
+            messagebox.showerror('Python Error', 'É necessario selecionar um servico!')
+            return
+        
+        path = "generatedGuild/" + self.fileName + "/" + "services/" + self.gptServiceSelComboBox.get()
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+
+        self.gptServContextText.config(state = tk.NORMAL)
+        self.gptServContextText.delete("1.0", "end")
+
+        gptMsgToSend = 'Crie e contextualize no presente um servico de RPG usando as seguintes informacoes::\n'
+
+        dataObjective = data["objectives"]
+        amountOfObjectives = 0
+        for i in dataObjective:
+            if str(i) != 'amount' and dataObjective[str(i)]["diceRangeMin"] != 20:
+                amountOfObjectives += 1
+                subName = dataObjective[str(i)]["subFileName"]
+                if subName == 'trainObjective' or subName == 'recruitObjective' or subName == 'negociationObjective' or subName == 'buildObjective':
+                    gptMsgToSend += f'-Objetivo {amountOfObjectives}: {dataObjective[str(i)]["name"]} {dataObjective[str(i)][subName]["objective"]["name"]} PARA {dataObjective[str(i)][subName]["for"]["name"]} MAS {dataObjective[str(i)][subName]["but"]["name"]}\n'
+                elif subName == 'healObjective' or subName == 'extractObjective' or subName == 'serviceObjective':
+                    gptMsgToSend += f'-Objetivo {amountOfObjectives}: {dataObjective[str(i)]["name"]} {dataObjective[str(i)][subName]["objective"]["name"]}'
+                    if dataObjective[str(i)][subName]["objective"]["name"] == 'Trabalho rural':
+                        gptMsgToSend += f' no/na {dataObjective[str(i)][subName]["ruralJob"]["name"]}'
+                    gptMsgToSend += f' DE {dataObjective[str(i)][subName]["for"]["name"]} MAS {dataObjective[str(i)][subName]["but"]["name"]}\n'
+                elif subName == 'helpObjective':
+                    gptMsgToSend += f'-Objetivo {amountOfObjectives}: {dataObjective[str(i)]["name"]} {dataObjective[str(i)][subName]["objective"]["name"]}, EM QUE? {dataObjective[str(i)][subName]["for"]["name"]} MAS {dataObjective[str(i)][subName]["but"]["name"]}\n'
+                elif subName == 'religiousObjective':
+                    gptMsgToSend += f'-Objetivo {amountOfObjectives}: {dataObjective[str(i)]["name"]} {dataObjective[str(i)][subName]["objective"]["name"]}, O QUE/QUEM? {dataObjective[str(i)][subName]["for"]["name"]} MAS {dataObjective[str(i)][subName]["but"]["name"]}\n'
+        
+        gptMsgToSend += f'-Contratante: {data["contractors"]["name"]}'
+        if data["contractors"]["name"] == "Governo":
+            gptMsgToSend += f', {data["contractors"]["subClass"]["name"]}'
+        gptMsgToSend += f'\n'
+
+        if data["complications"]["exist"]:
+            gptMsgToSend += f'-Complicação: {data["complications"]["complication"]["name"]} E {data["complications"]["and"]["name"]}\n'
+
+        if data['rivals']['exist']:
+            gptMsgToSend += f'-Rivais: {data["rivals"]["rival"]["name"]} MAS {data["rivals"]["but"]["name"]}\n'
+
+
+        if data['addQuests']['exist']:
+            gptMsgToSend += f'-Desafio Adicional: {data["addQuests"]["addQuest"]["name"]}\n'
+
+        gptMsgToSend += f'-Dificuldade: {data["rewardsAndChallenges"]["difficulty"]["name"]}\n'
+
+        gptMsgToSend += f'-Condicoes de conclusao: {data["rewardsAndChallenges"]["difficulty"]["requirement"]}\n'
+
+        gptMsgToSend += f'-Nivel de CD: {data["rewardsAndChallenges"]["rewardAndChallenge"]["cd"]}\n'
+
+        gptMsgToSend += f'-Recompensa: {data["rewardsAndChallenges"]["rewardAndChallenge"]["value"]} {data["rewardsAndChallenges"]["rewardAndChallenge"]["coin"]}\n'
+
+        gptMsgToSend += f'-Taxa de Recorrencia: {data["rewardsAndChallenges"]["rewardAndChallenge"]["recurrency"]}\n'
+
+        if data["keywords"]["existRolledDice"] > 0:
+            keyNumber = 1
+            gptMsgToSend += f'-Para a criacao do context do servico utilize as seguintes palavras-chave: '
+            for i in range(1, data["keywords"]["existRolledDice"]+1):
+                gptMsgToSend += f'{data["keywords"]["keyword"+str(keyNumber)]["name"]}, '
+                keyNumber += 1
+            gptMsgToSend += '\n'
+
+        gptResponse = self.sendToGPT(gptMsgToSend)
+
+        data["gptContextGen"]["exist"]  = True
+        data["gptContextGen"]["text"]   = gptResponse
+
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(data, indent=4))
+
+        if data["gptContextGen"]["exist"]:
+            self.gptServContextText.insert(tk.END, data["gptContextGen"]["text"])
+        else:
+             self.gptServContextText.insert(tk.END, "Esse servico ainda nao possui um contexto gerado pelo ChatGPT")
+        self.gptServContextText.config(state = tk.DISABLED)
         pass
 
     def sendToGPT(self, data):
@@ -939,6 +1125,7 @@ class ContractviewerApp:
         else:
             new_state = "hidden"
         self.notebook1.tab(4, state=new_state)
+        self.notebook1.tab(5, state=new_state)
         
         #Update the interface
         self.Gerador.tk.call('set_theme', self.savedConfig["theme"])
@@ -974,10 +1161,11 @@ class ContractviewerApp:
             if data["exist"]:
                 valuesExisted.add(data["name"])
 
-        self.guildSelComboBox['values']     = [i for i in values]
-        self.contGuildSelComboBox['values'] = [i for i in valuesExisted]
-        self.servGuildSelComboBox['values'] = [i for i in valuesExisted]
-        self.gptGuildSelComboBox['values']  = [i for i in valuesExisted]
+        self.guildSelComboBox['values']         = [i for i in values]
+        self.contGuildSelComboBox['values']     = [i for i in valuesExisted]
+        self.servGuildSelComboBox['values']     = [i for i in valuesExisted]
+        self.gptGuildSelComboBox['values']      = [i for i in valuesExisted]
+        self.gptServGuildSelComboBox['values']  = [i for i in valuesExisted]
         pass
 
     def on_close(self):

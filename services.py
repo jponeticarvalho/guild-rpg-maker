@@ -22,6 +22,7 @@ class ServiceMaker:
         self.defRival               ()
         self.defAditionalQuest      ()
         self.defKeyWords            ()
+        self.defRewardAndChallenge  ()
 
         self.serviceJson["guild"] = guildJson #guildJson["name"]
         
@@ -217,4 +218,18 @@ class ServiceMaker:
             keywordNumber += 1
         
         self.serviceJson["keywords"] = resultJson
+        pass
+
+    def defRewardAndChallenge(self):
+        with open(f'{self._SERVICE_PATH}rewardAndChallenge.json', encoding="utf-8") as f:
+            fullData = json.load(f)
+        resultJson = json.loads("{}")
+
+        resultJson["rewardAndChallenge"] = self.rollTable(fullData["rewardAndChallenge"], fullData["rewardAndChallengeDice"])
+        resultJson["rewardAndChallenge"]["value"] = self.rollDice(resultJson["rewardAndChallenge"]["rewardDice"])
+        resultJson["rewardAndChallenge"]["value"] *= resultJson["rewardAndChallenge"]["diceMultiplier"] 
+
+        resultJson["difficulty"] = self.rollTable(fullData["difficulty"], fullData["difficultyDice"])
+
+        self.serviceJson["rewardsAndChallenges"] = resultJson
         pass

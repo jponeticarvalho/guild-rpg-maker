@@ -308,7 +308,6 @@
                 </containerlayout>
                 <child>
                   <object class="ttk.Entry" id="chatGPTApiKeyEntry" named="True">
-                    <property name="text" translatable="yes">asdasd</property>
                     <property name="textvariable">string:chatGPTApiKeyVar</property>
                     <property name="width">50</property>
                     <layout manager="grid">
@@ -454,10 +453,10 @@
                       <property name="row">1</property>
                     </layout>
                     <child>
-                      <object class="ttk.Combobox" id="gptContractoSelComboBox" named="True">
+                      <object class="ttk.Combobox" id="gptContractSelComboBox" named="True">
                         <property name="height">10</property>
                         <property name="state">readonly</property>
-                        <property name="textvariable">string:gptContractoSelComboBoxVar</property>
+                        <property name="textvariable">string:gptContractSelComboBoxVar</property>
                         <property name="values">Contratos</property>
                         <property name="width">40</property>
                         <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptContractSelectorCb" add="" />
@@ -496,6 +495,96 @@
                 </child>
                 <child>
                   <object class="ttk.Label" id="label10">
+                    <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="row">3</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Notebook.Tab" id="chatGPTServGenTab" named="True">
+            <property name="state">hidden</property>
+            <property name="text" translatable="yes">Gerar Servico ChatGPT</property>
+            <child>
+              <object class="ttk.Frame" id="frame1" named="True">
+                <property name="height">200</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="ttk.Combobox" id="gptServGuildSelComboBox" named="True">
+                    <property name="height">10</property>
+                    <property name="state">readonly</property>
+                    <property name="textvariable">string:gptServGuildSelComboBoxVar</property>
+                    <property name="values">Selecione uma guilda para vizualização</property>
+                    <property name="width">50</property>
+                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptServGuildSelectCb" add="" />
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">20</property>
+                      <property name="pady">10</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Frame" id="frame2">
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">5</property>
+                      <property name="row">1</property>
+                    </layout>
+                    <child>
+                      <object class="ttk.Combobox" id="gptServiceSelComboBox" named="True">
+                        <property name="height">10</property>
+                        <property name="state">readonly</property>
+                        <property name="textvariable">string:gptServiceSelComboBoxVar</property>
+                        <property name="values">Servicos</property>
+                        <property name="width">40</property>
+                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptServiceSelectorCb" add="" />
+                        <layout manager="grid">
+                          <property name="column">0</property>
+                          <property name="padx">20</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Button" id="createServiceContextBtn" named="True">
+                        <property name="command" type="command" cbtype="simple">createServiceContextBtnCb</property>
+                        <property name="text" translatable="yes">Gerar Contexto</property>
+                        <property name="width">25</property>
+                        <layout manager="grid">
+                          <property name="column">1</property>
+                          <property name="padx">20</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Text" id="gptServContextText" named="True">
+                    <property name="height">35</property>
+                    <property name="width">100</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="padx">8</property>
+                      <property name="pady">0 3</property>
+                      <property name="row">2</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label2">
                     <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
                     <layout manager="grid">
                       <property name="column">0</property>
