@@ -1178,7 +1178,7 @@ class ContractviewerApp:
         self.Gerador.protocol('WM_DELETE_WINDOW', self.on_close)
         self.setup()
 
-        self.Gerador.tk.call('source', 'azure.tcl')
+        self.Gerador.tk.call('source', 'styles/Azure-ttk-theme/azure.tcl')
 
         self.readSavedConfigs()
 
