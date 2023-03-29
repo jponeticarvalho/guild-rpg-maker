@@ -22,14 +22,16 @@ class ContractviewerApp:
         # build ui
         self.Gerador = tk.Tk() if master is None else tk.Toplevel(master)
         self.Gerador.configure(height=600, padx=10, pady=10, width=800)
-        self.Gerador.resizable(False, False)
+        self.Gerador.resizable(True, True)
         self.notebook1 = ttk.Notebook(self.Gerador)
         self.notebook1.configure(height=680, width=820)
         self.guildFrame = ttk.Frame(self.notebook1)
         self.guildFrame.configure(height=200, width=200)
-        frame3 = ttk.Frame(self.guildFrame)
-        frame3.configure(height=200, width=200)
-        self.sizeComboBox = ttk.Combobox(frame3)
+        self.frame4 = ttk.Frame(self.guildFrame)
+        self.frame4.configure(height=200, width=200)
+        self.frame3 = ttk.Frame(self.frame4)
+        self.frame3.configure(height=200, width=200)
+        self.sizeComboBox = ttk.Combobox(self.frame3)
         self.sizeStrVar = tk.StringVar()
         self.sizeComboBox.configure(
             height=10,
@@ -37,43 +39,62 @@ class ContractviewerApp:
             textvariable=self.sizeStrVar,
             values=['Selecione o Tamanho do assentamento'],
             width=40)
-        self.sizeComboBox.current(0)
-        self.sizeComboBox.grid(column=0, padx=20, pady=5, row=0)
-        self.isHumanSettCheckbox = ttk.Checkbutton(frame3)
+        self.sizeComboBox.pack(expand="true", fill="x", padx=20, side="left")
+        self.createGuildBtn = ttk.Button(self.frame3)
+        self.createGuildBtn.configure(
+            cursor="hand2", text='Gerar Guilda', width=20)
+        self.createGuildBtn.pack(
+            expand="true", fill="x", padx=20, side="right")
+        self.createGuildBtn.configure(command=self.createGuildBtnCb)
+        self.isHumanSettCheckbox = ttk.Checkbutton(self.frame3)
         self.isHumanBoolVar = tk.BooleanVar()
         self.isHumanSettCheckbox.configure(
             text='Assentamento humano?',
             variable=self.isHumanBoolVar)
-        self.isHumanSettCheckbox.grid(column=1, padx=20, pady=5, row=0)
-        self.createGuildBtn = ttk.Button(frame3)
-        self.createGuildBtn.configure(text='Gerar Guilda', width=20)
-        self.createGuildBtn.grid(column=2, padx=20, pady=5, row=0)
-        self.createGuildBtn.configure(command=self.createGuildBtnCb)
-        frame3.grid(column=0, pady=5, row=0)
-        self.guildSelComboBox = ttk.Combobox(self.guildFrame)
+        self.isHumanSettCheckbox.pack(
+            expand="true", fill="x", padx=20, side="bottom")
+        self.frame3.pack(
+            anchor="n",
+            expand="true",
+            fill="x",
+            padx=20,
+            pady=10,
+            side="top")
+        self.guildSelComboBox = ttk.Combobox(self.frame4)
         self.guildSelComboBoxVar = tk.StringVar()
         self.guildSelComboBox.configure(
             state="readonly",
             textvariable=self.guildSelComboBoxVar,
             values=['Selecione uma guilda para vizualização'],
             width=50)
-        self.guildSelComboBox.current(0)
-        self.guildSelComboBox.grid(column=0, pady=5, row=1)
+        self.guildSelComboBox.pack(
+            anchor="n", expand="false", pady=5, side="top")
         self.guildSelComboBox.bind(
             "<<ComboboxSelected>>",
             self.guildSelectCb,
             add="")
+        self.frame4.pack(side="top")
         self.guildShowerText = tk.Text(self.guildFrame)
         self.guildShowerText.configure(height=35, width=100)
-        self.guildShowerText.grid(column=0, padx=8, pady="0 3", row=2)
-        label3 = ttk.Label(self.guildFrame)
-        label3.configure(text='powered by twitch.tv/Owneti')
-        label3.grid(column=0, row=4)
-        self.guildFrame.pack(side="top")
+        self.guildShowerText.pack(
+            anchor="n",
+            expand="true",
+            fill="both",
+            padx=8,
+            pady="0 3",
+            side="top")
+        self.guildFrame.pack(
+            anchor="n",
+            expand="true",
+            fill="both",
+            side="top")
+        self.guildFrame.pack_propagate(0)
         self.notebook1.add(self.guildFrame, text='Gerar Guilda')
         self.contractFrame = ttk.Frame(self.notebook1)
         self.contractFrame.configure(height=200, width=200)
-        self.contGuildSelComboBox = ttk.Combobox(self.contractFrame)
+        self.frame5 = ttk.Frame(self.contractFrame)
+        self.frame5.configure(height=200, width=200)
+        self.contGuildSelComboBox = ttk.Combobox(self.frame5)
         self.contGuildSelComboBoxVar = tk.StringVar()
         self.contGuildSelComboBox.configure(
             height=10,
@@ -81,15 +102,14 @@ class ContractviewerApp:
             textvariable=self.contGuildSelComboBoxVar,
             values=['Selecione uma guilda para vizualização'],
             width=50)
-        self.contGuildSelComboBox.current(0)
-        self.contGuildSelComboBox.grid(column=0, padx=20, pady=10, row=0)
+        self.contGuildSelComboBox.pack(padx=20, pady=10)
         self.contGuildSelComboBox.bind(
             "<<ComboboxSelected>>",
             self.contractGuildSelectCb,
             add="")
-        frame10 = ttk.Frame(self.contractFrame)
-        frame10.configure(height=200, width=200)
-        self.contractComboBox = ttk.Combobox(frame10)
+        self.frame10 = ttk.Frame(self.frame5)
+        self.frame10.configure(height=200, width=200)
+        self.contractComboBox = ttk.Combobox(self.frame10)
         self.contractComboBoxVar = tk.StringVar()
         self.contractComboBox.configure(
             height=10,
@@ -97,28 +117,38 @@ class ContractviewerApp:
             textvariable=self.contractComboBoxVar,
             values=['Contratos'],
             width=40)
-        self.contractComboBox.current(0)
         self.contractComboBox.grid(column=0, padx=20, row=0)
         self.contractComboBox.bind(
             "<<ComboboxSelected>>",
             self.contractSelectorCb,
             add="")
-        self.createContractBtn = ttk.Button(frame10)
-        self.createContractBtn.configure(text='Gerar Contrato', width=25)
+        self.createContractBtn = ttk.Button(self.frame10)
+        self.createContractBtn.configure(
+            cursor="hand2", text='Gerar Contrato', width=25)
         self.createContractBtn.grid(column=1, padx=20, row=0)
         self.createContractBtn.configure(command=self.createContractBtnCb)
-        frame10.grid(column=0, pady=5, row=1)
+        self.frame10.pack(pady=5)
+        self.frame5.pack(side="top")
         self.contractShowerText = tk.Text(self.contractFrame)
         self.contractShowerText.configure(height=35, width=100)
-        self.contractShowerText.grid(column=0, padx=8, pady="0 3", row=2)
-        label7 = ttk.Label(self.contractFrame)
-        label7.configure(text='powered by twitch.tv/Owneti')
-        label7.grid(column=0, row=3)
-        self.contractFrame.pack(side="top")
+        self.contractShowerText.pack(
+            anchor="n",
+            expand="true",
+            fill="both",
+            padx=8,
+            pady="0 3",
+            side="top")
+        self.contractFrame.pack(
+            anchor="n",
+            expand="true",
+            fill="both",
+            side="top")
         self.notebook1.add(self.contractFrame, text='Gerar Contrato')
         self.serviceFrame = ttk.Frame(self.notebook1)
         self.serviceFrame.configure(height=200, width=200)
-        self.servGuildSelComboBox = ttk.Combobox(self.serviceFrame)
+        self.frame6 = ttk.Frame(self.serviceFrame)
+        self.frame6.configure(height=200, width=200)
+        self.servGuildSelComboBox = ttk.Combobox(self.frame6)
         self.servGuildSelComboBoxVar = tk.StringVar()
         self.servGuildSelComboBox.configure(
             height=10,
@@ -126,15 +156,14 @@ class ContractviewerApp:
             textvariable=self.servGuildSelComboBoxVar,
             values=['Selecione uma guilda para vizualização'],
             width=50)
-        self.servGuildSelComboBox.current(0)
-        self.servGuildSelComboBox.grid(column=0, padx=20, pady=10, row=0)
+        self.servGuildSelComboBox.pack(padx=20, pady=10)
         self.servGuildSelComboBox.bind(
             "<<ComboboxSelected>>",
             self.serviceGuildSelectCb,
             add="")
-        frame13 = ttk.Frame(self.serviceFrame)
-        frame13.configure(height=200, width=200)
-        self.serviceComboBox = ttk.Combobox(frame13)
+        self.frame13 = ttk.Frame(self.frame6)
+        self.frame13.configure(height=200, width=200)
+        self.serviceComboBox = ttk.Combobox(self.frame13)
         self.serviceComboBoxVar = tk.StringVar()
         self.serviceComboBox.configure(
             height=10,
@@ -142,75 +171,94 @@ class ContractviewerApp:
             textvariable=self.serviceComboBoxVar,
             values=['Serviços'],
             width=40)
-        self.serviceComboBox.current(0)
         self.serviceComboBox.grid(column=0, padx=20, row=0)
         self.serviceComboBox.bind(
             "<<ComboboxSelected>>",
             self.serviceSelectorCb,
             add="")
-        self.createServiceBtn = ttk.Button(frame13)
-        self.createServiceBtn.configure(text='Gerar Serviço', width=25)
+        self.createServiceBtn = ttk.Button(self.frame13)
+        self.createServiceBtn.configure(
+            cursor="hand2", text='Gerar Serviço', width=25)
         self.createServiceBtn.grid(column=1, padx=20, row=0)
         self.createServiceBtn.configure(command=self.createServiceBtnCb)
-        frame13.grid(column=0, pady=5, row=1)
+        self.frame13.pack(pady=5)
+        self.frame6.pack(side="top")
         self.serviceShowerText = tk.Text(self.serviceFrame)
         self.serviceShowerText.configure(height=35, width=100)
-        self.serviceShowerText.grid(column=0, padx=8, pady="0 3", row=2)
-        label9 = ttk.Label(self.serviceFrame)
-        label9.configure(text='powered by twitch.tv/Owneti')
-        label9.grid(column=0, row=3)
-        self.serviceFrame.pack(side="top")
+        self.serviceShowerText.pack(
+            expand="true",
+            fill="both",
+            padx=8,
+            pady="0 3",
+            side="top")
+        self.serviceFrame.pack(expand="true", fill="both", side="top")
         self.notebook1.add(self.serviceFrame, text='Gerar Servico')
         self.themeFrame = ttk.Frame(self.notebook1)
         self.themeFrame.configure(height=200, width=200)
-        self.chatGPTApiKeyEntry = ttk.Entry(self.themeFrame)
+        self.apiKeyFrame = ttk.Frame(self.themeFrame)
+        self.apiKeyFrame.configure(height=200, width=200)
+        self.chatGPTApiKeyLabel = ttk.Label(self.apiKeyFrame)
+        self.chatGPTApiKeyLabel.configure(text='ChatGPT API-KEY')
+        self.chatGPTApiKeyLabel.pack()
+        self.chatGPTApiKeyEntry = ttk.Entry(self.apiKeyFrame)
         self.chatGPTApiKeyVar = tk.StringVar()
         self.chatGPTApiKeyEntry.configure(
             textvariable=self.chatGPTApiKeyVar, width=50)
-        self.chatGPTApiKeyEntry.grid(column=0, pady="5 10", row=2)
-        self.chatGPTApiKeyLabel = ttk.Label(self.themeFrame)
-        self.chatGPTApiKeyLabel.configure(text='ChatGPT API-KEY')
-        self.chatGPTApiKeyLabel.grid(column=0, row=1)
+        self.chatGPTApiKeyEntry.pack()
+        self.apiKeyFrame.pack(anchor="center", pady="200 0", side="top")
         self.enableChatGPTBtn = ttk.Checkbutton(self.themeFrame)
         self.enableChatGPTVar = tk.BooleanVar()
         self.enableChatGPTBtn.configure(
             text='Habilitar ChatGPT',
             variable=self.enableChatGPTVar)
-        self.enableChatGPTBtn.grid(column=0, pady=10, row=3)
-        self.themeComboBox = ttk.Combobox(self.themeFrame)
+        self.enableChatGPTBtn.pack(anchor="center", pady=20, side="top")
+        self.themeSelFrame = ttk.Frame(self.themeFrame)
+        self.themeSelFrame.configure(height=200, width=200)
+        self.label1 = ttk.Label(self.themeSelFrame)
+        self.label1.configure(text='Tema')
+        self.label1.pack()
+        self.themeComboBox = ttk.Combobox(self.themeSelFrame)
         self.themeComboBox.configure(values=['dark', 'light'])
-        self.themeComboBox.current(0)
-        self.themeComboBox.grid(column=0, pady="5 10", row=5)
-        label1 = ttk.Label(self.themeFrame)
-        label1.configure(text='Tema')
-        label1.grid(column=0, pady="10 5", row=4)
-        frame16 = ttk.Frame(self.themeFrame)
-        frame16.configure(height=200, width=200)
-        self.saveConfigBtn = ttk.Button(frame16)
-        self.saveConfigBtn.configure(text='Salvar configuraçoes', width=30)
-        self.saveConfigBtn.grid(column=2, padx="10 20", row=0)
-        self.saveConfigBtn.configure(command=self.saveConfigBtnCb)
-        self.restoreConfigBtn = ttk.Button(frame16)
-        self.restoreConfigBtn.configure(
-            text='Recuperar Configurações', width=30)
-        self.restoreConfigBtn.grid(column=0, padx=10, row=0)
-        self.restoreConfigBtn.configure(command=self.restoreConfigBtnCb)
-        frame16.grid(column=0, pady=10, row=7)
-        frame18 = ttk.Frame(self.themeFrame)
-        frame18.configure(height=200, width=200)
-        self.deleteNonExistGuildBtn = ttk.Button(frame18)
+        self.themeComboBox.pack()
+        self.themeSelFrame.pack(anchor="center", side="top")
+        self.frame12 = ttk.Frame(self.themeFrame)
+        self.frame12.configure(height=200, width=200)
+        self.frame18 = ttk.Frame(self.frame12)
+        self.frame18.configure(height=200, width=200)
+        self.deleteNonExistGuildBtn = ttk.Button(self.frame18)
         self.deleteNonExistGuildBtn.configure(
-            text='Excluir Guildas Inexistente', width=30)
+            cursor="hand2", text='Excluir Guildas Inexistente', width=30)
         self.deleteNonExistGuildBtn.pack(pady="5 10")
         self.deleteNonExistGuildBtn.configure(
             command=self.deleteNonExistGuildBtnCb)
-        frame18.grid(column=0, row=6)
-        self.themeFrame.pack(anchor="center", side="top")
-        self.themeFrame.grid_anchor("center")
+        self.frame18.pack()
+        self.frame16 = ttk.Frame(self.frame12)
+        self.frame16.configure(height=200, width=200)
+        self.saveConfigBtn = ttk.Button(self.frame16)
+        self.saveConfigBtn.configure(
+            cursor="hand2",
+            text='Salvar configuraçoes',
+            width=30)
+        self.saveConfigBtn.grid(column=2, padx="10 20", row=0)
+        self.saveConfigBtn.configure(command=self.saveConfigBtnCb)
+        self.restoreConfigBtn = ttk.Button(self.frame16)
+        self.restoreConfigBtn.configure(
+            cursor="hand2", text='Recuperar Configurações', width=30)
+        self.restoreConfigBtn.grid(column=0, padx=10, row=0)
+        self.restoreConfigBtn.configure(command=self.restoreConfigBtnCb)
+        self.frame16.pack()
+        self.frame12.pack(pady=20, side="bottom")
+        self.themeFrame.pack(
+            anchor="center",
+            expand="true",
+            fill="both",
+            side="top")
         self.notebook1.add(self.themeFrame, text='Configuraçoes')
         self.frame14 = ttk.Frame(self.notebook1)
         self.frame14.configure(height=200, width=200)
-        self.gptGuildSelComboBox = ttk.Combobox(self.frame14)
+        self.frame7 = ttk.Frame(self.frame14)
+        self.frame7.configure(height=200, width=200)
+        self.gptGuildSelComboBox = ttk.Combobox(self.frame7)
         self.gptGuildSelComboBoxVar = tk.StringVar()
         self.gptGuildSelComboBox.configure(
             height=10,
@@ -218,15 +266,12 @@ class ContractviewerApp:
             textvariable=self.gptGuildSelComboBoxVar,
             values=['Selecione uma guilda para vizualização'],
             width=50)
-        self.gptGuildSelComboBox.current(0)
-        self.gptGuildSelComboBox.grid(column=0, padx=20, pady=10, row=0)
+        self.gptGuildSelComboBox.pack(padx=20, pady=10)
         self.gptGuildSelComboBox.bind(
-            "<<ComboboxSelected>>",
-            self.gptGuildSelectCb,
-            add="")
-        frame15 = ttk.Frame(self.frame14)
-        frame15.configure(height=200, width=200)
-        self.gptContractSelComboBox = ttk.Combobox(frame15)
+            "<<ComboboxSelected>>", self.gptGuildSelectCb, add="")
+        self.frame15 = ttk.Frame(self.frame7)
+        self.frame15.configure(height=200, width=200)
+        self.gptContractSelComboBox = ttk.Combobox(self.frame15)
         self.gptContractSelComboBoxVar = tk.StringVar()
         self.gptContractSelComboBox.configure(
             height=10,
@@ -234,31 +279,31 @@ class ContractviewerApp:
             textvariable=self.gptContractSelComboBoxVar,
             values=['Contratos'],
             width=40)
-        self.gptContractSelComboBox.current(0)
         self.gptContractSelComboBox.grid(column=0, padx=20, row=0)
         self.gptContractSelComboBox.bind(
             "<<ComboboxSelected>>", self.gptContractSelectorCb, add="")
-        self.createContractContextBtn = ttk.Button(frame15)
+        self.createContractContextBtn = ttk.Button(self.frame15)
         self.createContractContextBtn.configure(
-            text='Gerar Contexto', width=25)
+            cursor="hand2", text='Gerar Contexto', width=25)
         self.createContractContextBtn.grid(column=1, padx=20, row=0)
         self.createContractContextBtn.configure(
             command=self.createContractContextBtnCb)
-        frame15.grid(column=0, pady=5, row=1)
+        self.frame15.pack(pady=2)
+        self.frame7.pack(side="top")
         self.gptContContextShowerText = tk.Text(self.frame14)
         self.gptContContextShowerText.configure(height=35, width=100)
-        self.gptContContextShowerText.grid(column=0, padx=8, pady="0 3", row=2)
-        label10 = ttk.Label(self.frame14)
-        label10.configure(text='powered by twitch.tv/Owneti')
-        label10.grid(column=0, row=3)
-        self.frame14.pack(side="top")
+        self.gptContContextShowerText.pack(
+            expand="true", fill="both", side="top")
+        self.frame14.pack(expand="true", fill="both", side="top")
         self.notebook1.add(
             self.frame14,
             state="hidden",
             text='Gerar Contrato ChatGPT')
         self.frame1 = ttk.Frame(self.notebook1)
         self.frame1.configure(height=200, width=200)
-        self.gptServGuildSelComboBox = ttk.Combobox(self.frame1)
+        self.frame8 = ttk.Frame(self.frame1)
+        self.frame8.configure(height=200, width=200)
+        self.gptServGuildSelComboBox = ttk.Combobox(self.frame8)
         self.gptServGuildSelComboBoxVar = tk.StringVar()
         self.gptServGuildSelComboBox.configure(
             height=10,
@@ -266,13 +311,12 @@ class ContractviewerApp:
             textvariable=self.gptServGuildSelComboBoxVar,
             values=['Selecione uma guilda para vizualização'],
             width=50)
-        self.gptServGuildSelComboBox.current(0)
-        self.gptServGuildSelComboBox.grid(column=0, padx=20, pady=10, row=0)
+        self.gptServGuildSelComboBox.pack(padx=20, pady=10)
         self.gptServGuildSelComboBox.bind(
             "<<ComboboxSelected>>", self.gptServGuildSelectCb, add="")
-        frame2 = ttk.Frame(self.frame1)
-        frame2.configure(height=200, width=200)
-        self.gptServiceSelComboBox = ttk.Combobox(frame2)
+        self.frame2 = ttk.Frame(self.frame8)
+        self.frame2.configure(height=200, width=200)
+        self.gptServiceSelComboBox = ttk.Combobox(self.frame2)
         self.gptServiceSelComboBoxVar = tk.StringVar()
         self.gptServiceSelComboBox.configure(
             height=10,
@@ -280,29 +324,29 @@ class ContractviewerApp:
             textvariable=self.gptServiceSelComboBoxVar,
             values=['Servicos'],
             width=40)
-        self.gptServiceSelComboBox.current(0)
         self.gptServiceSelComboBox.grid(column=0, padx=20, row=0)
         self.gptServiceSelComboBox.bind(
             "<<ComboboxSelected>>", self.gptServiceSelectorCb, add="")
-        self.createServiceContextBtn = ttk.Button(frame2)
-        self.createServiceContextBtn.configure(text='Gerar Contexto', width=25)
+        self.createServiceContextBtn = ttk.Button(self.frame2)
+        self.createServiceContextBtn.configure(
+            cursor="hand2", text='Gerar Contexto', width=25)
         self.createServiceContextBtn.grid(column=1, padx=20, row=0)
         self.createServiceContextBtn.configure(
             command=self.createServiceContextBtnCb)
-        frame2.grid(column=0, pady=5, row=1)
+        self.frame2.pack(pady=5)
+        self.frame8.pack(side="top")
         self.gptServContextText = tk.Text(self.frame1)
         self.gptServContextText.configure(height=35, width=100)
-        self.gptServContextText.grid(column=0, padx=8, pady="0 3", row=2)
-        label2 = ttk.Label(self.frame1)
-        label2.configure(text='powered by twitch.tv/Owneti')
-        label2.grid(column=0, row=3)
-        self.frame1.pack(side="top")
+        self.gptServContextText.pack(expand="true", fill="both", side="top")
+        self.frame1.pack(expand="true", fill="both", side="top")
         self.notebook1.add(
             self.frame1,
             state="hidden",
             text='Gerar Servico ChatGPT')
-        self.notebook1.grid()
-        self.Gerador.grid_anchor("center")
+        self.notebook1.pack(expand="true", fill="both", side="top")
+        self.label5 = ttk.Label(self.Gerador)
+        self.label5.configure(text='powered by twitch.tv/Owneti')
+        self.label5.pack(pady="5 2")
 
         # Main widget
         self.mainwindow = self.Gerador
@@ -1174,14 +1218,29 @@ class ContractviewerApp:
             self.Gerador.destroy()
         pass
 
+    def setCurrentComboBox(self):
+        self.sizeComboBox.current(0)
+        self.contractComboBox.current(0)
+        self.sizeComboBox.current(0)
+        self.themeComboBox.current(0)
+        self.contGuildSelComboBox.current(0)
+        self.serviceComboBox.current(0)
+        self.guildSelComboBox.current(0)
+        self.gptGuildSelComboBox.current(0)
+        self.servGuildSelComboBox.current(0)
+        self.gptServiceSelComboBox.current(0)
+        self.gptContractSelComboBox.current(0)
+        self.gptServGuildSelComboBox.current(0)
+        pass
+
     def run(self):
         self.Gerador.protocol('WM_DELETE_WINDOW', self.on_close)
         self.setup()
 
         self.Gerador.tk.call('source', 'styles/Azure-ttk-theme/azure.tcl')
 
+        self.setCurrentComboBox()
         self.readSavedConfigs()
-
         self.updateGuildList()
 
         #FILL size settlement

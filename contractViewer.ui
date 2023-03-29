@@ -4,16 +4,52 @@
     <property name="height">600</property>
     <property name="padx">10</property>
     <property name="pady">10</property>
-    <property name="resizable">none</property>
+    <property name="resizable">both</property>
     <property name="width">800</property>
-    <containerlayout manager="grid">
+    <containerlayout manager="pack">
       <property name="anchor">center</property>
     </containerlayout>
+    <child>
+      <object class="pygubu.builder.widgets.toplevelmenu" id="toplevelmenu3">
+        <child>
+          <object class="tk.Menu" id="menu3">
+            <child>
+              <object class="tk.Menuitem.Submenu" id="File" named="True">
+                <property name="label" translatable="yes">submenu1</property>
+                <property name="specialmenu">apple</property>
+                <child>
+                  <object class="tk.Menuitem.Command" id="command2">
+                    <property name="label" translatable="yes">command2</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="tk.Menuitem.Separator" id="separator1" />
+                </child>
+                <child>
+                  <object class="tk.Menuitem.Command" id="command4">
+                    <property name="label" translatable="yes">command4</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Menuitem.Command" id="command3">
+                <property name="label" translatable="yes">command3</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
     <child>
       <object class="ttk.Notebook" id="notebook1">
         <property name="height">680</property>
         <property name="width">820</property>
-        <layout manager="grid" />
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="side">top</property>
+        </layout>
         <child>
           <object class="ttk.Notebook.Tab" id="guildTab" named="True">
             <property name="text" translatable="yes">Gerar Guilda</property>
@@ -22,91 +58,104 @@
                 <property name="height">200</property>
                 <property name="width">200</property>
                 <layout manager="pack">
+                  <property name="anchor">n</property>
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
                   <property name="side">top</property>
                 </layout>
+                <containerlayout manager="pack">
+                  <property name="propagate">False</property>
+                </containerlayout>
                 <child>
-                  <object class="ttk.Frame" id="frame3">
+                  <object class="ttk.Frame" id="frame4">
                     <property name="height">200</property>
                     <property name="width">200</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5</property>
-                      <property name="row">0</property>
+                    <layout manager="pack">
+                      <property name="side">top</property>
                     </layout>
                     <child>
-                      <object class="ttk.Combobox" id="sizeComboBox" named="True">
-                        <property name="height">10</property>
+                      <object class="ttk.Frame" id="frame3">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="anchor">n</property>
+                          <property name="expand">true</property>
+                          <property name="fill">x</property>
+                          <property name="padx">20</property>
+                          <property name="pady">10</property>
+                          <property name="side">top</property>
+                        </layout>
+                        <child>
+                          <object class="ttk.Combobox" id="sizeComboBox" named="True">
+                            <property name="height">10</property>
+                            <property name="state">readonly</property>
+                            <property name="textvariable">string:sizeStrVar</property>
+                            <property name="values">Selecione o Tamanho do assentamento</property>
+                            <property name="width">40</property>
+                            <layout manager="pack">
+                              <property name="expand">true</property>
+                              <property name="fill">x</property>
+                              <property name="padx">20</property>
+                              <property name="side">left</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Button" id="createGuildBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">createGuildBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Gerar Guilda</property>
+                            <property name="width">20</property>
+                            <layout manager="pack">
+                              <property name="expand">true</property>
+                              <property name="fill">x</property>
+                              <property name="padx">20</property>
+                              <property name="side">right</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Checkbutton" id="isHumanSettCheckbox" named="True">
+                            <property name="text" translatable="yes">Assentamento humano?</property>
+                            <property name="variable">boolean:isHumanBoolVar</property>
+                            <layout manager="pack">
+                              <property name="expand">true</property>
+                              <property name="fill">x</property>
+                              <property name="padx">20</property>
+                              <property name="side">bottom</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Combobox" id="guildSelComboBox" named="True">
                         <property name="state">readonly</property>
-                        <property name="textvariable">string:sizeStrVar</property>
-                        <property name="values">Selecione o Tamanho do assentamento</property>
-                        <property name="width">40</property>
-                        <layout manager="grid">
-                          <property name="column">0</property>
-                          <property name="padx">20</property>
+                        <property name="textvariable">string:guildSelComboBoxVar</property>
+                        <property name="values">Selecione uma guilda para vizualização</property>
+                        <property name="width">50</property>
+                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="guildSelectCb" add="" />
+                        <layout manager="pack">
+                          <property name="anchor">n</property>
+                          <property name="expand">false</property>
                           <property name="pady">5</property>
-                          <property name="row">0</property>
+                          <property name="side">top</property>
                         </layout>
                       </object>
                     </child>
-                    <child>
-                      <object class="ttk.Checkbutton" id="isHumanSettCheckbox" named="True">
-                        <property name="text" translatable="yes">Assentamento humano?</property>
-                        <property name="variable">boolean:isHumanBoolVar</property>
-                        <layout manager="grid">
-                          <property name="column">1</property>
-                          <property name="padx">20</property>
-                          <property name="pady">5</property>
-                          <property name="row">0</property>
-                        </layout>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="ttk.Button" id="createGuildBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">createGuildBtnCb</property>
-                        <property name="text" translatable="yes">Gerar Guilda</property>
-                        <property name="width">20</property>
-                        <layout manager="grid">
-                          <property name="column">2</property>
-                          <property name="padx">20</property>
-                          <property name="pady">5</property>
-                          <property name="row">0</property>
-                        </layout>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Combobox" id="guildSelComboBox" named="True">
-                    <property name="state">readonly</property>
-                    <property name="textvariable">string:guildSelComboBoxVar</property>
-                    <property name="values">Selecione uma guilda para vizualização</property>
-                    <property name="width">50</property>
-                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="guildSelectCb" add="" />
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5</property>
-                      <property name="row">1</property>
-                    </layout>
                   </object>
                 </child>
                 <child>
                   <object class="tk.Text" id="guildShowerText" named="True">
                     <property name="height">35</property>
                     <property name="width">100</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
+                    <layout manager="pack">
+                      <property name="anchor">n</property>
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
                       <property name="padx">8</property>
                       <property name="pady">0 3</property>
-                      <property name="row">2</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Label" id="label3">
-                    <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="row">4</property>
+                      <property name="side">top</property>
                     </layout>
                   </object>
                 </child>
@@ -122,58 +171,67 @@
                 <property name="height">200</property>
                 <property name="width">200</property>
                 <layout manager="pack">
+                  <property name="anchor">n</property>
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
                   <property name="side">top</property>
                 </layout>
                 <child>
-                  <object class="ttk.Combobox" id="contGuildSelComboBox" named="True">
-                    <property name="height">10</property>
-                    <property name="state">readonly</property>
-                    <property name="textvariable">string:contGuildSelComboBoxVar</property>
-                    <property name="values">Selecione uma guilda para vizualização</property>
-                    <property name="width">50</property>
-                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="contractGuildSelectCb" add="" />
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">20</property>
-                      <property name="pady">10</property>
-                      <property name="row">0</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Frame" id="frame10">
+                  <object class="ttk.Frame" id="frame5">
                     <property name="height">200</property>
                     <property name="width">200</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5</property>
-                      <property name="row">1</property>
+                    <layout manager="pack">
+                      <property name="side">top</property>
                     </layout>
                     <child>
-                      <object class="ttk.Combobox" id="contractComboBox" named="True">
+                      <object class="ttk.Combobox" id="contGuildSelComboBox" named="True">
                         <property name="height">10</property>
                         <property name="state">readonly</property>
-                        <property name="textvariable">string:contractComboBoxVar</property>
-                        <property name="values">Contratos</property>
-                        <property name="width">40</property>
-                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="contractSelectorCb" add="" />
-                        <layout manager="grid">
-                          <property name="column">0</property>
+                        <property name="textvariable">string:contGuildSelComboBoxVar</property>
+                        <property name="values">Selecione uma guilda para vizualização</property>
+                        <property name="width">50</property>
+                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="contractGuildSelectCb" add="" />
+                        <layout manager="pack">
                           <property name="padx">20</property>
-                          <property name="row">0</property>
+                          <property name="pady">10</property>
                         </layout>
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Button" id="createContractBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">createContractBtnCb</property>
-                        <property name="text" translatable="yes">Gerar Contrato</property>
-                        <property name="width">25</property>
-                        <layout manager="grid">
-                          <property name="column">1</property>
-                          <property name="padx">20</property>
-                          <property name="row">0</property>
+                      <object class="ttk.Frame" id="frame10">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="pady">5</property>
                         </layout>
+                        <child>
+                          <object class="ttk.Combobox" id="contractComboBox" named="True">
+                            <property name="height">10</property>
+                            <property name="state">readonly</property>
+                            <property name="textvariable">string:contractComboBoxVar</property>
+                            <property name="values">Contratos</property>
+                            <property name="width">40</property>
+                            <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="contractSelectorCb" add="" />
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Button" id="createContractBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">createContractBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Gerar Contrato</property>
+                            <property name="width">25</property>
+                            <layout manager="grid">
+                              <property name="column">1</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -182,20 +240,13 @@
                   <object class="tk.Text" id="contractShowerText" named="True">
                     <property name="height">35</property>
                     <property name="width">100</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
+                    <layout manager="pack">
+                      <property name="anchor">n</property>
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
                       <property name="padx">8</property>
                       <property name="pady">0 3</property>
-                      <property name="row">2</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Label" id="label7">
-                    <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="row">3</property>
+                      <property name="side">top</property>
                     </layout>
                   </object>
                 </child>
@@ -211,58 +262,66 @@
                 <property name="height">200</property>
                 <property name="width">200</property>
                 <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
                   <property name="side">top</property>
                 </layout>
                 <child>
-                  <object class="ttk.Combobox" id="servGuildSelComboBox" named="True">
-                    <property name="height">10</property>
-                    <property name="state">readonly</property>
-                    <property name="textvariable">string:servGuildSelComboBoxVar</property>
-                    <property name="values">Selecione uma guilda para vizualização</property>
-                    <property name="width">50</property>
-                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="serviceGuildSelectCb" add="" />
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">20</property>
-                      <property name="pady">10</property>
-                      <property name="row">0</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Frame" id="frame13">
+                  <object class="ttk.Frame" id="frame6">
                     <property name="height">200</property>
                     <property name="width">200</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5</property>
-                      <property name="row">1</property>
+                    <layout manager="pack">
+                      <property name="side">top</property>
                     </layout>
                     <child>
-                      <object class="ttk.Combobox" id="serviceComboBox" named="True">
+                      <object class="ttk.Combobox" id="servGuildSelComboBox" named="True">
                         <property name="height">10</property>
                         <property name="state">readonly</property>
-                        <property name="textvariable">string:serviceComboBoxVar</property>
-                        <property name="values">Serviços</property>
-                        <property name="width">40</property>
-                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="serviceSelectorCb" add="" />
-                        <layout manager="grid">
-                          <property name="column">0</property>
+                        <property name="textvariable">string:servGuildSelComboBoxVar</property>
+                        <property name="values">Selecione uma guilda para vizualização</property>
+                        <property name="width">50</property>
+                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="serviceGuildSelectCb" add="" />
+                        <layout manager="pack">
                           <property name="padx">20</property>
-                          <property name="row">0</property>
+                          <property name="pady">10</property>
                         </layout>
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Button" id="createServiceBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">createServiceBtnCb</property>
-                        <property name="text" translatable="yes">Gerar Serviço</property>
-                        <property name="width">25</property>
-                        <layout manager="grid">
-                          <property name="column">1</property>
-                          <property name="padx">20</property>
-                          <property name="row">0</property>
+                      <object class="ttk.Frame" id="frame13">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="pady">5</property>
                         </layout>
+                        <child>
+                          <object class="ttk.Combobox" id="serviceComboBox" named="True">
+                            <property name="height">10</property>
+                            <property name="state">readonly</property>
+                            <property name="textvariable">string:serviceComboBoxVar</property>
+                            <property name="values">Serviços</property>
+                            <property name="width">40</property>
+                            <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="serviceSelectorCb" add="" />
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Button" id="createServiceBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">createServiceBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Gerar Serviço</property>
+                            <property name="width">25</property>
+                            <layout manager="grid">
+                              <property name="column">1</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -271,20 +330,12 @@
                   <object class="tk.Text" id="serviceShowerText" named="True">
                     <property name="height">35</property>
                     <property name="width">100</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
+                    <layout manager="pack">
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
                       <property name="padx">8</property>
                       <property name="pady">0 3</property>
-                      <property name="row">2</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Label" id="label9">
-                    <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="row">3</property>
+                      <property name="side">top</property>
                     </layout>
                   </object>
                 </child>
@@ -301,113 +352,128 @@
                 <property name="width">200</property>
                 <layout manager="pack">
                   <property name="anchor">center</property>
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
                   <property name="side">top</property>
                 </layout>
-                <containerlayout manager="grid">
+                <containerlayout manager="pack">
                   <property name="anchor">center</property>
                 </containerlayout>
                 <child>
-                  <object class="ttk.Entry" id="chatGPTApiKeyEntry" named="True">
-                    <property name="textvariable">string:chatGPTApiKeyVar</property>
-                    <property name="width">50</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5 10</property>
-                      <property name="row">2</property>
+                  <object class="ttk.Frame" id="apiKeyFrame" named="True">
+                    <property name="height">200</property>
+                    <property name="width">200</property>
+                    <layout manager="pack">
+                      <property name="anchor">center</property>
+                      <property name="pady">200 0</property>
+                      <property name="side">top</property>
                     </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Label" id="chatGPTApiKeyLabel" named="True">
-                    <property name="text" translatable="yes">ChatGPT API-KEY</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="row">1</property>
-                    </layout>
+                    <child>
+                      <object class="ttk.Label" id="chatGPTApiKeyLabel" named="True">
+                        <property name="text" translatable="yes">ChatGPT API-KEY</property>
+                        <layout manager="pack" />
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Entry" id="chatGPTApiKeyEntry" named="True">
+                        <property name="textvariable">string:chatGPTApiKeyVar</property>
+                        <property name="width">50</property>
+                        <layout manager="pack" />
+                      </object>
+                    </child>
                   </object>
                 </child>
                 <child>
                   <object class="ttk.Checkbutton" id="enableChatGPTBtn" named="True">
                     <property name="text" translatable="yes">Habilitar ChatGPT</property>
                     <property name="variable">boolean:enableChatGPTVar</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">10</property>
-                      <property name="row">3</property>
+                    <layout manager="pack">
+                      <property name="anchor">center</property>
+                      <property name="pady">20</property>
+                      <property name="side">top</property>
                     </layout>
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Combobox" id="themeComboBox" named="True">
-                    <property name="values">dark light</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5 10</property>
-                      <property name="row">5</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Label" id="label1">
-                    <property name="text" translatable="yes">Tema</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">10 5</property>
-                      <property name="row">4</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Frame" id="frame16">
+                  <object class="ttk.Frame" id="themeSelFrame" named="True">
                     <property name="height">200</property>
                     <property name="width">200</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">10</property>
-                      <property name="row">7</property>
+                    <layout manager="pack">
+                      <property name="anchor">center</property>
+                      <property name="side">top</property>
                     </layout>
                     <child>
-                      <object class="ttk.Button" id="saveConfigBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">saveConfigBtnCb</property>
-                        <property name="text" translatable="yes">Salvar configuraçoes</property>
-                        <property name="width">30</property>
-                        <layout manager="grid">
-                          <property name="column">2</property>
-                          <property name="padx">10 20</property>
-                          <property name="row">0</property>
-                        </layout>
+                      <object class="ttk.Label" id="label1">
+                        <property name="text" translatable="yes">Tema</property>
+                        <layout manager="pack" />
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Button" id="restoreConfigBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">restoreConfigBtnCb</property>
-                        <property name="text" translatable="yes">Recuperar Configurações</property>
-                        <property name="width">30</property>
-                        <layout manager="grid">
-                          <property name="column">0</property>
-                          <property name="padx">10</property>
-                          <property name="row">0</property>
-                        </layout>
+                      <object class="ttk.Combobox" id="themeComboBox" named="True">
+                        <property name="state">readonly</property>
+                        <property name="values">dark light</property>
+                        <layout manager="pack" />
                       </object>
                     </child>
                   </object>
                 </child>
                 <child>
-                  <object class="ttk.Frame" id="frame18">
+                  <object class="ttk.Frame" id="frame12">
                     <property name="height">200</property>
                     <property name="width">200</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="row">6</property>
+                    <layout manager="pack">
+                      <property name="pady">20</property>
+                      <property name="side">bottom</property>
                     </layout>
                     <child>
-                      <object class="ttk.Button" id="deleteNonExistGuildBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">deleteNonExistGuildBtnCb</property>
-                        <property name="text" translatable="yes">Excluir Guildas Inexistente</property>
-                        <property name="width">30</property>
-                        <layout manager="pack">
-                          <property name="pady">5 10</property>
-                        </layout>
+                      <object class="ttk.Frame" id="frame18">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack" />
+                        <child>
+                          <object class="ttk.Button" id="deleteNonExistGuildBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">deleteNonExistGuildBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Excluir Guildas Inexistente</property>
+                            <property name="width">30</property>
+                            <layout manager="pack">
+                              <property name="pady">5 10</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Frame" id="frame16">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack" />
+                        <child>
+                          <object class="ttk.Button" id="saveConfigBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">saveConfigBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Salvar configuraçoes</property>
+                            <property name="width">30</property>
+                            <layout manager="grid">
+                              <property name="column">2</property>
+                              <property name="padx">10 20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Button" id="restoreConfigBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">restoreConfigBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Recuperar Configurações</property>
+                            <property name="width">30</property>
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="padx">10</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -425,58 +491,66 @@
                 <property name="height">200</property>
                 <property name="width">200</property>
                 <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
                   <property name="side">top</property>
                 </layout>
                 <child>
-                  <object class="ttk.Combobox" id="gptGuildSelComboBox" named="True">
-                    <property name="height">10</property>
-                    <property name="state">readonly</property>
-                    <property name="textvariable">string:gptGuildSelComboBoxVar</property>
-                    <property name="values">Selecione uma guilda para vizualização</property>
-                    <property name="width">50</property>
-                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptGuildSelectCb" add="" />
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">20</property>
-                      <property name="pady">10</property>
-                      <property name="row">0</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Frame" id="frame15">
+                  <object class="ttk.Frame" id="frame7">
                     <property name="height">200</property>
                     <property name="width">200</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5</property>
-                      <property name="row">1</property>
+                    <layout manager="pack">
+                      <property name="side">top</property>
                     </layout>
                     <child>
-                      <object class="ttk.Combobox" id="gptContractSelComboBox" named="True">
+                      <object class="ttk.Combobox" id="gptGuildSelComboBox" named="True">
                         <property name="height">10</property>
                         <property name="state">readonly</property>
-                        <property name="textvariable">string:gptContractSelComboBoxVar</property>
-                        <property name="values">Contratos</property>
-                        <property name="width">40</property>
-                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptContractSelectorCb" add="" />
-                        <layout manager="grid">
-                          <property name="column">0</property>
+                        <property name="textvariable">string:gptGuildSelComboBoxVar</property>
+                        <property name="values">Selecione uma guilda para vizualização</property>
+                        <property name="width">50</property>
+                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptGuildSelectCb" add="" />
+                        <layout manager="pack">
                           <property name="padx">20</property>
-                          <property name="row">0</property>
+                          <property name="pady">10</property>
                         </layout>
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Button" id="createContractContextBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">createContractContextBtnCb</property>
-                        <property name="text" translatable="yes">Gerar Contexto</property>
-                        <property name="width">25</property>
-                        <layout manager="grid">
-                          <property name="column">1</property>
-                          <property name="padx">20</property>
-                          <property name="row">0</property>
+                      <object class="ttk.Frame" id="frame15">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="pady">2</property>
                         </layout>
+                        <child>
+                          <object class="ttk.Combobox" id="gptContractSelComboBox" named="True">
+                            <property name="height">10</property>
+                            <property name="state">readonly</property>
+                            <property name="textvariable">string:gptContractSelComboBoxVar</property>
+                            <property name="values">Contratos</property>
+                            <property name="width">40</property>
+                            <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptContractSelectorCb" add="" />
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Button" id="createContractContextBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">createContractContextBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Gerar Contexto</property>
+                            <property name="width">25</property>
+                            <layout manager="grid">
+                              <property name="column">1</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -485,20 +559,10 @@
                   <object class="tk.Text" id="gptContContextShowerText" named="True">
                     <property name="height">35</property>
                     <property name="width">100</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">8</property>
-                      <property name="pady">0 3</property>
-                      <property name="row">2</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Label" id="label10">
-                    <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="row">3</property>
+                    <layout manager="pack">
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
+                      <property name="side">top</property>
                     </layout>
                   </object>
                 </child>
@@ -515,58 +579,66 @@
                 <property name="height">200</property>
                 <property name="width">200</property>
                 <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
                   <property name="side">top</property>
                 </layout>
                 <child>
-                  <object class="ttk.Combobox" id="gptServGuildSelComboBox" named="True">
-                    <property name="height">10</property>
-                    <property name="state">readonly</property>
-                    <property name="textvariable">string:gptServGuildSelComboBoxVar</property>
-                    <property name="values">Selecione uma guilda para vizualização</property>
-                    <property name="width">50</property>
-                    <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptServGuildSelectCb" add="" />
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">20</property>
-                      <property name="pady">10</property>
-                      <property name="row">0</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Frame" id="frame2">
+                  <object class="ttk.Frame" id="frame8">
                     <property name="height">200</property>
                     <property name="width">200</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="pady">5</property>
-                      <property name="row">1</property>
+                    <layout manager="pack">
+                      <property name="side">top</property>
                     </layout>
                     <child>
-                      <object class="ttk.Combobox" id="gptServiceSelComboBox" named="True">
+                      <object class="ttk.Combobox" id="gptServGuildSelComboBox" named="True">
                         <property name="height">10</property>
                         <property name="state">readonly</property>
-                        <property name="textvariable">string:gptServiceSelComboBoxVar</property>
-                        <property name="values">Servicos</property>
-                        <property name="width">40</property>
-                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptServiceSelectorCb" add="" />
-                        <layout manager="grid">
-                          <property name="column">0</property>
+                        <property name="textvariable">string:gptServGuildSelComboBoxVar</property>
+                        <property name="values">Selecione uma guilda para vizualização</property>
+                        <property name="width">50</property>
+                        <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptServGuildSelectCb" add="" />
+                        <layout manager="pack">
                           <property name="padx">20</property>
-                          <property name="row">0</property>
+                          <property name="pady">10</property>
                         </layout>
                       </object>
                     </child>
                     <child>
-                      <object class="ttk.Button" id="createServiceContextBtn" named="True">
-                        <property name="command" type="command" cbtype="simple">createServiceContextBtnCb</property>
-                        <property name="text" translatable="yes">Gerar Contexto</property>
-                        <property name="width">25</property>
-                        <layout manager="grid">
-                          <property name="column">1</property>
-                          <property name="padx">20</property>
-                          <property name="row">0</property>
+                      <object class="ttk.Frame" id="frame2">
+                        <property name="height">200</property>
+                        <property name="width">200</property>
+                        <layout manager="pack">
+                          <property name="pady">5</property>
                         </layout>
+                        <child>
+                          <object class="ttk.Combobox" id="gptServiceSelComboBox" named="True">
+                            <property name="height">10</property>
+                            <property name="state">readonly</property>
+                            <property name="textvariable">string:gptServiceSelComboBoxVar</property>
+                            <property name="values">Servicos</property>
+                            <property name="width">40</property>
+                            <bind sequence="&lt;&lt;ComboboxSelected&gt;&gt;" handler="gptServiceSelectorCb" add="" />
+                            <layout manager="grid">
+                              <property name="column">0</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="ttk.Button" id="createServiceContextBtn" named="True">
+                            <property name="command" type="command" cbtype="simple">createServiceContextBtnCb</property>
+                            <property name="cursor">hand2</property>
+                            <property name="text" translatable="yes">Gerar Contexto</property>
+                            <property name="width">25</property>
+                            <layout manager="grid">
+                              <property name="column">1</property>
+                              <property name="padx">20</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -575,20 +647,10 @@
                   <object class="tk.Text" id="gptServContextText" named="True">
                     <property name="height">35</property>
                     <property name="width">100</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="padx">8</property>
-                      <property name="pady">0 3</property>
-                      <property name="row">2</property>
-                    </layout>
-                  </object>
-                </child>
-                <child>
-                  <object class="ttk.Label" id="label2">
-                    <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
-                    <layout manager="grid">
-                      <property name="column">0</property>
-                      <property name="row">3</property>
+                    <layout manager="pack">
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
+                      <property name="side">top</property>
                     </layout>
                   </object>
                 </child>
@@ -596,6 +658,14 @@
             </child>
           </object>
         </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label5">
+        <property name="text" translatable="yes">powered by twitch.tv/Owneti</property>
+        <layout manager="pack">
+          <property name="pady">5 2</property>
+        </layout>
       </object>
     </child>
   </object>
