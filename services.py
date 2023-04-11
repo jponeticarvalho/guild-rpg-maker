@@ -117,7 +117,7 @@ class ServiceMaker:
         resultJson['for'] = self.rollTable(data['for'], data['forDice'])
         resultJson['but'] = self.rollTable(data['but'], data['butDice'])
 
-        if filename == 'serviceObjective' and resultJson['objective'] == 'Trabalho rural':
+        if filename == 'serviceObjective' and resultJson['objective']['name'] == 'Trabalho rural':
             resultJson['ruralJob'] = self.rollTable(data['ruralJob'], data['ruralJobDice'])
 
         return resultJson
