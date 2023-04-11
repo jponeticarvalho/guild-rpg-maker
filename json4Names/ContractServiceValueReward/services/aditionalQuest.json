@@ -1,0 +1,518 @@
+{
+    "haveAddQuest": {
+        "dice": {
+            "diceAmount": 1,
+            "diceType": 20,
+            "diceBonus": 0
+        },
+        "existRangeMin": 20,
+        "existRangeMax": 20
+    },
+    "addQuestDice": {
+        "diceAmount": 1,
+		"diceType": 100,
+		"diceBonus": 0
+    },
+    "addQuest": {
+        "1-1": {
+            "name": "Pescadores precisam de criaturas fortes para puxar peixes muito pesados",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Um adepto arcano que quer contar os passos de um lugar longínquo a outro",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Maníaco por limpeza contrata humanoides para sujarem uma construção",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Ladrão tentando desvendar o mistério de um cofre impenetrável",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Grupo de amigos tentando escapar de uma ilha deserta",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Cientista que quer criar um novo tipo de combustível",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        },
+        "7-7": {
+            "name": "Cavaleiro em busca da lendária espada mágica",
+            "diceRangeMin": 7,
+            "diceRangeMax": 7
+        },
+        "8-8": {
+            "name": "Aventureiros tentando desvendar os segredos de uma ruína antiga",
+            "diceRangeMin": 8,
+            "diceRangeMax": 8
+        },
+        "9-9": {
+            "name": "Político corrupto que quer encobrir suas atividades ilegais",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9
+        },
+        "10-10": {
+            "name": "Sobrevivente de um apocalipse zumbi que busca um local seguro",
+            "diceRangeMin": 10,
+            "diceRangeMax": 10
+        },
+        "11-11": {
+            "name": "Feiticeiro que busca um ingrediente raro para uma poção poderosa",
+            "diceRangeMin": 11,
+            "diceRangeMax": 11
+        },
+        "12-12": {
+            "name": "Contrabandista tentando atravessar uma fronteira perigosa",
+            "diceRangeMin": 12,
+            "diceRangeMax": 12
+        },
+        "13-13": {
+            "name": "Escritor em busca de inspiração para sua próxima obra",
+            "diceRangeMin": 13,
+            "diceRangeMax": 13
+        },
+        "14-14": {
+            "name": "Investigador que quer solucionar um assassinato misterioso",
+            "diceRangeMin": 14,
+            "diceRangeMax": 14
+        },
+        "15-15": {
+            "name": "Aprendiz de alquimia que busca conhecimento para criar uma pedra filosofal",
+            "diceRangeMin": 15,
+            "diceRangeMax": 15
+        },
+        "16-16": {
+            "name": "Pirata em busca de um tesouro lendário",
+            "diceRangeMin": 16,
+            "diceRangeMax": 16
+        },
+        "17-17": {
+            "name": "Caçador de recompensas em busca de um fugitivo perigoso",
+            "diceRangeMin": 17,
+            "diceRangeMax": 17
+        },
+        "18-18": {
+            "name": "Guerreiro que busca vingança contra um inimigo poderoso",
+            "diceRangeMin": 18,
+            "diceRangeMax": 18
+        },
+        "19-19": {
+            "name": "Treinador de animais em busca de uma criatura rara para sua coleção",
+            "diceRangeMin": 19,
+            "diceRangeMax": 19
+        },
+        "20-20": {
+            "name": "Detetive particular tentando desvendar um caso de chantagem",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20
+        },
+        "21-21": {
+            "name": "Fazendeiro lutando para proteger sua plantação de uma praga invasora",
+            "diceRangeMin": 21,
+            "diceRangeMax": 21
+        },
+        "22-22": {
+            "name": "Ativista que quer expor as atividades ilegais de uma empresa poderosa",
+            "diceRangeMin": 22,
+            "diceRangeMax": 22
+        },
+        "23-23": {
+            "name": "Colecionador que busca um item raro para completar sua coleção",
+            "diceRangeMin": 23,
+            "diceRangeMax": 23
+        },
+        "24-24": {
+            "name": "Membro de uma seita que busca um sacrifício humano para seus rituais",
+            "diceRangeMin": 24,
+            "diceRangeMax": 24
+        },
+        "25-25": {
+            "name": "Cientista que quer criar uma nova espécie de animal",
+            "diceRangeMin": 25,
+            "diceRangeMax": 25
+        },
+        "26-26": {
+            "name": "Empresário que busca dominar o mercado com um novo produto revolucionário",
+            "diceRangeMin": 26,
+            "diceRangeMax": 26
+        },
+        "27-27": {
+            "name": "Guia turístico em busca de novos locais para mostrar aos seus clientes",
+            "diceRangeMin": 27,
+            "diceRangeMax": 27
+        },
+        "28-28": {
+            "name": "Espião que precisa se infiltrar em uma organização criminosa",
+            "diceRangeMin": 28,
+            "diceRangeMax": 28
+        },
+        "29-29": {
+            "name": "Sobrevivente de um desastre aéreo tentando encontrar uma saída",
+            "diceRangeMin": 29,
+            "diceRangeMax": 29
+        },
+        "30-30": {
+            "name": "Artista que busca fama e reconhecimento pelo seu trabalho",
+            "diceRangeMin": 30,
+            "diceRangeMax": 30
+        },
+        "31-31": {
+            "name": "Mago que busca um artefato mágico poderoso",
+            "diceRangeMin": 31,
+            "diceRangeMax": 31
+        },
+        "32-32": {
+            "name": "Cientista que quer criar um vírus capaz de curar doenças graves",
+            "diceRangeMin": 32,
+            "diceRangeMax": 32
+        },
+        "33-33": {
+            "name": "Jornalista investigativo que quer expor um escândalo político",
+            "diceRangeMin": 33,
+            "diceRangeMax": 33
+        },
+        "34-34": {
+            "name": "Atleta em busca de um novo desafio para testar seus limites",
+            "diceRangeMin": 34,
+            "diceRangeMax": 34
+        },
+        "35-35": {
+            "name": "Hacker que quer invadir um sistema de segurança de alto nível",
+            "diceRangeMin": 35,
+            "diceRangeMax": 35
+        },
+        "36-36": {
+            "name": "Arqueólogo que busca um artefato antigo de valor histórico",
+            "diceRangeMin": 36,
+            "diceRangeMax": 36
+        },
+        "37-37": {
+            "name": "Agricultor lutando para proteger suas colheitas de um clima adverso",
+            "diceRangeMin": 37,
+            "diceRangeMax": 37
+        },
+        "38-38": {
+            "name": "Especialista em demolição que precisa derrubar um prédio em área urbana",
+            "diceRangeMin": 38,
+            "diceRangeMax": 38
+        },
+        "39-39": {
+            "name": "Vizinhos pedem ajuda para acabar com sons irritantes em horários inapropriados",
+            "diceRangeMin": 39,
+            "diceRangeMax": 39
+        },
+        "40-40": {
+            "name": "O contratante quer que você experimente tudo que ele for comer para provar que não está envenenado",
+            "diceRangeMin": 40,
+            "diceRangeMax": 40
+        },
+        "41-41": {
+            "name": "Escultor busca ajuda para transportar uma escultura extremamente pesada, porém frágil e delicada",
+            "diceRangeMin": 41,
+            "diceRangeMax": 41
+        },
+        "42-42": {
+            "name": "Humanoides procuram por cobaias para um experimento científico/poções desconhecidas",
+            "diceRangeMin": 42,
+            "diceRangeMax": 42
+        },
+        "43-43": {
+            "name": "Um kuo-toa quer comer um peixe cozinhado com magia",
+            "diceRangeMin": 43,
+            "diceRangeMax": 43
+        },
+        "44-44": {
+            "name": "Um especialista te contrata para fazer ciúmes em seu ex",
+            "diceRangeMin": 44,
+            "diceRangeMax": 44
+        },
+        "45-45": {
+            "name": "Mercador precisa de que alguém para cuidar de sua barraquinha por 2d4 dias pois vai sair em viagem",
+            "diceRangeMin": 45,
+            "diceRangeMax": 45
+        },
+        "46-46": {
+            "name": "Um humanoide precisa de ajuda motivacional para entrar em forma e conseguir um trabalho que ele goste",
+            "diceRangeMin": 46,
+            "diceRangeMax": 46
+        },
+        "47-47": {
+            "name": "Um coveiro novato com medo do cemitério pede ajuda para trabalhar",
+            "diceRangeMin": 47,
+            "diceRangeMax": 47
+        },
+        "48-48": {
+            "name": "Um nobre pede para tirar uma espada \"mágica\"enfincada numa pedra",
+            "diceRangeMin": 48,
+            "diceRangeMax": 48
+        },
+        "49-49": {
+            "name": "Contratante com amnésia pede ajuda para investigar sua própria vida",
+            "diceRangeMin": 49,
+            "diceRangeMax": 49
+        },
+        "50-50": {
+            "name": "Taverneiro precisa que você vença um de seus clientes em alguma competição na taverna",
+            "diceRangeMin": 50,
+            "diceRangeMax": 50
+        },
+        "51-51": {
+            "name": "Um bardo pede para o contratado fingir ser seu amigo em uma festa",
+            "diceRangeMin": 51,
+            "diceRangeMax": 51
+        },
+        "52-52": {
+            "name": "Um ferreiro precisa de humanoides para servirem de modelos para suas novas armaduras",
+            "diceRangeMin": 52,
+            "diceRangeMax": 52
+        },
+        "53-53": {
+            "name": "Um corvo de cartola e terno fala que é um antigo nobre e quer voltar a sua forma normal",
+            "diceRangeMin": 53,
+            "diceRangeMax": 53
+        },
+        "54-54": {
+            "name": "Humanoide precisa de mão-de-obra para reformar sua moradia",
+            "diceRangeMin": 54,
+            "diceRangeMax": 54
+        },
+        "55-55": {
+            "name": "Um artista contrata para fingirem ser seus fãs",
+            "diceRangeMin": 55,
+            "diceRangeMax": 55
+        },
+        "56-56": {
+            "name": "Um jovem pescador quer ajuda para pegar um peixe lendário",
+            "diceRangeMin": 56,
+            "diceRangeMax": 56
+        },
+        "57-57": {
+            "name": "Nobre exótico contrata humanoides para um reality show",
+            "diceRangeMin": 57,
+            "diceRangeMax": 57
+        },
+        "58-58": {
+            "name": "Um diabrete pede ajuda para pregar uma peça bastante elaborada",
+            "diceRangeMin": 58,
+            "diceRangeMax": 58
+        },
+        "59-59": {
+            "name": "Um velho supersticioso pede ajuda pra encontrar o seu dente da sorte perdido",
+            "diceRangeMin": 59,
+            "diceRangeMax": 59
+        },
+        "60-60": {
+            "name": "Um mercador pede para o contratado ser garoto propaganda de sua loja",
+            "diceRangeMin": 60,
+            "diceRangeMax": 60
+        },
+        "61-61": {
+            "name": "Um humanoide que diz está vivendo o mesmo dia, todos os dias, pede ajuda para quebrar o encanto",
+            "diceRangeMin": 61,
+            "diceRangeMax": 61
+        },
+        "62-62": {
+            "name": "Um martelo falante pede ajuda pra recuperar seu ferreiro que foi comprar pregos e nunca mais voltou",
+            "diceRangeMin": 62,
+            "diceRangeMax": 62
+        },
+        "63-63": {
+            "name": "Um cão teleportador pede ajuda para localizar uma guloseima que enterrou",
+            "diceRangeMin": 63,
+            "diceRangeMax": 63
+        },
+        "64-64": {
+            "name": "Um patrulheiro pede ajuda para mudar um grupo de animais predadores para outro território",
+            "diceRangeMin": 64,
+            "diceRangeMax": 64
+        },
+        "65-65": {
+            "name": "Um goblin descobriu que ele tem o poder de ler mentes e pede ajuda para desenvolver esse poder (no momento só pode ler a própria mente)",
+            "diceRangeMin": 65,
+            "diceRangeMax": 65
+        },
+        "66-66": {
+            "name": "Um fã contrata seu ídolo para que passe um \"dia dos sonhos\"com ele",
+            "diceRangeMin": 66,
+            "diceRangeMax": 66
+        },
+        "67-67": {
+            "name": "Uma trupe de fantasmas pede ajuda para achar a localização de seus túmulos no assentamento",
+            "diceRangeMin": 67,
+            "diceRangeMax": 67
+        },
+        "68-68": {
+            "name": "Um nobre pede para o contratado trabalhar como garçom num evento chique",
+            "diceRangeMin": 68,
+            "diceRangeMax": 68
+        },
+        "69-69": {
+            "name": "líder local pede ajuda para limpar parte suja do assentamento",
+            "diceRangeMin": 69,
+            "diceRangeMax": 69
+        },
+        "70-70": {
+            "name": "O dono de um circo precisa de ajuda com asapresentações",
+            "diceRangeMin": 70,
+            "diceRangeMax": 70
+        },
+        "71-71": {
+            "name": "Um arcanista pede ajuda para encontrar sua capa invisível",
+            "diceRangeMin": 71,
+            "diceRangeMax": 71
+        },
+        "72-72": {
+            "name": "Humanoide contrata alguém para cuidar de um bebê com magia selvagem inata e descontrolada por 1d4+1 dias",
+            "diceRangeMin": 72,
+            "diceRangeMax": 72
+        },
+        "73-73": {
+            "name": "Um nobre quer que você roube algo dele, mas não explica o porquê",
+            "diceRangeMin": 73,
+            "diceRangeMax": 73
+        },
+        "74-74": {
+            "name": "Um humanoide pede ajuda para descobrir quem foi o mago que saiu de um portal em sua frente e disse \"droga, errei de novo\"",
+            "diceRangeMin": 74,
+            "diceRangeMax": 74
+        },
+        "75-75": {
+            "name": "Um humanoide pede ajuda para remover sua sombra que está lutando contra ele a anos",
+            "diceRangeMin": 75,
+            "diceRangeMax": 75
+        },
+        "76-76": {
+            "name": "Um troll está tendo crises existenciais no meio da estrada, a população lhe paga para dar-lhe apoio emocional",
+            "diceRangeMin": 76,
+            "diceRangeMax": 76
+        },
+        "77-77": {
+            "name": "Contratante pede ajuda para conseguir partes do corpo de diferentes humanoides para criar uma criatura",
+            "diceRangeMin": 77,
+            "diceRangeMax": 77
+        },
+        "78-78": {
+            "name": "Um nobre paga para aquele que o fizer rir",
+            "diceRangeMin": 78,
+            "diceRangeMax": 78
+        },
+        "79-79": {
+            "name": "Um paladino que quebrou seus votos pede ajuda para fazer seu ritual de penitência",
+            "diceRangeMin": 79,
+            "diceRangeMax": 79
+        },
+        "80-80": {
+            "name": "Um dançarino pede para alguém substituir seu parceiro de dança doente em uma apresentação",
+            "diceRangeMin": 80,
+            "diceRangeMax": 80
+        },
+        "81-81": {
+            "name": "Elfo pede ajuda para traduzir pergaminhos antigos",
+            "diceRangeMin": 81,
+            "diceRangeMax": 81
+        },
+        "82-82": {
+            "name": "Um arqueiro precisa que você seja o teste de uma apresentação dele",
+            "diceRangeMin": 82,
+            "diceRangeMax": 82
+        },
+        "83-83": {
+            "name": "Um humanoide pede ajuda pra encontrar ratos para sua grande fera",
+            "diceRangeMin": 83,
+            "diceRangeMax": 83
+        },
+        "84-84": {
+            "name": "Um humanoide quer ajuda para decidir para qual divindade dedicar a sua vida",
+            "diceRangeMin": 84,
+            "diceRangeMax": 84
+        },
+        "85-85": {
+            "name": "Um draconato com uma rinite incurável pede ajuda pois expele uma baforada a cada espirro",
+            "diceRangeMin": 85,
+            "diceRangeMax": 85
+        },
+        "86-86": {
+            "name": "A guilda precisa de alguém para confiscar ou recuperar pertences de membros que a devem",
+            "diceRangeMin": 86,
+            "diceRangeMax": 86
+        },
+        "87-87": {
+            "name": "Um anão contrata pintores de muro",
+            "diceRangeMin": 87,
+            "diceRangeMax": 87
+        },
+        "88-88": {
+            "name": "Uma criança pede por socorro e afirma que uma bugiganga caiu do céu e grudou no seu pulso",
+            "diceRangeMin": 88,
+            "diceRangeMax": 88
+        },
+        "89-89": {
+            "name": "Bardo precisa de materiais mágicos para seus instrumentos",
+            "diceRangeMin": 89,
+            "diceRangeMax": 89
+        },
+        "90-90": {
+            "name": "Um humanoide lhe pede para ajudá-lo a organizar sua biblioteca pessoal",
+            "diceRangeMin": 90,
+            "diceRangeMax": 90
+        },
+        "91-91": {
+            "name": "Um humanoide quer ficar mais feio porque ele se acha tão bonito a ponto de se prender no espelho",
+            "diceRangeMin": 91,
+            "diceRangeMax": 91
+        },
+        "92-92": {
+            "name": "Um antigo chefe de cozinha pede ajuda para se atualizar",
+            "diceRangeMin": 92,
+            "diceRangeMax": 92
+        },
+        "93-93": {
+            "name": "Encontre as vacas furtivas do fazendeiro",
+            "diceRangeMin": 93,
+            "diceRangeMax": 93
+        },
+        "94-94": {
+            "name": "Um alfaiate pede ajuda para achar tecidos",
+            "diceRangeMin": 94,
+            "diceRangeMax": 94
+        },
+        "95-95": {
+            "name": "Estabelecimento comercial procura garoto propaganda",
+            "diceRangeMin": 95,
+            "diceRangeMax": 95
+        },
+        "96-96": {
+            "name": "Cuidar dos quadrigêmeos de um humanoide",
+            "diceRangeMin": 96,
+            "diceRangeMax": 96
+        },
+        "97-97": {
+            "name": "Demônios lhe contratarão como babá",
+            "diceRangeMin": 97,
+            "diceRangeMax": 97
+        },
+        "98-98": {
+            "name": "Construtor precisa de ajuda para carregar material",
+            "diceRangeMin": 98,
+            "diceRangeMax": 98
+        },
+        "99-99": {
+            "name": "Um monge pede ajuda a criatura para que não deixem que ninguém o interrompa por 7 dias inteiros enquanto medita",
+            "diceRangeMin": 99,
+            "diceRangeMax": 99
+        },
+        "100-100": {
+            "name": "Um pescador pede para que você consiga um peixe raro que é um dos preferidos dos dragões",
+            "diceRangeMin": 100,
+            "diceRangeMax": 100
+        }
+    }
+}

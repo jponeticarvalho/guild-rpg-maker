@@ -1,0 +1,113 @@
+{
+    "objectiveDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "objective": {
+        "1-1": {
+            "name": "Doença contagiosa",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Lesão/doença/cicatriz",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Moral e respeito/reputação/honra",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Bugiganga que criou vida",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "O psicológico",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Um vício",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "forDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "for": {
+        "1-1": {
+            "name": "Bestas enfermas",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Humanoide amargurado",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Crianças debilitadas",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Um engenhoqueiro",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Velhos bisbilhoteiros",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Criatura hostil",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "butDice": {
+        "diceAmount": 1,
+        "diceType": 6,
+        "diceBonus": 0
+    },
+    "but": {
+        "1-1": {
+            "name": "O afetado não colabora",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Tem outra doença que atrapalha",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Não existe cura/não tem jeito",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Cria-se um laço sentimental muito forte",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "O problema passa para quem o resolveu",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Outro especialista discorda de você",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    }
+}

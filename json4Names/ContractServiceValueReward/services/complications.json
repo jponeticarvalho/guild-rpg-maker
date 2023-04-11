@@ -1,0 +1,85 @@
+{
+    "haveComplication": {
+		"dice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"existRangeMin": 15,
+		"existRangeMax": 20
+	},
+	"complicationDice": {
+		"diceAmount": 1,
+		"diceType": 6,
+		"diceBonus": 0
+	},
+    "complication": {
+        "1-1": {
+            "name": "Governo local desaprova",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Facção criminosa quer se aproveitar",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Ordem religiosa/arcana interessada",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Um rival do contratante fica enciumado",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Instituição de oficio afetada",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Humanoides hostis",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    },
+    "andDice": {
+		"diceAmount": 1,
+		"diceType": 6,
+		"diceBonus": 0
+	},
+    "and": {
+        "1-1": {
+            "name": "Entrará com medidas legais",
+            "diceRangeMin": 1,
+            "diceRangeMax": 1
+        },
+        "2-2": {
+            "name": "Manipulará as coisas por baixo dos panos",
+            "diceRangeMin": 2,
+            "diceRangeMax": 2
+        },
+        "3-3": {
+            "name": "Tentará te convencer a desistir",
+            "diceRangeMin": 3,
+            "diceRangeMax": 3
+        },
+        "4-4": {
+            "name": "Complicará sua vida caso seja bem-sucedido",
+            "diceRangeMin": 4,
+            "diceRangeMax": 4
+        },
+        "5-5": {
+            "name": "Abusará de seu poder pra conseguir o que quer",
+            "diceRangeMin": 5,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Usarão de violência para te impedir",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        }
+    }
+}

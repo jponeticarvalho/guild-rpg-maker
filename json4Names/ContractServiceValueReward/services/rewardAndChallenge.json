@@ -1,0 +1,251 @@
+{
+    "rewardAndChallengeDice": {
+        "diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
+    },
+    "rewardAndChallenge": {
+        "1-2": {
+            "diceRangeMin": 1,
+            "diceRangeMax": 2,
+            "cd": 10,
+            "rewardDice": {
+                "diceAmount": 2,
+                "diceType": 4,
+                "diceBonus": 2
+            },
+            "diceMultiplier": 1,
+            "coin": "Peças de Cobre",
+            "recurrency": "+4 Peças de cobre"
+        },
+        "3-4": {
+            "diceRangeMin": 3,
+            "diceRangeMax": 4,
+            "cd": 11,
+            "rewardDice": {
+                "diceAmount": 3,
+                "diceType": 4,
+                "diceBonus": 3
+            },
+            "diceMultiplier": 1,
+            "coin": "Peças de Cobre",
+            "recurrency": "+6 Peças de cobre"
+        },
+        "5-5": {
+            "diceRangeMin": 5,
+            "diceRangeMax": 5,
+            "cd": 12,
+            "rewardDice": {
+                "diceAmount": 1,
+                "diceType": 4,
+                "diceBonus": 2
+            },
+            "diceMultiplier": 1,
+            "coin": "Peças de Prata",
+            "recurrency": "+2 Peças de prata"
+        },
+        "6-6": {
+            "diceRangeMin": 6,
+            "diceRangeMax": 6,
+            "cd": 13,
+            "rewardDice": {
+                "diceAmount": 2,
+                "diceType": 4,
+                "diceBonus": 2
+            },
+            "diceMultiplier": 1,
+            "coin": "Peças de Prata",
+            "recurrency": "+4 Peças de prata"
+        },
+        "7-9": {
+            "diceRangeMin": 7,
+            "diceRangeMax": 9,
+            "cd": 14,
+            "rewardDice": {
+                "diceAmount": 3,
+                "diceType": 4,
+                "diceBonus": 2
+            },
+            "diceMultiplier": 1,
+            "coin": "Peças de Prata",
+            "recurrency": "+4 Peças de prata"
+        },
+        "10-13": {
+            "diceRangeMin": 10,
+            "diceRangeMax": 13,
+            "cd": 15,
+            "rewardDice": {
+                "diceAmount": 1,
+                "diceType": 4,
+                "diceBonus": 0
+            },
+            "diceMultiplier": 2,
+            "coin": "Peças de Ouro",
+            "recurrency": "+6 Peças de prata"
+        },
+        "14-15": {
+            "diceRangeMin": 14,
+            "diceRangeMax": 15,
+            "cd": 16,
+            "rewardDice": {
+                "diceAmount": 2,
+                "diceType": 4,
+                "diceBonus": 0
+            },
+            "diceMultiplier": 2,
+            "coin": "Peças de Ouro",
+            "recurrency": "+2 Peças de ouro"
+        },
+        "16-17": {
+            "diceRangeMin": 16,
+            "diceRangeMax": 17,
+            "cd": 17,
+            "rewardDice": {
+                "diceAmount": 1,
+                "diceType": 6,
+                "diceBonus": 2
+            },
+            "diceMultiplier": 3,
+            "coin": "Peças de Ouro",
+            "recurrency": "+4 Peças de ouro"
+        },
+        "18-18": {
+            "diceRangeMin": 18,
+            "diceRangeMax": 18,
+            "cd": 18,
+            "rewardDice": {
+                "diceAmount": 2,
+                "diceType": 6,
+                "diceBonus": 2
+            },
+            "diceMultiplier": 4,
+            "coin": "Peças de Ouro",
+            "recurrency": "+6 Peças de ouro"
+        },
+        "19-19": {
+            "diceRangeMin": 19,
+            "diceRangeMax": 19,
+            "cd": 19,
+            "rewardDice": {
+                "diceAmount": 3,
+                "diceType": 6,
+                "diceBonus": 3
+            },
+            "diceMultiplier": 5,
+            "coin": "Peças de Ouro",
+            "recurrency": "+7 Peças de ouro"
+        },
+        "20-20": {
+            "diceRangeMin": 20,
+            "diceRangeMax": 20,
+            "cd": 20,
+            "rewardDice": {
+                "diceAmount": 4,
+                "diceType": 6,
+                "diceBonus": 4
+            },
+            "diceMultiplier": 6,
+            "coin": "Peças de Ouro",
+            "recurrency": "+8 Peças de ouro"
+        }
+    },
+    "difficultyDice": {
+        "diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
+    },
+    "difficulty": {
+        "1-10": {
+            "name": "Simples",
+            "diceRangeMin": 1,
+            "diceRangeMax": 10,
+            "requirement": "Um único teste de perícia",
+            "successCases": {
+                "1": {  
+                    "successNumber": 0,
+                    "status": "Fracasso Total"
+                },
+                "2": {  
+                    "successNumber": 1,
+                    "status": "Sucesso Total"
+                }
+            }
+        },
+        "11-15": {
+            "name": "Complicada",
+            "diceRangeMin": 11,
+            "diceRangeMax": 15,
+            "requirement": "Dois testes com a mesma CD. Os testes tem que ser da mesma perícia",
+            "successCases": {
+                "1": {  
+                    "successNumber": 0,
+                    "status": "Fracasso total, -1 de renome adicional"
+                },
+                "2": {  
+                    "successNumber": 1,
+                    "status": "Serviço mal feito porém ainda recebe a recompensa"
+                },
+                "3": {  
+                    "successNumber": 2,
+                    "status": "O serviço foi concluído com êxito"
+                }
+            }
+        },
+        "16-18": {
+            "name": "Complexa",
+            "diceRangeMin": 16,
+            "diceRangeMax": 18,
+            "requirement": "Três testes, um com a CD padrão, um com -1 de CD e outro com +1 de CD. Use três perícias diferentes",
+            "successCases": {
+                "1": {  
+                    "successNumber": 0,
+                    "status": "Fracasso total, -1 de renome adicional, -2 nos testes do próximo serviço"
+                },
+                "2": {  
+                    "successNumber": 1,
+                    "status": "Fracasso parcial, -1 de renome adicional, -1 nos testes do próximo serviço, receba metade da recompensa"
+                },
+                "3": {  
+                    "successNumber": 2,
+                    "status": "Serviço mal feito porém ainda recebe a recompensa"
+                },
+                "4": {  
+                    "successNumber": 3,
+                    "status": "O serviço foi concluído com êxito"
+                }
+            }
+        },
+        "19-20": {
+            "name": "Extremamente complexa",
+            "diceRangeMin": 19,
+            "diceRangeMax": 20,
+            "requirement": "",
+            "successCases": {
+                "1": {  
+                    "successNumber": 0,
+                    "status": "Fracasso total, -5 de renome adicional, desvantagem e -5 nos testes do próximo serviço"
+                },
+                "2": {  
+                    "successNumber": 1,
+                    "status": "Fracasso parcial, -3 de renome adicional, -5 nos testes do próximo serviço"
+                },
+                "3": {  
+                    "successNumber": 2,
+                    "status": "Serviço mal feito, receba metade da recompensa, -2 nos testes do próximo serviço"
+                },
+                "4": {  
+                    "successNumber": 3,
+                    "status": " Serviço mal feito porém ainda recebe a recompensa"
+                },
+                "5": {  
+                    "successNumber": 4,
+                    "status": "O serviço foi concluído com êxito"
+                },
+                "6": {  
+                    "successNumber": 5,
+                    "status": " Trabalho primoroso, +1 de renome adicional, +1 nos testes do próximo serviço, role novamente a recompensa e some a recompensa inicial"
+                }
+            }
+        }
+    }
+}

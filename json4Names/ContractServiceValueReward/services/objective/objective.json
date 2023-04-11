@@ -1,0 +1,69 @@
+{
+    "objectiveDice": {
+        "diceAmount": 1,
+        "diceType": 20,
+        "diceBonus": 0
+    },
+    "objective": {
+        "1-4": {
+            "name": "Treinar ou ensinar",
+            "diceRangeMin": 1,
+            "diceRangeMax": 4,
+            "subFileName": "trainObjective"
+        },
+        "5-6": {
+            "name": "Recrutar",
+            "diceRangeMin": 5,
+            "diceRangeMax": 6,
+            "subFileName": "recruitObjective"
+        },
+        "7-8": {
+            "name": "Curar ou recuperar",
+            "diceRangeMin": 7,
+            "diceRangeMax": 8,
+            "subFileName": "healObjective"
+        },
+        "9-9": {
+            "name": "Negociar ou coagir",
+            "diceRangeMin": 9,
+            "diceRangeMax": 9,
+            "subFileName": "negociationObjective"
+        },
+        "10-12": {
+            "name": "Auxiliar ou cuidar",
+            "diceRangeMin": 10,
+            "diceRangeMax": 12,
+            "subFileName": "helpObjective"
+        },
+        "13-14": {
+            "name": "Extrair recursos",
+            "diceRangeMin": 13,
+            "diceRangeMax": 14,
+            "subFileName": "extractObjective"
+        },
+        "15-16": {
+            "name": "Construir, criar ou reparar",
+            "diceRangeMin": 15,
+            "diceRangeMax": 16,
+            "subFileName": "buildObjective"
+        },
+        "17-17": {
+            "name": "Serviços específicos",
+            "diceRangeMin": 17,
+            "diceRangeMax": 17,
+            "subFileName": "serviceObjective"
+        },
+        "18-19": {
+            "name": "Religioso",
+            "diceRangeMin": 18,
+            "diceRangeMax": 19,
+            "subFileName": "religiousObjective"
+        },
+        "20-20": {
+            "name": "Role duas vezes e use ambos",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20,
+            "subFileName": "2roll"
+        }
+    }
+}

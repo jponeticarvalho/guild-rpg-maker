@@ -13,7 +13,7 @@ class nameGen():
 		dice2 = dice.roll(1, 100)
 		dice3 = dice.roll(1, 100)
 		try:
-			name = str(data1[str(dice1)]["localidade"]) + " do/da " + str(data1[str(dice2)]["objeto"]) + " " + str(data1[str(dice3)]["qualidade"])
+			name = f'{data1[str(dice1)]["localidade"]} do/da {data1[str(dice2)]["objeto"]} {data1[str(dice3)]["qualidade"]}'
 		except:
 			print ("ue")
 		print ("[NemGen] name= " + name)

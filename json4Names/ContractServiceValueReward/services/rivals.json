@@ -1,0 +1,125 @@
+{
+    "haveRival": {
+		"dice": {
+			"diceAmount": 1,
+			"diceType": 20,
+			"diceBonus": 0
+		},
+		"existRangeMin": 19,
+		"existRangeMax": 20
+	},
+	"rivalDice": {
+		"diceAmount": 1,
+		"diceType": 6,
+		"diceBonus": 0
+	},
+    "rival": {
+        "1-5": {
+            "name": "Irá contra seu objetivo",
+            "diceRangeMin": 1,
+            "diceRangeMax": 5
+        },
+        "6-6": {
+            "name": "Fará a mesma coisa que você",
+            "diceRangeMin": 6,
+            "diceRangeMax": 6
+        },
+        "7-8": {
+            "name": "Sabota/Implanta armadilhas",
+            "diceRangeMin": 7,
+            "diceRangeMax": 8
+        },
+        "9-10": {
+            "name": "Roubará recursos importantes",
+            "diceRangeMin": 9,
+            "diceRangeMax": 10
+        },
+        "11-12": {
+            "name": "Tentará ficar com os créditos",
+            "diceRangeMin": 11,
+            "diceRangeMax": 12
+        },
+        "13-13": {
+            "name": "Espalha rumores maldosos",
+            "diceRangeMin": 13,
+            "diceRangeMax": 13
+        },
+        "14-14": {
+            "name": "Fingirá ser o contratado",
+            "diceRangeMin": 14,
+            "diceRangeMax": 14
+        },
+        "15-16": {
+            "name": "Dará dicas falsas sobre o serviço",
+            "diceRangeMin": 15,
+            "diceRangeMax": 16
+        },
+        "17-18": {
+            "name": "Oferecerá valiosas informações",
+            "diceRangeMin": 17,
+            "diceRangeMax": 18
+        },
+        "19-20": {
+            "name": "Tentará te subornar ou ameaçar",
+            "diceRangeMin": 19,
+            "diceRangeMax": 20
+        }
+    },
+    "butDice": {
+		"diceAmount": 1,
+		"diceType": 6,
+		"diceBonus": 0
+	},
+    "but": {
+        "1-2": {
+            "name": "Faz isso por amor",
+            "diceRangeMin": 1,
+            "diceRangeMax": 2
+        },
+        "3-5": {
+            "name": "Se atrapalha todo",
+            "diceRangeMin": 3,
+            "diceRangeMax": 5
+        },
+        "6-13": {
+            "name": "Faz isso porque precisa",
+            "diceRangeMin": 6,
+            "diceRangeMax": 13
+        },
+        "14-14": {
+            "name": "Faz isso pelas crianças",
+            "diceRangeMin": 14,
+            "diceRangeMax": 14
+        },
+        "15-15": {
+            "name": "Se arrepende",
+            "diceRangeMin": 15,
+            "diceRangeMax": 15
+        },
+        "16-16": {
+            "name": "Desaparece depois disso",
+            "diceRangeMin": 16,
+            "diceRangeMax": 16
+        },
+        "17-17": {
+            "name": "No fundo gosta, e faz isso por você",
+            "diceRangeMin": 17,
+            "diceRangeMax": 17
+        },
+        "18-18": {
+            "name": "Faz isso porque te odeia",
+            "diceRangeMin": 18,
+            "diceRangeMax": 18
+        },
+        "19-19": {
+            "name": "Faz isso contra a vontade dele",
+            "diceRangeMin": 19,
+            "diceRangeMax": 19
+        },
+        "20-20": {
+            "name": "Na verdade é o contratante",
+            "diceRangeMin": 20,
+            "diceRangeMax": 20
+        }
+    }
+}
